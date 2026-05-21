@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewEnter — Assessoria Contábil | Comércio Exterior & Hotelaria</title>
+<meta name="description" content="Contabilidade especializada em comércio exterior e hotelaria em São Paulo.">
+<meta name="theme-color" content="#1B2A8E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#1B2A8E;--azul-claro:#2E40C7;--azul-escuro:#0F1442;--magenta:#E91E9B;--magenta-claro:#FF3DB0;--bege:#F5F1EB;--creme:#FAF7F2;--branco:#FFFFFF;--texto:#0F1442;--texto-suave:#5A5F7E;--linha:#E8E4DC;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+section[id]{scroll-margin-top:80px;}
+body{font-family:'Inter Tight',system-ui,sans-serif;background:var(--creme);color:var(--texto);line-height:1.6;overflow-x:hidden;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.reveal-left.visible{opacity:1;transform:none;}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.reveal-right.visible{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,242,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(232,228,220,.6);transition:all .3s;}
+.nav.scrolled{padding:13px 5%;box-shadow:0 4px 30px rgba(27,42,142,.08);}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--azul);text-decoration:none;letter-spacing:-.02em;}
+.nav-logo span{color:var(--magenta);}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--texto);font-size:14px;font-weight:500;position:relative;transition:color .3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--magenta);transition:width .3s;}
+.nav-links a:hover{color:var(--magenta);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--azul)!important;color:var(--branco)!important;padding:11px 24px;border-radius:50px;font-weight:600;transition:all .3s;}
+.nav-cta:hover{background:var(--magenta)!important;transform:translateY(-1px);box-shadow:0 8px 24px rgba(233,30,155,.3);}
+.nav-cta::after{display:none!important;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--azul);z-index:101;}
+
+/* HERO */
+.hero{min-height:100vh;padding:130px 5% 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--creme) 0%,#EEF0FA 100%);}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:800px;height:800px;background:radial-gradient(circle,rgba(233,30,155,.1) 0%,transparent 65%);border-radius:50%;z-index:0;animation:pulseGlow 8s ease-in-out infinite;}
+.hero::after{content:'';position:absolute;bottom:-300px;left:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(27,42,142,.07) 0%,transparent 65%);border-radius:50%;z-index:0;}
+@keyframes pulseGlow{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.05)}}
+.hero-content{position:relative;z-index:2;animation:fadeUp .9s cubic-bezier(.22,1,.36,1);}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--branco);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:600;color:var(--azul);border:1px solid var(--linha);margin-bottom:28px;box-shadow:0 4px 16px rgba(27,42,142,.08);}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--magenta);box-shadow:0 0 0 3px rgba(233,30,155,.2);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.04;letter-spacing:-.03em;margin-bottom:24px;color:var(--azul);}
+.hero h1 em{font-style:italic;color:var(--magenta);font-weight:500;}
+.hero-sub{font-size:1.15rem;color:var(--texto-suave);margin-bottom:40px;max-width:500px;line-height:1.7;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:50px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:none;transition:all .3s cubic-bezier(.22,1,.36,1);}
+.btn-primary{background:var(--azul);color:var(--branco);}
+.btn-primary:hover{background:var(--magenta);transform:translateY(-2px);box-shadow:0 14px 32px rgba(233,30,155,.35);}
+.btn-secondary{background:transparent;color:var(--azul);border:2px solid var(--azul);}
+.btn-secondary:hover{background:var(--azul);color:var(--branco);}
+.btn svg{width:18px;height:18px;transition:transform .3s;}
+.btn:hover svg{transform:translateX(4px);}
+.hero-proof{display:flex;align-items:center;gap:20px;}
+.avatars{display:flex;}
+.av{width:40px;height:40px;border-radius:50%;border:3px solid var(--branco);margin-left:-10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;}
+.av:first-child{margin-left:0;}
+.av.a1{background:linear-gradient(135deg,#1B2A8E,#2E40C7);}
+.av.a2{background:linear-gradient(135deg,#E91E9B,#FF3DB0);}
+.av.a3{background:linear-gradient(135deg,#0F1442,#1B2A8E);}
+.av.a4{background:linear-gradient(135deg,#2E40C7,#E91E9B);}
+.proof-txt{font-size:13px;color:var(--texto-suave);line-height:1.4;}
+.proof-txt strong{color:var(--azul);font-weight:700;}
+
+/* HERO VISUAL */
+.hero-visual{position:relative;z-index:2;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .2s backwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.hero-mockup{background:var(--branco);border-radius:28px;padding:36px;box-shadow:0 40px 100px -20px rgba(27,42,142,.22);border:1px solid var(--linha);position:relative;}
+.mockup-header{display:flex;align-items:center;gap:8px;margin-bottom:28px;}
+.mdot{width:12px;height:12px;border-radius:50%;}
+.mdot.r{background:#FF5F57}.mdot.y{background:#FEBC2E}.mdot.g{background:#28C840}
+.mockup-title{font-size:12px;color:var(--texto-suave);margin-left:8px;font-weight:500;}
+.chart{display:flex;align-items:flex-end;gap:6px;height:60px;margin-bottom:24px;}
+.bar{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(to top,var(--azul),var(--azul-claro));opacity:.65;transition:opacity .3s;}
+.bar:hover{opacity:1;}
+.bar.active{background:linear-gradient(to top,var(--magenta),var(--magenta-claro));opacity:1;}
+.metric{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--linha);}
+.metric:last-child{border:none;}
+.metric-label{font-size:13px;color:var(--texto-suave);}
+.metric-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;color:var(--azul);}
+.metric-val em{color:var(--magenta);font-style:normal;}
+.mbadge{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;}
+.bg{background:#E8F5E9;color:#2E7D32}.bb{background:#E3F2FD;color:#1565C0}
+.float-card{position:absolute;background:var(--branco);padding:14px 18px;border-radius:16px;box-shadow:0 16px 48px rgba(27,42,142,.18);display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;border:1px solid var(--linha);}
+.fc1{top:-24px;right:-20px;animation:floatY 5s ease-in-out infinite;}
+.fc2{bottom:20px;left:-28px;animation:floatY 5s ease-in-out infinite 2.5s;}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.fci{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.fc1 .fci{background:#E8F5E9}.fc2 .fci{background:#FCE4EC}
+.fcard-val{font-size:15px;color:var(--azul);line-height:1.3;}
+.fcard-sub{font-size:11px;color:var(--texto-suave);font-weight:400;}
+
+/* STATS */
+.stats-band{background:var(--azul);padding:60px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;position:relative;overflow:hidden;}
+.stats-band::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(233,30,155,.2) 0%,transparent 70%);border-radius:50%;}
+.stat-item{text-align:center;position:relative;z-index:2;}
+.si-num{font-family:'Fraunces',serif;font-size:3rem;font-weight:500;color:#fff;line-height:1;margin-bottom:8px;}
+.si-num em{color:var(--magenta-claro);font-style:normal;}
+.si-label{font-size:13px;color:rgba(255,255,255,.65);letter-spacing:.04em;line-height:1.4;}
+.sdiv{width:1px;background:rgba(255,255,255,.1);margin:auto;}
+
+/* SECTIONS */
+section{padding:110px 5%;position:relative;}
+.stag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:14px;display:block;}
+.stitle{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:400;line-height:1.08;letter-spacing:-.025em;color:var(--azul);margin-bottom:18px;max-width:760px;}
+.stitle em{font-style:italic;color:var(--magenta);font-weight:500;}
+.ssub{font-size:1.08rem;color:var(--texto-suave);max-width:580px;margin-bottom:60px;line-height:1.7;}
+
+/* DIFERENCIAIS */
+.diferenciais{background:var(--branco);}
+.dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.dif{padding:40px 32px;border-radius:24px;border:1px solid var(--linha);background:var(--creme);position:relative;overflow:hidden;transition:all .4s cubic-bezier(.22,1,.36,1);}
+.dif::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--magenta),var(--magenta-claro));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.dif:hover{transform:translateY(-8px);box-shadow:0 28px 60px -15px rgba(27,42,142,.18);background:var(--branco);border-color:transparent;}
+.dif:hover::after{transform:scaleX(1);}
+.dif-icon{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:28px;transition:transform .4s;}
+.dif:hover .dif-icon{transform:rotate(-8deg) scale(1.1);}
+.d-1 .dif-icon{background:linear-gradient(135deg,#E3F2FD,#BBDEFB);}
+.d-2 .dif-icon{background:linear-gradient(135deg,#FCE4EC,#F8BBD9);}
+.d-3 .dif-icon{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);}
+.d-4 .dif-icon{background:linear-gradient(135deg,#FFF3E0,#FFE0B2);}
+.d-5 .dif-icon{background:linear-gradient(135deg,#EDE7F6,#D1C4E9);}
+.d-6 .dif-icon{background:linear-gradient(135deg,#E0F7FA,#B2EBF2);}
+.dif h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:500;color:var(--azul);margin-bottom:10px;}
+.dif p{color:var(--texto-suave);font-size:.95rem;line-height:1.65;}
+
+/* SERVIÇOS */
+.servicos{background:var(--creme);}
+.sv-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.sv-nav{position:sticky;top:100px;}
+.sv-item{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:16px;cursor:pointer;transition:all .3s;margin-bottom:8px;border:1px solid transparent;}
+.sv-item:hover,.sv-item.active{background:var(--branco);border-color:var(--linha);box-shadow:0 20px 60px -15px rgba(27,42,142,.15);}
+.sv-item.active .snum{background:var(--magenta);color:#fff;}
+.snum{width:36px;height:36px;border-radius:10px;background:var(--linha);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:.9rem;font-style:italic;color:var(--azul);flex-shrink:0;transition:all .3s;}
+.sv-txt h4{font-size:15px;font-weight:600;color:var(--azul);margin-bottom:2px;}
+.sv-txt span{font-size:12px;color:var(--texto-suave);}
+.sv-cards{display:flex;flex-direction:column;gap:20px;}
+.sc{background:var(--branco);border-radius:20px;padding:32px;border:1px solid var(--linha);transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--magenta),var(--magenta-claro));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.sc:hover{transform:translateY(-4px);box-shadow:0 20px 50px -12px rgba(27,42,142,.15);}
+.sc:hover::before{transform:scaleX(1);}
+.sc-hd{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.sc-ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--azul),var(--azul-claro));display:flex;align-items:center;justify-content:center;transition:all .4s;}
+.sc:hover .sc-ico{background:linear-gradient(135deg,var(--magenta),var(--magenta-claro));transform:rotate(-6deg);}
+.sc-ico svg{width:24px;height:24px;color:#fff;}
+.sc-hd h3{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:500;color:var(--azul);}
+.sc p{color:var(--texto-suave);font-size:.95rem;line-height:1.65;margin-bottom:16px;}
+.sc-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.sc-tag{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;background:var(--bege);color:var(--azul);border:1px solid var(--linha);}
+
+/* ESPECIALIDADES */
+.esp{background:linear-gradient(135deg,var(--azul-escuro) 0%,var(--azul) 60%,#1a3580 100%);color:#fff;position:relative;overflow:hidden;}
+.esp::before{content:'';position:absolute;top:-20%;right:-10%;width:70%;height:140%;background:radial-gradient(circle,rgba(233,30,155,.18) 0%,transparent 60%);pointer-events:none;}
+.esp::after{content:'';position:absolute;bottom:-20%;left:-15%;width:60%;height:120%;background:radial-gradient(circle,rgba(255,61,176,.07) 0%,transparent 60%);pointer-events:none;}
+.esp-hdr{position:relative;z-index:2;margin-bottom:70px;}
+.esp .stag{color:var(--magenta-claro);}
+.esp .stitle{color:#fff;}
+.esp .stitle em{color:var(--magenta-claro);}
+.esp .ssub{color:rgba(255,255,255,.7);}
+.esp-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:2;margin-bottom:56px;}
+.eb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);border-radius:28px;padding:44px 36px;position:relative;overflow:hidden;transition:all .5s cubic-bezier(.22,1,.36,1);}
+.eb:hover{border-color:rgba(255,61,176,.45);transform:translateY(-6px);box-shadow:0 32px 80px -20px rgba(233,30,155,.3);}
+.eb::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--magenta),var(--magenta-claro));transform:scaleX(0);transform-origin:left;transition:transform .5s;}
+.eb:hover::before{transform:scaleX(1);}
+.eb-num{position:absolute;top:24px;right:32px;font-family:'Fraunces',serif;font-size:5rem;font-weight:300;font-style:italic;color:rgba(255,255,255,.05);line-height:1;pointer-events:none;}
+.eb-vis{height:180px;margin-bottom:32px;display:flex;align-items:center;justify-content:center;position:relative;}
+.esp-globo{width:160px;height:160px;animation:girar 22s linear infinite;}
+@keyframes girar{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.orbit{stroke-dasharray:8 4;animation:orbitDash 12s linear infinite;}
+@keyframes orbitDash{to{stroke-dashoffset:-100}}
+.pr{animation:piscar 2.5s ease-in-out infinite;}
+.pr.p1{animation-delay:0s}.pr.p2{animation-delay:.6s}.pr.p3{animation-delay:1.2s}.pr.p4{animation-delay:1.8s}
+@keyframes piscar{0%,100%{opacity:1}50%{opacity:.2}}
+.esp-predio{width:160px;height:160px;}
+.jns rect{animation:jpis 5s ease-in-out infinite;}
+.j1,.j3,.j5,.j7,.j9{animation-delay:0s}.j2,.j4,.j6,.j8{animation-delay:1.2s}
+@keyframes jpis{0%,75%,100%{opacity:.95}80%,90%{opacity:.15}}
+.estrelas text{animation:bril 2.5s ease-in-out infinite;}
+.estrelas text:nth-child(1){animation-delay:0s}.estrelas text:nth-child(2){animation-delay:.2s}.estrelas text:nth-child(3){animation-delay:.4s}.estrelas text:nth-child(4){animation-delay:.6s}.estrelas text:nth-child(5){animation-delay:.8s}
+@keyframes bril{0%,100%{opacity:1}50%{opacity:.3}}
+.etags{position:absolute;inset:0;pointer-events:none;}
+.etag{position:absolute;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:50px;font-size:12px;font-weight:600;color:#fff;white-space:nowrap;animation:ftag 6s ease-in-out infinite;}
+.t1{top:8%;left:0;animation-delay:0s}.t2{bottom:12%;right:0;animation-delay:2s}.t3{top:48%;left:-4%;animation-delay:4s}
+@keyframes ftag{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.eb h3{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:500;margin-bottom:12px;color:#fff;}
+.eb-desc{color:rgba(255,255,255,.7);font-size:.98rem;line-height:1.65;margin-bottom:28px;}
+.eb-feats{display:flex;flex-direction:column;gap:16px;padding:24px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:28px;}
+.ef{display:flex;align-items:flex-start;gap:14px;}
+.efico{width:40px;height:40px;background:rgba(255,61,176,.15);border:1px solid rgba(255,61,176,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;}
+.eb:hover .efico{background:rgba(255,61,176,.28);transform:rotate(-5deg);}
+.efico svg{width:18px;height:18px;color:var(--magenta-claro);}
+.ef strong{display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;}
+.ef span{font-size:12px;color:rgba(255,255,255,.5);}
+.eb-stats{display:flex;align-items:center;gap:18px;}
+.es{flex:1;}
+.es-num{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:500;color:var(--magenta-claro);line-height:1;margin-bottom:4px;font-style:italic;}
+.es-num span{font-size:1.2rem;color:rgba(255,255,255,.4);font-style:normal;}
+.es-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500;}
+.es-div{width:1px;height:44px;background:rgba(255,255,255,.12);}
+.esp-cta{padding:40px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;position:relative;z-index:2;}
+.esp-cta p{font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:#fff;max-width:500px;}
+
+/* SOBRE */
+.sobre{background:var(--bege);padding:120px 5%;}
+.sb-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center;}
+.sb-foto-wrap{position:relative;}
+.sb-foto{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -20px rgba(27,42,142,.28);}
+.sb-foto-ph{width:100%;height:100%;background:linear-gradient(160deg,var(--azul) 0%,var(--azul-claro) 50%,var(--magenta) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
+.sb-foto-ph svg{width:90px;height:90px;color:rgba(255,255,255,.5);}
+.sb-foto-ph span{color:rgba(255,255,255,.6);font-size:14px;}
+.sb-foto-wrap::after{content:'';position:absolute;bottom:-24px;right:-24px;width:160px;height:160px;background:var(--magenta);border-radius:28px;z-index:-1;}
+.sb-foto-wrap::before{content:'';position:absolute;top:-18px;left:-18px;width:90px;height:90px;border:2.5px solid var(--azul);border-radius:18px;z-index:-1;}
+.sb-badge{position:absolute;bottom:40px;left:-30px;background:var(--branco);border-radius:18px;padding:18px 22px;box-shadow:0 16px 48px rgba(27,42,142,.2);border:1px solid var(--linha);z-index:2;}
+.sb-badge-num{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:500;color:var(--azul);line-height:1;}
+.sb-badge-num em{color:var(--magenta);font-style:normal;}
+.sb-badge-lbl{font-size:12px;color:var(--texto-suave);font-weight:500;margin-top:4px;}
+.sb-bio{font-size:1.06rem;color:var(--texto-suave);line-height:1.78;margin-bottom:22px;}
+.sb-bio strong{color:var(--azul);font-weight:600;}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 34px;}
+.cred{background:var(--branco);padding:10px 18px;border-radius:50px;font-size:13px;font-weight:500;color:var(--azul);border:1px solid var(--linha);}
+.assin{padding-top:28px;border-top:1px solid var(--linha);}
+.assin-nome{font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;color:var(--azul);font-weight:500;}
+.assin-cargo{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--texto-suave);margin-top:4px;}
+
+/* NOTÍCIAS */
+.noticias{background:var(--branco);}
+.nt-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:wrap;gap:20px;}
+.nt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.nc{border-radius:20px;overflow:hidden;border:1px solid var(--linha);background:var(--creme);transition:all .4s cubic-bezier(.22,1,.36,1);cursor:pointer;}
+.nc:hover{transform:translateY(-8px);box-shadow:0 28px 60px -15px rgba(27,42,142,.18);border-color:transparent;}
+.nc-thumb{height:200px;display:flex;align-items:center;justify-content:center;font-size:54px;position:relative;}
+.nc-fiscal{background:linear-gradient(135deg,#E3F2FD,#BBDEFB);}
+.nc-comex{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);}
+.nc-hotel{background:linear-gradient(135deg,#FFF3E0,#FFE0B2);}
+.nc-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--azul);}
+.nc-body{padding:24px;}
+.nc-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.nc-data{font-size:12px;color:var(--texto-suave);}
+.nc-dot{width:4px;height:4px;border-radius:50%;background:var(--linha);}
+.nc-leit{font-size:12px;color:var(--texto-suave);}
+.nc-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:500;color:var(--azul);margin-bottom:10px;line-height:1.35;}
+.nc-resumo{font-size:.9rem;color:var(--texto-suave);line-height:1.6;margin-bottom:16px;}
+.nc-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--magenta);text-decoration:none;transition:gap .3s;}
+.nc:hover .nc-link{gap:10px;}
+
+/* FAQ */
+.faq{background:var(--bege);}
+.faq-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.faq-side{position:sticky;top:100px;}
+.faq-cta-box{margin-top:36px;background:var(--azul);border-radius:20px;padding:28px;color:#fff;}
+.faq-cta-box p{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;margin-bottom:18px;color:rgba(255,255,255,.9);}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:var(--branco);border-radius:16px;border:1px solid var(--linha);overflow:hidden;transition:all .3s;}
+.faq-item.open{border-color:var(--magenta);box-shadow:0 8px 30px -8px rgba(233,30,155,.15);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;cursor:pointer;gap:16px;}
+.faq-q h4{font-size:15px;font-weight:600;color:var(--azul);line-height:1.4;}
+.faq-ico{width:28px;height:28px;border-radius:50%;background:var(--bege);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;font-size:18px;color:var(--magenta);}
+.faq-item.open .faq-ico{background:var(--magenta);color:#fff;transform:rotate(45deg);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-item.open .faq-ans{max-height:300px;}
+.faq-ans p{padding:0 24px 22px;font-size:14px;color:var(--texto-suave);line-height:1.7;}
+
+/* CONTATO */
+.contato{background:var(--creme);position:relative;overflow:hidden;}
+.contato::before{content:'';position:absolute;top:50%;left:-200px;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(233,30,155,.06) 0%,transparent 70%);border-radius:50%;}
+.ct-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;position:relative;z-index:2;}
+.ct-cards{display:flex;flex-direction:column;gap:14px;margin-top:36px;}
+.ct-card{background:var(--branco);padding:22px 26px;border-radius:16px;border:1px solid var(--linha);display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--texto);transition:all .3s;}
+.ct-card:hover{transform:translateX(6px);border-color:var(--magenta);box-shadow:0 12px 30px -8px rgba(233,30,155,.18);}
+.ct-ico{width:46px;height:46px;background:var(--bege);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;}
+.ct-card:hover .ct-ico{background:var(--magenta);}
+.ct-ico svg{width:20px;height:20px;color:var(--azul);transition:color .3s;}
+.ct-card:hover .ct-ico svg{color:#fff;}
+.ct-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave);font-weight:600;margin-bottom:3px;}
+.ct-val{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--azul);font-weight:500;}
+.horario{background:var(--azul);color:#fff;border-radius:22px;padding:36px;position:relative;overflow:hidden;}
+.horario::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(233,30,155,.25) 0%,transparent 70%);border-radius:50%;}
+.hor-title{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;margin-bottom:4px;position:relative;z-index:2;}
+.hor-sub{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:24px;position:relative;z-index:2;}
+.hor-lista{position:relative;z-index:2;}
+.hor-item{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.93rem;}
+.hor-item:last-child{border:none;}
+.hor-item.fechado{color:rgba(255,255,255,.45);}
+.horas{font-weight:600;color:var(--magenta-claro);}
+.fechado .horas{color:rgba(255,255,255,.35);}
+.ct-cta-box{margin-top:20px;background:var(--branco);border-radius:20px;padding:28px;border:1px solid var(--linha);}
+.ct-cta-box h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--azul);margin-bottom:8px;}
+.ct-cta-box p{color:var(--texto-suave);font-size:.92rem;line-height:1.6;margin-bottom:20px;}
+
+/* FOOTER */
+.footer{background:#0A0E2E;color:#fff;padding:80px 5% 28px;}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+.ft-brand{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;}
+.ft-brand span{color:var(--magenta-claro);}
+.ft-tagline{font-family:'Fraunces',serif;font-style:italic;color:rgba(255,255,255,.6);line-height:1.65;max-width:340px;margin-bottom:24px;}
+.ft-socials{display:flex;gap:12px;}
+.ft-soc{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:700;transition:all .3s;}
+.ft-soc:hover{background:var(--magenta);border-color:var(--magenta);color:#fff;}
+.ft-col h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta-claro);font-weight:700;margin-bottom:20px;}
+.ft-col ul{list-style:none;}
+.ft-col li{margin-bottom:12px;}
+.ft-col a{color:rgba(255,255,255,.65);text-decoration:none;font-size:14px;transition:color .3s;}
+.ft-col a:hover{color:var(--magenta-claro);}
+.ft-bot{padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:rgba(255,255,255,.4);}
+.ft-bot a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s;}
+.ft-bot a:hover{color:var(--magenta-claro);}
+
+/* WA */
+.wa-btn{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;z-index:99;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:all .3s cubic-bezier(.22,1,.36,1);}
+.wa-btn:hover{transform:scale(1.12);}
+.wa-btn svg{width:30px;height:30px;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .dif-grid{grid-template-columns:repeat(2,1fr);}
+  .sv-layout{grid-template-columns:1fr;gap:40px;}
+  .sv-nav{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+  .stats-band{grid-template-columns:repeat(2,1fr);}
+  .sdiv{display:none;}
+  .faq-layout{grid-template-columns:1fr;gap:40px;}
+  .faq-side{position:static;}
+}
+@media(max-width:968px){
+  .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:340px;height:100vh;background:var(--branco);flex-direction:column;justify-content:center;padding:40px;box-shadow:-10px 0 40px rgba(0,0,0,.1);transition:right .4s cubic-bezier(.22,1,.36,1);}
+  .nav-links.open{right:0;}
+  .menu-toggle{display:block;}
+  .hero{grid-template-columns:1fr;gap:50px;padding-top:110px;}
+  .hero-visual{display:none;}
+  .esp-grid{grid-template-columns:1fr;}
+  .sb-layout{grid-template-columns:1fr;gap:50px;}
+  .nt-grid{grid-template-columns:repeat(2,1fr);}
+  .ct-layout{grid-template-columns:1fr;gap:40px;}
+  .ft-top{grid-template-columns:1fr;gap:36px;}
+  section{padding:80px 5%;}
+}
+@media(max-width:600px){
+  .hero h1{font-size:2.5rem;}
+  .hero-actions{flex-direction:column;}
+  .btn{justify-content:center;}
+  .stats-band{grid-template-columns:1fr 1fr;padding:40px 5%;}
+  .dif-grid{grid-template-columns:1fr;}
+  .nt-grid{grid-template-columns:1fr;}
+  .sv-nav{grid-template-columns:1fr;}
+  .esp-cta{flex-direction:column;text-align:center;}
+  .nt-hdr{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">New<span>Enter</span></a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#especialidades">Especialidades</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#noticias">Notícias</a></li>
+    <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-badge"><div class="badge-dot"></div>Assessoria Contábil Especializada · São Paulo</div>
+    <h1>Contabilidade que<br>fala a língua do<br><em>seu negócio</em></h1>
+    <p class="hero-sub">Especialistas em comércio exterior e hotelaria. Transformamos obrigações fiscais em vantagem competitiva para sua empresa crescer com segurança.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn btn-primary">Consulta gratuita <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#servicos" class="btn btn-secondary">Nossos serviços</a>
+    </div>
+    <div class="hero-proof">
+      <div class="avatars">
+        <div class="av a1">J</div><div class="av a2">M</div><div class="av a3">R</div><div class="av a4">A</div>
+      </div>
+      <div class="proof-txt"><strong>+300 empresas</strong> confiam na NewEnter<br>Comércio exterior · Hotelaria · PMEs</div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-mockup">
+      <div class="float-card fc1"><div class="fci">✅</div><div><div class="fcard-val">Compliance OK</div><div class="fcard-sub">Todas obrigações em dia</div></div></div>
+      <div class="float-card fc2"><div class="fci">📊</div><div><div class="fcard-val">-28% de impostos</div><div class="fcard-sub">Planejamento tributário</div></div></div>
+      <div class="mockup-header"><div class="mdot r"></div><div class="mdot y"></div><div class="mdot g"></div><span class="mockup-title">Painel Gerencial — NewEnter</span></div>
+      <div class="chart">
+        <div class="bar" style="height:35%"></div><div class="bar" style="height:55%"></div>
+        <div class="bar" style="height:45%"></div><div class="bar" style="height:70%"></div>
+        <div class="bar" style="height:60%"></div><div class="bar" style="height:80%"></div>
+        <div class="bar active" style="height:95%"></div>
+      </div>
+      <div class="metric"><span class="metric-label">Economia tributária</span><div style="display:flex;align-items:center;gap:10px"><span class="metric-val">R$ 48<em>k</em></span><span class="mbadge bg">↑ 23%</span></div></div>
+      <div class="metric"><span class="metric-label">Obrigações entregues</span><div style="display:flex;align-items:center;gap:10px"><span class="metric-val">100<em>%</em></span><span class="mbadge bb">No prazo</span></div></div>
+      <div class="metric"><span class="metric-label">Operações COMEX</span><span class="metric-val">214<em>+</em></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-item reveal"><div class="si-num">300<em>+</em></div><div class="si-label">Empresas atendidas</div></div>
+  <div class="sdiv"></div>
+  <div class="stat-item reveal d1"><div class="si-num">10<em>+</em></div><div class="si-label">Anos de mercado</div></div>
+  <div class="sdiv"></div>
+  <div class="stat-item reveal d2"><div class="si-num">0</div><div class="si-label">Autuações fiscais em 3 anos</div></div>
+  <div class="sdiv"></div>
+  <div class="stat-item reveal d3"><div class="si-num">98<em>%</em></div><div class="si-label">Clientes satisfeitos</div></div>
+</div>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais" id="diferenciais">
+  <div class="reveal">
+    <span class="stag">Por que a NewEnter</span>
+    <h2 class="stitle">Contabilidade que vai <em>além dos números</em></h2>
+    <p class="ssub">Mais do que cumprir obrigações fiscais — somos parceiros estratégicos no crescimento do seu negócio.</p>
+  </div>
+  <div class="dif-grid">
+    <div class="dif d-1 reveal d1"><div class="dif-icon">🎯</div><h3>Especialização real</h3><p>Equipe com expertise em comércio exterior e hotelaria — não somos generalistas. Conhecemos as nuances do seu setor.</p></div>
+    <div class="dif d-2 reveal d2"><div class="dif-icon">⚡</div><h3>Resposta rápida</h3><p>Atendimento via WhatsApp com retorno em até 4 horas. Nada de aguardar dias para tirar uma dúvida urgente.</p></div>
+    <div class="dif d-3 reveal d3"><div class="dif-icon">📊</div><h3>Relatórios gerenciais</h3><p>Você recebe relatórios mensais em linguagem clara — dados que realmente ajudam a tomar decisões estratégicas.</p></div>
+    <div class="dif d-4 reveal d1"><div class="dif-icon">🛡️</div><h3>Zero autuações</h3><p>Nossa metodologia rigorosa garante que suas obrigações sejam entregues corretamente, eliminando riscos fiscais.</p></div>
+    <div class="dif d-5 reveal d2"><div class="dif-icon">💡</div><h3>Planejamento tributário</h3><p>Identificamos oportunidades legais para reduzir sua carga tributária — média de 15 a 28% de economia.</p></div>
+    <div class="dif d-6 reveal d3"><div class="dif-icon">🤝</div><h3>Parceiro de longo prazo</h3><p>Acompanhamos o crescimento da sua empresa e evoluímos juntos — muito além de um simples prestador de serviço.</p></div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="sv-layout">
+    <div class="sv-nav reveal-left">
+      <span class="stag">Serviços</span>
+      <h2 class="stitle" style="margin-bottom:28px">Tudo que sua empresa <em>precisa</em></h2>
+      <div class="sv-item active" onclick="hlSv(this,0)"><div class="snum">01</div><div class="sv-txt"><h4>Contabilidade Geral</h4><span>Escrituração, balanços, DRE</span></div></div>
+      <div class="sv-item" onclick="hlSv(this,1)"><div class="snum">02</div><div class="sv-txt"><h4>Comércio Exterior</h4><span>Importação, exportação, NCM</span></div></div>
+      <div class="sv-item" onclick="hlSv(this,2)"><div class="snum">03</div><div class="sv-txt"><h4>Hotelaria & Turismo</h4><span>RevPAR, F&B, centro de custo</span></div></div>
+      <div class="sv-item" onclick="hlSv(this,3)"><div class="snum">04</div><div class="sv-txt"><h4>Planejamento Tributário</h4><span>Regime ideal, economia fiscal</span></div></div>
+      <div class="sv-item" onclick="hlSv(this,4)"><div class="snum">05</div><div class="sv-txt"><h4>Departamento Pessoal</h4><span>Folha, eSocial, admissões</span></div></div>
+      <div class="sv-item" onclick="hlSv(this,5)"><div class="snum">06</div><div class="sv-txt"><h4>Consultoria Financeira</h4><span>Fluxo de caixa, diagnóstico</span></div></div>
+    </div>
+    <div class="sv-cards reveal-right">
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l6-6m-6 0h6v6M3 17V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h3>Contabilidade Geral</h3></div><p>Escrituração contábil completa, balancetes mensais, DRE e balanço patrimonial. Relatórios gerenciais em linguagem clara para tomada de decisão segura.</p><div class="sc-tags"><span class="sc-tag">Escrituração</span><span class="sc-tag">Balancetes</span><span class="sc-tag">DRE</span><span class="sc-tag">Balanço</span></div></div>
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><h3>Comércio Exterior</h3></div><p>Assessoria completa em importação e exportação: classificação NCM, SISCOMEX, regimes aduaneiros especiais, drawback e recuperação de créditos tributários.</p><div class="sc-tags"><span class="sc-tag">NCM / SISCOMEX</span><span class="sc-tag">Drawback</span><span class="sc-tag">Recof</span><span class="sc-tag">Exportação</span></div></div>
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h3>Hotelaria & Turismo</h3></div><p>Contabilidade gerencial para hotéis e pousadas: centro de custo por UH, controle de F&B, indicadores como RevPAR, ADR e GoProfit.</p><div class="sc-tags"><span class="sc-tag">RevPAR / ADR</span><span class="sc-tag">F&B Control</span><span class="sc-tag">Centro de Custo</span></div></div>
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Planejamento Tributário</h3></div><p>Análise do regime mais vantajoso (Simples, Lucro Presumido ou Real). Redução legal da carga fiscal com segurança total e conformidade regulatória.</p><div class="sc-tags"><span class="sc-tag">Simples Nacional</span><span class="sc-tag">Lucro Presumido</span><span class="sc-tag">Lucro Real</span></div></div>
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3>Departamento Pessoal</h3></div><p>Gestão completa da folha de pagamento, eSocial, pró-labore, FGTS, admissões e demissões com segurança jurídica total.</p><div class="sc-tags"><span class="sc-tag">Folha de Pagamento</span><span class="sc-tag">eSocial</span><span class="sc-tag">FGTS</span></div></div>
+      <div class="sc"><div class="sc-hd"><div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Consultoria Financeira</h3></div><p>Diagnóstico financeiro, fluxo de caixa projetado, análise de indicadores e orientação estratégica para crescimento sustentável.</p><div class="sc-tags"><span class="sc-tag">Fluxo de Caixa</span><span class="sc-tag">Indicadores</span><span class="sc-tag">Diagnóstico</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="esp" id="especialidades">
+  <div class="esp-hdr reveal">
+    <span class="stag">Nossas especialidades</span>
+    <h2 class="stitle">Expertise em dois <em>universos</em> únicos</h2>
+    <p class="ssub">Dominamos as particularidades contábeis e fiscais de dois setores com legislações próprias e dinâmicas exigentes.</p>
+  </div>
+  <div class="esp-grid">
+    <div class="eb reveal-left">
+      <div class="eb-num">01</div>
+      <div class="eb-vis">
+        <svg class="esp-globo" viewBox="0 0 160 160" fill="none">
+          <circle cx="80" cy="80" r="68" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+          <ellipse cx="80" cy="80" rx="32" ry="68" stroke="rgba(255,255,255,.12)" stroke-width="1" class="orbit"/>
+          <ellipse cx="80" cy="80" rx="68" ry="24" stroke="rgba(255,255,255,.12)" stroke-width="1" class="orbit"/>
+          <circle cx="80" cy="12" r="5" fill="#FF3DB0" class="pr p1"/>
+          <circle cx="148" cy="80" r="4" fill="#FF3DB0" class="pr p2"/>
+          <circle cx="22" cy="54" r="3.5" fill="white" class="pr p3"/>
+          <circle cx="112" cy="138" r="4" fill="#FF3DB0" class="pr p4"/>
+          <line x1="22" y1="54" x2="80" y2="12" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+          <line x1="80" y1="12" x2="148" y2="80" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+          <line x1="148" y1="80" x2="112" y2="138" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+          <circle cx="80" cy="80" r="12" fill="rgba(255,61,176,.3)" stroke="#FF3DB0" stroke-width="1.5"/>
+        </svg>
+        <div class="etags"><div class="etag t1">🌎 Importação</div><div class="etag t2">📦 Drawback</div><div class="etag t3">🚢 Exportação</div></div>
+      </div>
+      <h3>Comércio Exterior</h3>
+      <p class="eb-desc">Assessoria completa para empresas que operam no mercado internacional, garantindo compliance aduaneiro e fiscal em todas as etapas.</p>
+      <div class="eb-feats">
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><strong>Classificação Fiscal NCM</strong><span>Análise precisa de todos os produtos</span></div></div>
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><strong>Regimes Aduaneiros Especiais</strong><span>Drawback, Recof, Entreposto</span></div></div>
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div><div><strong>SISCOMEX & Documentação</strong><span>Gestão completa das operações</span></div></div>
+      </div>
+      <div class="eb-stats"><div class="es"><div class="es-num">200<span>+</span></div><div class="es-lbl">Operações mensais</div></div><div class="es-div"></div><div class="es"><div class="es-num">15<span>%</span></div><div class="es-lbl">Redução média de custos</div></div></div>
+    </div>
+    <div class="eb reveal-right">
+      <div class="eb-num">02</div>
+      <div class="eb-vis">
+        <svg class="esp-predio" viewBox="0 0 160 160" fill="none">
+          <rect x="28" y="42" width="104" height="110" rx="4" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/>
+          <rect x="48" y="20" width="64" height="26" rx="3" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+          <g class="jns">
+            <rect class="j1" x="40" y="56" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j2" x="60" y="56" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j3" x="80" y="56" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j4" x="100" y="56" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j5" x="40" y="74" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j6" x="60" y="74" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j7" x="80" y="74" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j8" x="100" y="74" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+            <rect class="j9" x="40" y="92" width="14" height="10" rx="2" fill="#FF3DB0" opacity=".9"/>
+          </g>
+          <rect x="58" y="118" width="44" height="34" rx="3" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+          <g class="estrelas" style="font-size:13px">
+            <text x="42" y="36" fill="#FFD700">★</text><text x="56" y="36" fill="#FFD700">★</text>
+            <text x="70" y="36" fill="#FFD700">★</text><text x="84" y="36" fill="#FFD700">★</text>
+            <text x="98" y="36" fill="#FFD700">★</text>
+          </g>
+        </svg>
+        <div class="etags"><div class="etag t1">🏨 RevPAR</div><div class="etag t2">📊 F&B Control</div><div class="etag t3">🛎️ GoProfit</div></div>
+      </div>
+      <h3>Hotelaria & Turismo</h3>
+      <p class="eb-desc">Contabilidade gerencial para o setor hoteleiro com indicadores e relatórios para maximizar rentabilidade por unidade habitacional.</p>
+      <div class="eb-feats">
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div><strong>Centro de Custo por UH</strong><span>Controle individual de rentabilidade</span></div></div>
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><strong>Indicadores Setoriais</strong><span>RevPAR, ADR, TRevPAR, GoProfit</span></div></div>
+        <div class="ef"><div class="efico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><strong>Controle de F&B</strong><span>Custo de alimentos e bebidas</span></div></div>
+      </div>
+      <div class="eb-stats"><div class="es"><div class="es-num">50<span>+</span></div><div class="es-lbl">Hotéis atendidos</div></div><div class="es-div"></div><div class="es"><div class="es-num">30<span>%</span></div><div class="es-lbl">Melhora no GoProfit</div></div></div>
+    </div>
+  </div>
+  <div class="esp-cta reveal">
+    <p>Pronto para uma contabilidade que entende o seu setor de verdade?</p>
+    <a href="#contato" class="btn" style="background:var(--magenta);color:#fff;white-space:nowrap;">Agendar conversa grátis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="sb-layout">
+    <div class="sb-foto-wrap reveal-left">
+      <div class="sb-foto"><div class="sb-foto-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Foto da equipe</span></div></div>
+      <div class="sb-badge"><div class="sb-badge-num">10<em>+</em></div><div class="sb-badge-lbl">anos de<br>experiência</div></div>
+    </div>
+    <div class="reveal-right">
+      <span class="stag">Quem somos</span>
+      <h2 class="stitle">Mais de uma década <em>transformando</em> números em decisões</h2>
+      <p class="sb-bio">A <strong>NewEnter</strong> nasceu da convicção de que contabilidade vai muito além de obrigações fiscais. Somos uma assessoria que une <strong>rigor técnico e visão estratégica</strong> para empresas que operam em segmentos exigentes.</p>
+      <p class="sb-bio">Nossa equipe combina expertise em <strong>comércio exterior e hotelaria</strong> — dois setores com legislações específicas que exigem conhecimento profundo e atualização constante.</p>
+      <div class="creds"><div class="cred">✓ CRC Ativo</div><div class="cred">✓ Membro SINCOSP</div><div class="cred">✓ Especialista COMEX</div><div class="cred">✓ Certificação Hotelaria</div></div>
+      <div class="assin"><div class="assin-nome">Janaína Carmo</div><div class="assin-cargo">Sócia-Fundadora · Contadora CRC-SP</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTÍCIAS -->
+<section class="noticias" id="noticias">
+  <div class="nt-hdr reveal">
+    <div><span class="stag">Notícias & Dicas</span><h2 class="stitle" style="margin-bottom:0">Fique por dentro do <em>universo contábil</em></h2></div>
+    <a href="#" class="btn btn-secondary" style="white-space:nowrap">Ver todas →</a>
+  </div>
+  <div class="nt-grid">
+    <div class="nc reveal d1">
+      <div class="nc-thumb nc-fiscal">📋<div class="nc-badge">Fiscal</div></div>
+      <div class="nc-body">
+        <div class="nc-meta"><span class="nc-data">15 Mai 2025</span><div class="nc-dot"></div><span class="nc-leit">4 min de leitura</span></div>
+        <h3 class="nc-title">Novas regras do Simples Nacional 2025: o que muda para sua empresa</h3>
+        <p class="nc-resumo">O governo publicou alterações importantes nas alíquotas e limites. Veja como isso afeta o seu planejamento tributário.</p>
+        <a href="#" class="nc-link">Ler artigo <span>→</span></a>
+      </div>
+    </div>
+    <div class="nc reveal d2">
+      <div class="nc-thumb nc-comex">🌎<div class="nc-badge">COMEX</div></div>
+      <div class="nc-body">
+        <div class="nc-meta"><span class="nc-data">10 Mai 2025</span><div class="nc-dot"></div><span class="nc-leit">6 min de leitura</span></div>
+        <h3 class="nc-title">Drawback suspensão: como reduzir impostos nas importações em 2025</h3>
+        <p class="nc-resumo">O regime de drawback suspensão é um dos mais vantajosos para importadores. Entenda os requisitos e benefícios.</p>
+        <a href="#" class="nc-link">Ler artigo <span>→</span></a>
+      </div>
+    </div>
+    <div class="nc reveal d3">
+      <div class="nc-thumb nc-hotel">🏨<div class="nc-badge">Hotelaria</div></div>
+      <div class="nc-body">
+        <div class="nc-meta"><span class="nc-data">05 Mai 2025</span><div class="nc-dot"></div><span class="nc-leit">5 min de leitura</span></div>
+        <h3 class="nc-title">RevPAR vs TRevPAR: qual indicador usar para medir a performance do seu hotel</h3>
+        <p class="nc-resumo">Entender a diferença entre esses indicadores muda como você avalia a rentabilidade do seu empreendimento.</p>
+        <a href="#" class="nc-link">Ler artigo <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-layout">
+    <div class="faq-side reveal-left">
+      <span class="stag">Dúvidas frequentes</span>
+      <h2 class="stitle">Perguntas que <em>todo cliente</em> faz</h2>
+      <p class="ssub" style="margin-bottom:0">Não encontrou sua resposta? Fale com nossa equipe.</p>
+      <div class="faq-cta-box">
+        <p>Prefere conversar com um especialista?</p>
+        <a href="https://wa.me/5511999999999" class="btn" style="background:var(--magenta);color:#fff;width:100%;justify-content:center;" target="_blank">Falar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <div class="faq-list reveal-right">
+      <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><h4>Qual a diferença entre Lucro Presumido e Lucro Real?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>No Lucro Presumido, a base de cálculo é uma margem presumida pela Receita Federal. No Lucro Real, os impostos incidem sobre o lucro efetivo. Empresas com margens baixas geralmente se beneficiam do Lucro Real. Nossa equipe faz a análise do regime ideal para cada caso.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><h4>Minha empresa pode se beneficiar do Drawback?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>O Drawback é para empresas exportadoras que importam insumos para fabricação de produtos exportados. Se você importa matéria-prima e exporta o produto final, muito provavelmente pode se beneficiar com suspensão ou isenção de tributos. Entre em contato para análise gratuita.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><h4>O que é o eSocial e como afeta minha empresa?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>O eSocial é a plataforma digital do governo que unifica o envio de informações trabalhistas, previdenciárias e fiscais. Toda empresa com funcionários CLT deve enviar informações periodicamente. Nossa equipe cuida de todo o processo, evitando multas e inconsistências.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><h4>Como funciona a contabilidade para hotéis?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>A contabilidade hoteleira vai além da escrituração convencional. Trabalhamos com centros de custo por UH, controle de F&B, indicadores como RevPAR e ADR, e relatórios específicos para o setor — permitindo decisões baseadas em dados reais do negócio.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><h4>Qual o prazo para trocar de contador?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>A troca pode ser feita a qualquer momento. O processo envolve uma declaração de quitação pelo contador anterior e transferência dos documentos. Nossa equipe cuida de toda a burocracia para que a transição seja tranquila e sem prejuízo para as obrigações da empresa.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><h4>Vocês atendem empresas fora de São Paulo?</h4><div class="faq-ico">+</div></div><div class="faq-ans"><p>Sim! Atendemos empresas em todo o Brasil 100% online. Nosso processo é totalmente digital — assinatura de documentos, relatórios e comunicação via WhatsApp e e-mail. A distância não é obstáculo para uma assessoria contábil de qualidade.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="ct-layout">
+    <div class="reveal-left">
+      <span class="stag">Fale com a gente</span>
+      <h2 class="stitle">Vamos conversar sobre o seu <em>negócio</em></h2>
+      <p class="ssub">Agende uma consulta gratuita. Nossos especialistas analisam sua empresa e apresentam as melhores soluções.</p>
+      <div class="ct-cards">
+        <a href="https://wa.me/5511999999999" class="ct-card" target="_blank"><div class="ct-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><div class="ct-lbl">WhatsApp</div><div class="ct-val">(11) 9 9999-9999</div></div></a>
+        <a href="mailto:contato@newenter.com.br" class="ct-card"><div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ct-lbl">E-mail</div><div class="ct-val">contato@newenter.com.br</div></div></a>
+        <div class="ct-card" style="cursor:default"><div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ct-lbl">Localização</div><div class="ct-val">São Paulo, SP</div></div></div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <div class="horario">
+        <div class="hor-title">Horário de atendimento</div>
+        <div class="hor-sub">Estamos prontos para atender você</div>
+        <div class="hor-lista">
+          <div class="hor-item"><span>Segunda — Sexta</span><span class="horas">08h — 18h</span></div>
+          <div class="hor-item"><span>Sábado</span><span class="horas">09h — 13h</span></div>
+          <div class="hor-item fechado"><span>Domingo</span><span class="horas">Fechado</span></div>
+        </div>
+      </div>
+      <div class="ct-cta-box">
+        <h3>Primeira consulta gratuita</h3>
+        <p>Sem compromisso. Analisamos sua empresa e apresentamos as melhores soluções para o seu setor.</p>
+        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20gratuita." class="btn btn-primary" target="_blank" style="width:100%;justify-content:center;">Agendar agora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ft-top">
+    <div>
+      <div class="ft-brand">New<span>Enter</span></div>
+      <p class="ft-tagline">Assessoria contábil especializada em comércio exterior e hotelaria. Transformando números em soluções estratégicas.</p>
+      <div class="ft-socials"><a href="#" class="ft-soc">in</a><a href="#" class="ft-soc">ig</a><a href="#" class="ft-soc">f</a></div>
+    </div>
+    <div class="ft-col"><h4>Serviços</h4><ul><li><a href="#servicos">Contabilidade Geral</a></li><li><a href="#servicos">Comércio Exterior</a></li><li><a href="#servicos">Hotelaria & Turismo</a></li><li><a href="#servicos">Planejamento Tributário</a></li><li><a href="#servicos">Departamento Pessoal</a></li></ul></div>
+    <div class="ft-col"><h4>Empresa</h4><ul><li><a href="#sobre">Sobre nós</a></li><li><a href="#especialidades">Especialidades</a></li><li><a href="#noticias">Notícias</a></li><li><a href="#faq">Perguntas frequentes</a></li><li><a href="#contato">Contato</a></li></ul></div>
+  </div>
+  <div class="ft-bot"><span>© 2025 NewEnter Assessoria Contábil. Todos os direitos reservados.</span><a href="#inicio">Voltar ao topo ↑</a></div>
+</footer>
+
+<!-- WA -->
+<a href="https://wa.me/5511999999999" class="wa-btn" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const menuToggle=document.getElementById('menuToggle'),navLinks=document.getElementById('navLinks'),nav=document.getElementById('nav');
+menuToggle.addEventListener('click',()=>{navLinks.classList.toggle('open');menuToggle.textContent=navLinks.classList.contains('open')?'✕':'☰';});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.textContent='☰';}));
+document.addEventListener('click',e=>{if(!nav.contains(e.target)){navLinks.classList.remove('open');menuToggle.textContent='☰';}});
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+function toggleFaq(btn){const item=btn.parentElement,isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+function hlSv(el,idx){document.querySelectorAll('.sv-item').forEach(i=>i.classList.remove('active'));el.classList.add('active');const cards=document.querySelectorAll('.sc');cards.forEach(c=>c.style.opacity='.45');if(cards[idx]){cards[idx].style.opacity='1';cards[idx].scrollIntoView({behavior:'smooth',block:'nearest'});}setTimeout(()=>cards.forEach(c=>c.style.opacity='1'),1400);}
+</script>
+</body>
+</html>
