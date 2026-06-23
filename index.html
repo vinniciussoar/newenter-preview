@@ -3,1120 +3,1432 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NewEnter — Contabilidade especializada em Comércio Exterior & Hotelaria</title>
-<meta name="description" content="Reduza seus impostos em até 30% com uma contabilidade que entende seu setor. Especialistas em comércio exterior e hotelaria em São Paulo.">
-<meta name="theme-color" content="#1B2A8E">
+<title>NEWENTER — Inteligência Empresarial, Governança e Performance</title>
+<meta name="description" content="Plataforma integrada de inteligência empresarial que conecta contabilidade estratégica, controladoria, tributação, compliance e governança em uma única visão executiva. Brasil e América Latina.">
+<meta name="keywords" content="inteligência empresarial, governança corporativa, controladoria, BI, planejamento tributário, compliance, contabilidade estratégica, comércio exterior, hotelaria, CFO, family office">
+<meta name="author" content="NEWENTER">
+<meta name="theme-color" content="#0A1733">
+<link rel="canonical" href="https://www.newenter.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="NEWENTER">
+<meta property="og:title" content="NEWENTER — Inteligência Empresarial, Governança e Performance">
+<meta property="og:description" content="Transformamos obrigações em inteligência para decisões empresariais. Uma única visão executiva que conecta tributação, controladoria, compliance e governança.">
+<meta property="og:url" content="https://www.newenter.com.br/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NEWENTER",
+  "description": "Plataforma integrada de inteligência empresarial, governança e performance para empresas em expansão.",
+  "areaServed": ["Brasil", "América Latina"],
+  "knowsAbout": ["Governança Corporativa", "Controladoria", "Planejamento Tributário", "Compliance", "Comércio Exterior", "Hotelaria"],
+  "url": "https://www.newenter.com.br/",
+  "slogan": "Transformamos obrigações em inteligência para decisões empresariais."
+}
+</script>
+
 <style>
 :root{
-  --azul:#1B2A8E;--azul-claro:#2E40C7;--magenta:#E91E9B;--magenta-claro:#FF3DB0;
-  --bege:#F5F1EB;--creme:#FAF7F2;--branco:#FFFFFF;--texto:#0F1442;
-  --texto-suave:#5A5F7E;--linha:#E8E4DC;--vermelho:#DC2626;--verde:#059669;
+  --navy:#0A1733;        /* Azul Executivo (primária) */
+  --navy-2:#162A5C;      /* Secundária */
+  --navy-3:#0E1E45;      /* Intermediária para gradientes */
+  --gold:#C8A96B;        /* Dourado institucional (acento) */
+  --gold-2:#DABE89;      /* Dourado claro */
+  --gold-deep:#A98A4F;   /* Dourado profundo */
+  --snow:#FFFFFF;
+  --mist:#F7F8FA;        /* Neutro claro */
+  --cloud:#EAECEF;       /* Neutro */
+  --line:#E3E6EB;
+  --line-soft:#EEF0F3;
+  --ink:#0A1733;         /* Texto sobre claro */
+  --ink-soft:#54607A;    /* Texto secundário */
+  --ink-mute:#8791A6;    /* Texto terciário */
+  --on-dark:#FFFFFF;
+  --on-dark-soft:rgba(255,255,255,0.74);
+  --on-dark-mute:rgba(255,255,255,0.50);
+  --on-dark-line:rgba(255,255,255,0.12);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-section[id]{scroll-margin-top:80px;}
-body{font-family:'Inter Tight',system-ui,sans-serif;background:var(--creme);color:var(--texto);line-height:1.6;overflow-x:hidden;}
+section[id],div[id]{scroll-margin-top:88px;}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--snow);color:var(--ink);
+  line-height:1.65;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"ss01","cv05";
+}
+::selection{background:rgba(200,169,107,0.28);color:var(--navy);}
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(36px);transition:opacity 1s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1);will-change:opacity,transform;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1);}
-.reveal-left.visible{opacity:1;transform:translateX(0);}
-.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1);}
-.reveal-right.visible{opacity:1;transform:translateX(0);}
-.delay-1{transition-delay:0.1s;}.delay-2{transition-delay:0.2s;}.delay-3{transition-delay:0.3s;}
+/* ---------- TIPOGRAFIA / UTIL ---------- */
+.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:12px;letter-spacing:0.26em;text-transform:uppercase;
+  font-weight:600;color:var(--gold-deep);
+}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--gold);display:inline-block;}
+.eyebrow.center{justify-content:center;}
+.on-dark .eyebrow{color:var(--gold-2);}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.1rem,4.4vw,3.5rem);
+  font-weight:500;line-height:1.08;letter-spacing:-0.01em;
+  color:var(--navy);margin:22px 0 20px;max-width:18ch;
+}
+.section-title em{font-style:italic;color:var(--gold-deep);font-weight:500;}
+.on-dark .section-title{color:var(--on-dark);}
+.on-dark .section-title em{color:var(--gold-2);}
+.section-lead{
+  font-size:1.08rem;color:var(--ink-soft);max-width:60ch;line-height:1.75;font-weight:300;
+}
+.on-dark .section-lead{color:var(--on-dark-soft);}
+.center{text-align:center;}
+.center .section-title,.center .section-lead{margin-left:auto;margin-right:auto;}
+.center .section-title{max-width:22ch;}
 
-/* NAVBAR */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,242,0.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(232,228,220,0.6);transition:padding 0.3s,box-shadow 0.3s;}
-.nav.scrolled{padding:12px 5%;box-shadow:0 4px 30px rgba(27,42,142,0.08);}
-.nav-logo{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--azul);text-decoration:none;letter-spacing:-0.02em;}
-.nav-logo span{color:var(--magenta);}
-.nav-cta{background:var(--azul);color:var(--branco);text-decoration:none;padding:11px 24px;border-radius:50px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;box-shadow:0 4px 16px rgba(27,42,142,0.25);}
-.nav-cta:hover{background:var(--magenta);transform:translateY(-1px);}
-.nav-cta svg{width:16px;height:16px;}
+/* ---------- REVEAL (microinterações discretas) ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1);will-change:opacity,transform;}
+.reveal.visible{opacity:1;transform:none;}
+.d1{transition-delay:0.08s;}.d2{transition-delay:0.16s;}.d3{transition-delay:0.24s;}.d4{transition-delay:0.32s;}.d5{transition-delay:0.40s;}
 
-/* BOTÕES */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 36px;border-radius:50px;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer;border:none;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;}
-.btn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left 0.6s;}
-.btn:hover::before{left:140%;}
-.btn-primary{background:var(--azul);color:var(--branco);box-shadow:0 6px 24px rgba(27,42,142,0.3);}
-.btn-primary:hover{background:var(--magenta);transform:translateY(-3px);box-shadow:0 14px 36px rgba(233,30,155,0.4);}
-.btn-outline-white{background:transparent;color:var(--branco);border:2px solid rgba(255,255,255,0.4);}
-.btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:var(--branco);}
-.btn svg{width:18px;height:18px;transition:transform 0.3s;}
-.btn:hover svg{transform:translateX(5px);}
+/* ---------- SECTION SHELL ---------- */
+section{padding:118px 6%;position:relative;}
+.wrap{max-width:1240px;margin:0 auto;}
+.section-head{max-width:760px;margin-bottom:64px;}
+.center.section-head{margin-left:auto;margin-right:auto;}
 
-/* HERO */
-.hero{min-height:100vh;padding:140px 5% 80px;display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--creme) 0%,#EEF0FF 100%);}
-.hero-blob-1{position:absolute;top:-200px;right:-150px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,155,0.12) 0%,transparent 65%);z-index:0;animation:blob 10s ease-in-out infinite;}
-.hero-blob-2{position:absolute;bottom:-300px;left:-150px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(27,42,142,0.08) 0%,transparent 65%);z-index:0;animation:blob 12s ease-in-out infinite reverse;}
-@keyframes blob{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(24px,-18px) scale(1.06);}66%{transform:translate(-12px,14px) scale(0.97);}}
-.hero-content{position:relative;z-index:2;animation:slideUp 0.9s cubic-bezier(0.22,1,0.36,1);}
-@keyframes slideUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;background:var(--branco);padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;color:var(--azul);letter-spacing:0.04em;border:1px solid var(--linha);margin-bottom:32px;box-shadow:0 4px 24px rgba(27,42,142,0.08);}
-.hero-tag-dot{width:8px;height:8px;border-radius:50%;background:var(--magenta);box-shadow:0 0 0 3px rgba(233,30,155,0.2);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 3px rgba(233,30,155,0.2);}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(233,30,155,0.1);}}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,5.5vw,4.6rem);font-weight:400;line-height:1.04;letter-spacing:-0.03em;color:var(--azul);margin-bottom:24px;}
-.hero h1 em{font-style:italic;font-weight:500;color:var(--magenta);}
-.hero h1 .hl{position:relative;display:inline-block;font-weight:500;}
-.hero h1 .hl::after{content:'';position:absolute;left:0;right:0;bottom:6px;height:14px;background:rgba(233,30,155,0.25);z-index:-1;border-radius:4px;}
-.hero-desc{font-size:1.2rem;color:var(--texto-suave);margin-bottom:36px;max-width:540px;line-height:1.7;}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
-.hero-proof{display:flex;align-items:center;gap:18px;padding-top:28px;border-top:1px solid var(--linha);}
-.proof-avatars{display:flex;}
-.proof-avatars span{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--magenta));border:2.5px solid var(--branco);margin-left:-10px;font-size:12px;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;}
-.proof-avatars span:first-child{margin-left:0;}
-.proof-stars{color:#F59E0B;font-size:14px;letter-spacing:1.5px;margin-bottom:2px;}
-.proof-text{font-size:13px;color:var(--texto-suave);}
-.proof-text strong{color:var(--texto);font-weight:600;}
-.hero-visual{position:relative;z-index:2;animation:slideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s backwards;}
-.hero-card{background:var(--branco);border-radius:24px;padding:40px;box-shadow:0 40px 80px -25px rgba(27,42,142,0.25);border:1px solid var(--linha);position:relative;}
-.hero-card-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:28px;padding:6px 12px;background:rgba(233,30,155,0.08);border-radius:50px;}
-.hero-saving-label{font-size:12px;color:var(--texto-suave);font-weight:500;margin-bottom:6px;}
-.hero-saving-val{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:500;color:var(--azul);line-height:1;margin-bottom:6px;}
-.hero-saving-val .num{color:var(--magenta);font-style:italic;}
-.hero-saving-sub{font-size:13px;color:var(--texto-suave);margin-bottom:24px;}
-.hero-bar{margin:16px 0;}
-.hero-bar-label{display:flex;justify-content:space-between;font-size:12px;color:var(--texto-suave);margin-bottom:8px;}
-.hero-bar-track{height:10px;background:var(--bege);border-radius:50px;overflow:hidden;position:relative;}
-.hero-bar-fill{position:absolute;left:0;top:0;bottom:0;border-radius:50px;animation:fillBar 1.5s cubic-bezier(0.22,1,0.36,1) 0.5s backwards;}
-.hero-bar-fill.b1{width:78%;background:linear-gradient(90deg,var(--vermelho),#F87171);}
-.hero-bar-fill.b2{width:55%;background:linear-gradient(90deg,var(--verde),#34D399);}
-@keyframes fillBar{from{width:0;}}
-.hero-mini-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;padding-top:24px;border-top:1px solid var(--linha);}
-.hero-mini-tag{font-size:12px;font-weight:500;color:var(--azul);padding:6px 12px;background:var(--bege);border-radius:50px;}
-.hero-float{position:absolute;background:var(--branco);padding:14px 18px;border-radius:14px;box-shadow:0 14px 40px rgba(27,42,142,0.15);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--azul);border:1px solid var(--linha);}
-.hero-float.f1{top:-18px;left:-30px;animation:float 6s ease-in-out infinite;}
-.hero-float.f2{bottom:30px;right:-30px;animation:float 6s ease-in-out infinite 3s;}
-.hero-float-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.hero-float.f1 .hero-float-icon{background:rgba(5,150,105,0.12);color:var(--verde);}
-.hero-float.f2 .hero-float-icon{background:rgba(233,30,155,0.12);color:var(--magenta);}
-.hero-float svg{width:18px;height:18px;}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:11px;
+  padding:16px 30px;border-radius:2px;
+  font-family:'Inter',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.01em;
+  text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:all 0.45s cubic-bezier(0.16,1,0.3,1);position:relative;
+}
+.btn svg{width:17px;height:17px;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);}
+.btn:hover svg{transform:translateX(4px);}
+.btn-primary{background:var(--navy);color:#fff;border-color:var(--navy);}
+.btn-primary:hover{background:var(--navy-2);box-shadow:0 14px 34px -14px rgba(10,23,51,0.5);transform:translateY(-2px);}
+.btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:600;}
+.btn-gold:hover{background:var(--gold-2);box-shadow:0 16px 38px -14px rgba(200,169,107,0.6);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--navy);background:var(--mist);}
+.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,0.28);}
+.btn-ghost-light:hover{border-color:var(--gold);color:var(--gold-2);}
 
-/* SEÇÕES GERAIS */
-section{padding:120px 5%;position:relative;}
-.section-tag{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:16px;display:block;}
-.section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,4.2vw,3.4rem);font-weight:400;line-height:1.1;letter-spacing:-0.02em;color:var(--azul);margin-bottom:20px;max-width:800px;}
-.section-title em{font-style:italic;color:var(--magenta);font-weight:500;}
-.section-subtitle{font-size:1.1rem;color:var(--texto-suave);max-width:620px;margin-bottom:64px;line-height:1.7;}
-.text-center{text-align:center;}
-.text-center .section-title,.text-center .section-subtitle{margin-left:auto;margin-right:auto;}
+/* ---------- NAVBAR ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 6%;
+  background:rgba(255,255,255,0.0);
+  transition:padding 0.35s,background 0.35s,box-shadow 0.35s,border-color 0.35s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  padding:14px 6%;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 10px 40px -28px rgba(10,23,51,0.35);
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;
+  color:#fff;text-decoration:none;letter-spacing:0.16em;line-height:1;
+  display:flex;align-items:center;gap:0;transition:color 0.35s;
+}
+.nav-logo b{font-weight:600;}
+.nav-logo .dot{color:var(--gold);font-size:1.7rem;line-height:0;margin-left:2px;}
+.nav.scrolled .nav-logo{color:var(--navy);}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-links a{
+  font-size:13.5px;font-weight:500;letter-spacing:0.02em;text-decoration:none;
+  color:rgba(255,255,255,0.78);transition:color 0.3s;position:relative;
+}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width 0.35s;}
+.nav-links a:hover{color:#fff;}
+.nav-links a:hover::after{width:100%;}
+.nav.scrolled .nav-links a{color:var(--ink-soft);}
+.nav.scrolled .nav-links a:hover{color:var(--navy);}
+.nav-cta{
+  font-size:13.5px;font-weight:500;letter-spacing:0.01em;text-decoration:none;
+  color:var(--navy);background:var(--gold);
+  padding:11px 22px;border-radius:2px;transition:all 0.35s;
+  display:inline-flex;align-items:center;gap:9px;border:1px solid var(--gold);
+}
+.nav-cta:hover{background:var(--gold-2);transform:translateY(-1px);}
+.nav-cta svg{width:15px;height:15px;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
+.nav-toggle span{width:24px;height:2px;background:#fff;transition:background 0.3s;display:block;}
+.nav.scrolled .nav-toggle span{background:var(--navy);}
 
-/* PROBLEMA / SOLUÇÃO */
-.problema-solucao{background:var(--creme);}
-.ps-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:60px;align-items:start;}
-.ps-coluna h3{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;margin-bottom:32px;}
-.ps-coluna.problema h3{color:var(--vermelho);}
-.ps-coluna.solucao h3{color:var(--verde);}
-.ps-item{background:var(--branco);padding:22px 26px;border-radius:16px;border:1px solid var(--linha);margin-bottom:14px;display:flex;align-items:flex-start;gap:16px;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);}
-.ps-item:hover{transform:translateX(8px);box-shadow:0 18px 40px -12px rgba(27,42,142,0.16);border-color:transparent;}
-.ps-icon{width:40px;height:40px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-.problema .ps-icon{background:rgba(220,38,38,0.1);color:var(--vermelho);}
-.solucao .ps-icon{background:rgba(5,150,105,0.1);color:var(--verde);}
-.ps-icon svg{width:20px;height:20px;}
-.ps-item-titulo{font-weight:600;color:var(--texto);margin-bottom:4px;font-size:14px;}
-.ps-item-desc{font-size:13px;color:var(--texto-suave);line-height:1.55;}
-.ps-arrow{display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:var(--magenta);padding-top:60px;}
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh;padding:160px 6% 90px;
+  display:grid;grid-template-columns:1.08fr 0.92fr;gap:72px;align-items:center;
+  background:
+    radial-gradient(1100px 600px at 78% -8%, rgba(200,169,107,0.14) 0%, transparent 55%),
+    radial-gradient(900px 700px at 8% 110%, rgba(22,42,92,0.55) 0%, transparent 60%),
+    linear-gradient(160deg,#0A1733 0%,#0C1C3E 52%,#0A1733 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:0.5;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.035) 1px,transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(900px 600px at 70% 30%,#000 0%,transparent 75%);
+  mask-image:radial-gradient(900px 600px at 70% 30%,#000 0%,transparent 75%);
+}
+.hero-content{position:relative;z-index:3;}
+.hero-region{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;
+  color:var(--gold-2);border:1px solid rgba(200,169,107,0.32);
+  padding:8px 16px;border-radius:2px;margin-bottom:30px;background:rgba(200,169,107,0.06);
+}
+.hero-region .pin{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(200,169,107,0.18);}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:clamp(2.7rem,5.3vw,4.4rem);line-height:1.06;letter-spacing:-0.015em;
+  color:#fff;margin-bottom:26px;
+}
+.hero h1 em{font-style:italic;color:var(--gold-2);font-weight:500;}
+.hero-desc{
+  font-size:1.16rem;line-height:1.72;font-weight:300;
+  color:var(--on-dark-soft);max-width:54ch;margin-bottom:38px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px;}
+.hero-pillars{
+  display:flex;flex-wrap:wrap;gap:0;padding-top:30px;
+  border-top:1px solid var(--on-dark-line);
+}
+.hero-pillar{
+  font-size:12.5px;letter-spacing:0.04em;color:var(--on-dark-soft);font-weight:400;
+  padding:0 20px;position:relative;
+}
+.hero-pillar:first-child{padding-left:0;}
+.hero-pillar::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background:var(--on-dark-line);}
+.hero-pillar:first-child::before{display:none;}
 
-/* CALCULADORA */
-.calculadora{background:linear-gradient(135deg,#EEF0FF 0%,var(--creme) 100%);position:relative;overflow:hidden;}
-.calculadora::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,155,0.08) 0%,transparent 65%);pointer-events:none;}
-.calc-card{
-  background:var(--branco);border-radius:28px;
-  padding:56px;
-  box-shadow:0 30px 80px -20px rgba(27,42,142,0.14);
-  border:1px solid var(--linha);
-  max-width:860px;margin:0 auto;
+/* HERO CONSOLE (Board Room Digital) */
+.console{
+  position:relative;z-index:3;
+  background:linear-gradient(165deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.13);
+  border-radius:6px;padding:30px;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 50px 90px -40px rgba(0,0,0,0.6);
+}
+.console-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.console-title{display:flex;align-items:center;gap:11px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-2);font-weight:600;}
+.console-title .glyph{width:26px;height:26px;border:1px solid rgba(200,169,107,0.4);border-radius:3px;display:flex;align-items:center;justify-content:center;}
+.console-title .glyph svg{width:14px;height:14px;color:var(--gold-2);}
+.console-live{display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-dark-mute);}
+.console-live .blip{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:blip 2.4s ease-in-out infinite;}
+@keyframes blip{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,169,107,0.35);}50%{opacity:0.6;box-shadow:0 0 0 6px rgba(200,169,107,0);}}
+.console-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px;}
+.kpi{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:15px 14px;}
+.kpi-label{font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-dark-mute);margin-bottom:9px;}
+.kpi-val{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:#fff;line-height:1;}
+.kpi-val span{color:var(--gold-2);font-size:1.1rem;}
+.kpi-bar{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:11px;overflow:hidden;}
+.kpi-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));border-radius:2px;width:0;transition:width 1.4s cubic-bezier(0.16,1,0.3,1);}
+.console-chart{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:18px;margin-bottom:18px;}
+.console-chart-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;}
+.console-chart-head .t{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-dark-soft);}
+.console-chart-head .v{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-2);font-size:1.1rem;}
+.console-chart svg{width:100%;height:64px;display:block;}
+.console-foot{display:flex;gap:9px;flex-wrap:wrap;}
+.console-chip{font-size:11px;letter-spacing:0.03em;color:var(--on-dark-soft);border:1px solid rgba(255,255,255,0.12);padding:6px 12px;border-radius:2px;display:flex;align-items:center;gap:7px;}
+.console-chip i{width:5px;height:5px;border-radius:50%;background:var(--gold);}
+
+/* ---------- DOR DO C-LEVEL ---------- */
+.dor{background:var(--mist);}
+.dor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.dor-item{background:var(--snow);padding:38px 34px;transition:background 0.5s,transform 0.5s;position:relative;}
+.dor-item:hover{background:#fff;}
+.dor-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gold-deep);margin-bottom:18px;}
+.dor-item h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:10px;line-height:1.2;}
+.dor-item p{font-size:0.96rem;color:var(--ink-soft);line-height:1.65;font-weight:300;}
+.dor-origin{
+  margin-top:54px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;
+  background:var(--navy);border-radius:6px;padding:46px 52px;color:#fff;position:relative;overflow:hidden;
+  background-image:radial-gradient(700px 300px at 100% 0%,rgba(200,169,107,0.12),transparent 60%);
+}
+.dor-origin-tag{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-2);font-weight:600;white-space:nowrap;border-right:1px solid var(--on-dark-line);padding-right:36px;}
+.dor-origin p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.6vw,2rem);font-weight:500;line-height:1.3;color:#fff;}
+.dor-origin p em{font-style:italic;color:var(--gold-2);}
+
+/* ---------- ONE BUSINESS BOARD ---------- */
+.board{background:var(--snow);overflow:hidden;}
+.board-stage{position:relative;margin-top:18px;}
+.board-links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible;}
+.board-links line{stroke:url(#linkgrad);stroke-width:1.4;stroke-dasharray:5 5;opacity:0;animation:dashmove 22s linear infinite;}
+.board-links line.on{opacity:0.55;transition:opacity 1.1s ease;}
+@keyframes dashmove{to{stroke-dashoffset:-200;}}
+.board-links circle{fill:var(--gold);}
+.board-grid{
   position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr minmax(280px,340px) 1fr;gap:46px;align-items:center;
 }
-.calc-header{text-align:center;margin-bottom:48px;}
-.calc-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(233,30,155,0.08);
-  padding:8px 16px;border-radius:50px;
-  font-size:12px;font-weight:700;color:var(--magenta);
-  letter-spacing:0.12em;text-transform:uppercase;
-  margin-bottom:20px;
+.board-col{display:flex;flex-direction:column;gap:20px;}
+.pillar{
+  background:var(--snow);border:1px solid var(--line);border-radius:5px;
+  padding:22px 24px;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);position:relative;
 }
-.calc-badge svg{width:14px;height:14px;}
-.calc-header h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;color:var(--azul);margin-bottom:12px;line-height:1.15;}
-.calc-header h2 em{font-style:italic;color:var(--magenta);}
-.calc-header p{font-size:1rem;color:var(--texto-suave);max-width:500px;margin:0 auto;line-height:1.6;}
-.calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;}
-.calc-field label{display:block;font-size:12px;font-weight:700;color:var(--texto-suave);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;}
-.calc-input-wrap{position:relative;}
-.calc-prefix{
-  position:absolute;left:18px;top:50%;transform:translateY(-50%);
-  font-family:'Fraunces',serif;font-size:1rem;font-weight:500;
-  color:var(--azul);pointer-events:none;
+.board-col.left .pillar{padding-right:30px;}
+.board-col.right .pillar{padding-left:30px;}
+.pillar:hover{border-color:var(--gold);box-shadow:0 24px 50px -28px rgba(10,23,51,0.28);transform:translateY(-3px);}
+.pillar-head{display:flex;align-items:center;gap:13px;margin-bottom:9px;}
+.board-col.right .pillar-head{flex-direction:row-reverse;text-align:right;}
+.board-col.right .pillar p{text-align:right;}
+.pillar-ico{width:40px;height:40px;border-radius:4px;background:var(--mist);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.5s;}
+.pillar:hover .pillar-ico{background:var(--navy);border-color:var(--navy);}
+.pillar-ico svg{width:19px;height:19px;color:var(--navy);transition:color 0.5s;}
+.pillar:hover .pillar-ico svg{color:var(--gold-2);}
+.pillar h3{font-size:0.98rem;font-weight:600;color:var(--navy);letter-spacing:0.01em;}
+.pillar p{font-size:0.84rem;color:var(--ink-mute);line-height:1.55;font-weight:300;}
+.board-core{
+  position:relative;border-radius:8px;padding:40px 32px;text-align:center;color:#fff;
+  background:linear-gradient(165deg,#0A1733 0%,#162A5C 130%);
+  border:1px solid rgba(200,169,107,0.3);
+  box-shadow:0 40px 90px -40px rgba(10,23,51,0.6),0 0 0 6px rgba(247,248,250,0.6);
 }
-.calc-input,.calc-select{
-  width:100%;padding:18px 18px 18px 48px;
-  border:1.5px solid var(--linha);border-radius:14px;
-  font-family:'Inter Tight',sans-serif;font-size:1.05rem;font-weight:500;
-  color:var(--texto);background:var(--creme);
-  transition:all 0.3s;outline:none;
-  -webkit-appearance:none;appearance:none;
-}
-.calc-select{padding-left:18px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235A5F7E' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
-.calc-input:focus,.calc-select:focus{border-color:var(--azul);background:var(--branco);box-shadow:0 0 0 4px rgba(27,42,142,0.08);}
-.calc-select-wrap{position:relative;}
-.calc-btn{
-  width:100%;padding:20px;border-radius:14px;
-  background:linear-gradient(135deg,var(--azul),var(--azul-claro));
-  color:var(--branco);font-family:'Inter Tight',sans-serif;
-  font-size:1.05rem;font-weight:700;border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  transition:all 0.3s cubic-bezier(0.22,1,0.36,1);
-  letter-spacing:0.01em;margin-bottom:32px;
-}
-.calc-btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(233,30,155,0.35);background:linear-gradient(135deg,var(--magenta),var(--magenta-claro));}
-.calc-btn svg{width:20px;height:20px;transition:transform 0.3s;}
-.calc-btn:hover svg{transform:translateX(4px);}
+.board-core::before{content:'';position:absolute;inset:0;border-radius:8px;background:radial-gradient(420px 200px at 50% 0%,rgba(200,169,107,0.16),transparent 65%);pointer-events:none;}
+.board-core-ring{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;border:1px solid rgba(200,169,107,0.45);display:flex;align-items:center;justify-content:center;position:relative;}
+.board-core-ring::after{content:'';position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(200,169,107,0.18);animation:spin 14s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.board-core-ring svg{width:28px;height:28px;color:var(--gold-2);}
+.board-core-label{font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:8px;}
+.board-core h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;line-height:1.05;margin-bottom:12px;color:#fff;}
+.board-core p{font-size:0.85rem;color:var(--on-dark-soft);line-height:1.6;font-weight:300;}
+.board-core-stat{margin-top:22px;padding-top:20px;border-top:1px solid var(--on-dark-line);display:flex;justify-content:space-around;gap:10px;}
+.board-core-stat div{text-align:center;}
+.board-core-stat .n{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold-2);font-weight:600;line-height:1;}
+.board-core-stat .l{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--on-dark-mute);margin-top:6px;}
 
-/* Resultado */
-.calc-resultado{
-  display:none;
-  background:linear-gradient(135deg,var(--azul) 0%,#0F1442 100%);
-  border-radius:20px;padding:40px;
-  position:relative;overflow:hidden;
-  animation:resultadoIn 0.5s cubic-bezier(0.22,1,0.36,1);
+/* ---------- ESPECIALIZAÇÕES ---------- */
+.verticais{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.verticais::before{content:'';position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(200,169,107,0.10),transparent 60%);pointer-events:none;}
+.vert-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;position:relative;z-index:2;margin-top:10px;}
+.vert{
+  background:linear-gradient(165deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015));
+  border:1px solid rgba(255,255,255,0.11);border-radius:6px;padding:46px 44px;
+  position:relative;overflow:hidden;transition:all 0.55s cubic-bezier(0.16,1,0.3,1);
 }
-@keyframes resultadoIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-.calc-resultado.show{display:block;}
-.calc-resultado::before{content:'';position:absolute;top:-40%;right:-15%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,155,0.2) 0%,transparent 65%);}
-.calc-res-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;position:relative;z-index:2;}
-.calc-res-label{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:8px;}
-.calc-res-valor{font-family:'Fraunces',serif;font-size:clamp(1.6rem,5vw,3.6rem);font-weight:500;font-style:italic;color:var(--magenta-claro);line-height:1;word-break:break-word;}
-.calc-res-periodo{font-size:14px;color:rgba(255,255,255,0.6);margin-top:6px;}
-.calc-res-breakdown{display:flex;flex-direction:column;gap:10px;flex-shrink:0;}
-.calc-res-item{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);}
-.calc-res-item svg{width:16px;height:16px;color:var(--magenta-claro);flex-shrink:0;}
-.calc-res-divider{height:1px;background:rgba(255,255,255,0.1);margin:0 0 24px;position:relative;z-index:2;}
-.calc-res-disclaimer{font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:20px;line-height:1.5;position:relative;z-index:2;}
-.calc-wa-btn{
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  width:100%;padding:18px;border-radius:14px;
-  background:#25D366;color:var(--branco);
-  font-family:'Inter Tight',sans-serif;
-  font-size:1rem;font-weight:700;border:none;cursor:pointer;
-  text-decoration:none;
-  transition:all 0.3s cubic-bezier(0.22,1,0.36,1);
-  position:relative;z-index:2;
-}
-.calc-wa-btn:hover{background:#20BA5A;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,0.4);}
-.calc-wa-btn svg{width:22px;height:22px;}
+.vert::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));transform:scaleX(0);transform-origin:left;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1);}
+.vert:hover{border-color:rgba(200,169,107,0.4);transform:translateY(-5px);box-shadow:0 40px 80px -40px rgba(0,0,0,0.6);}
+.vert:hover::before{transform:scaleX(1);}
+.vert-index{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--gold-2);letter-spacing:0.05em;margin-bottom:24px;display:block;}
+.vert-ico{width:54px;height:54px;border-radius:5px;border:1px solid rgba(200,169,107,0.35);display:flex;align-items:center;justify-content:center;margin-bottom:26px;background:rgba(200,169,107,0.06);}
+.vert-ico svg{width:26px;height:26px;color:var(--gold-2);}
+.vert h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;margin-bottom:12px;color:#fff;}
+.vert-desc{font-size:0.97rem;color:var(--on-dark-soft);line-height:1.65;font-weight:300;margin-bottom:28px;}
+.vert-list{list-style:none;display:flex;flex-direction:column;gap:13px;padding:24px 0;border-top:1px solid var(--on-dark-line);}
+.vert-list li{display:flex;align-items:center;gap:13px;font-size:0.92rem;color:rgba(255,255,255,0.86);font-weight:300;}
+.vert-list li svg{width:17px;height:17px;color:var(--gold-2);flex-shrink:0;}
 
-/* COMO FUNCIONA */
-.como-funciona{background:var(--branco);}
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:20px;}
-.passos::before{content:'';position:absolute;top:52px;left:calc(16.66% + 32px);right:calc(16.66% + 32px);height:2px;background:linear-gradient(90deg,var(--magenta),var(--azul));z-index:0;}
-.passo{text-align:center;padding:0 40px;position:relative;z-index:1;}
-.passo-num-wrap{display:flex;align-items:center;justify-content:center;margin-bottom:28px;}
-.passo-num{
-  width:68px;height:68px;border-radius:50%;
+/* ---------- METODOLOGIA ---------- */
+.metodo{background:var(--mist);}
+.metodo-line{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:20px;}
+.metodo-line::before{content:'';position:absolute;top:23px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,var(--gold),var(--line));z-index:0;}
+.metodo-step{text-align:center;padding:0 18px;position:relative;z-index:1;}
+.metodo-node{
+  width:46px;height:46px;border-radius:50%;margin:0 auto 26px;
   display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;
-  font-style:italic;color:var(--branco);
-  background:linear-gradient(135deg,var(--azul),var(--azul-claro));
-  box-shadow:0 8px 28px rgba(27,42,142,0.3);
-  transition:all 0.4s cubic-bezier(0.22,1,0.36,1);
-  position:relative;z-index:2;
+  background:var(--snow);border:1px solid var(--gold);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--gold-deep);font-weight:600;
+  position:relative;z-index:2;transition:all 0.5s;
 }
-.passo:hover .passo-num{background:linear-gradient(135deg,var(--magenta),var(--magenta-claro));transform:scale(1.1);box-shadow:0 0 0 8px rgba(233,30,155,0.1),0 16px 44px rgba(233,30,155,0.45);}
-.passo-icone{
-  width:48px;height:48px;border-radius:14px;
-  background:linear-gradient(135deg,rgba(27,42,142,0.08),rgba(46,64,199,0.12));
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;transition:all 0.4s;
+.metodo-step:hover .metodo-node{background:var(--navy);border-color:var(--navy);color:var(--gold-2);transform:translateY(-3px);}
+.metodo-step h3{font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:12px;}
+.metodo-step p{font-size:0.86rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
+.metodo-foot{margin-top:62px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.6rem);color:var(--ink-soft);max-width:40ch;margin-left:auto;margin-right:auto;line-height:1.45;}
+.metodo-foot em{color:var(--gold-deep);font-style:italic;}
+
+/* ---------- RESULTADOS ---------- */
+.result{background:var(--snow);}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.result-card{border:1px solid var(--line);border-radius:6px;padding:36px 32px;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;}
+.result-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform 0.5s;}
+.result-card:hover{transform:translateY(-5px);box-shadow:0 30px 60px -34px rgba(10,23,51,0.3);border-color:transparent;}
+.result-card:hover::after{transform:scaleY(1);}
+.result-ico{width:48px;height:48px;border-radius:5px;background:var(--mist);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:all 0.5s;}
+.result-card:hover .result-ico{background:var(--navy);}
+.result-ico svg{width:22px;height:22px;color:var(--navy);transition:color 0.5s;}
+.result-card:hover .result-ico svg{color:var(--gold-2);}
+.result-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:9px;}
+.result-card p{font-size:0.93rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
+
+/* ---------- DIAGNÓSTICO TRIBUTÁRIO ---------- */
+.diag{background:linear-gradient(180deg,var(--mist),var(--snow));}
+.diag-card{
+  max-width:920px;margin:0 auto;background:var(--snow);
+  border:1px solid var(--line);border-radius:8px;
+  padding:56px;box-shadow:0 40px 90px -50px rgba(10,23,51,0.28);position:relative;overflow:hidden;
 }
-.passo:hover .passo-icone{background:linear-gradient(135deg,rgba(233,30,155,0.1),rgba(255,61,176,0.15));}
-.passo-icone svg{width:24px;height:24px;color:var(--azul);transition:color 0.4s;}
-.passo:hover .passo-icone svg{color:var(--magenta);}
-.passo-titulo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;color:var(--azul);margin-bottom:12px;line-height:1.2;}
-.passo-desc{font-size:0.95rem;color:var(--texto-suave);line-height:1.7;margin-bottom:20px;}
-.passo-detalhe{
-  background:var(--bege);border-radius:12px;padding:14px 18px;
-  font-size:13px;color:var(--texto-suave);line-height:1.55;
-  border-left:3px solid var(--magenta);text-align:left;
+.diag-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--gold) 60%,var(--navy));}
+.diag-head{text-align:center;margin-bottom:42px;}
+.diag-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:600;color:var(--navy);line-height:1.12;margin:18px auto 14px;max-width:24ch;}
+.diag-head h2 em{font-style:italic;color:var(--gold-deep);}
+.diag-head p{font-size:1rem;color:var(--ink-soft);max-width:56ch;margin:0 auto;line-height:1.7;font-weight:300;}
+.diag-fields{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:26px;}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;}
+.field-wrap{position:relative;}
+.field-prefix{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--navy);font-weight:600;pointer-events:none;}
+.diag-input,.diag-select{
+  width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:3px;
+  font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:var(--ink);
+  background:var(--mist);transition:all 0.3s;outline:none;-webkit-appearance:none;appearance:none;
 }
-.passo-detalhe strong{color:var(--azul);font-weight:600;}
-.passos-cta{text-align:center;margin-top:60px;padding-top:48px;border-top:1px solid var(--linha);}
-.passos-cta p{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--texto-suave);margin-bottom:24px;}
+.diag-input.has-prefix{padding-left:46px;}
+.diag-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2354607A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;}
+.diag-input:focus,.diag-select:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(10,23,51,0.06);}
+.diag-btn{
+  width:100%;padding:18px;border-radius:3px;background:var(--navy);color:#fff;
+  font-family:'Inter',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.01em;
+  border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.diag-btn:hover{background:var(--navy-2);transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(10,23,51,0.5);}
+.diag-btn svg{width:18px;height:18px;transition:transform 0.4s;}
+.diag-btn:hover svg{transform:translateX(4px);}
+/* resultado */
+.diag-result{display:none;margin-top:34px;background:var(--navy);border-radius:6px;padding:42px;color:#fff;position:relative;overflow:hidden;animation:fadeUp 0.6s cubic-bezier(0.16,1,0.3,1);}
+.diag-result.show{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.diag-result::before{content:'';position:absolute;top:-30%;right:-12%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,107,0.18),transparent 65%);}
+.diag-res-top{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;position:relative;z-index:2;margin-bottom:28px;}
+.gauge{position:relative;width:128px;height:128px;flex-shrink:0;}
+.gauge svg{transform:rotate(-90deg);}
+.gauge-track{fill:none;stroke:rgba(255,255,255,0.12);stroke-width:9;}
+.gauge-fill{fill:none;stroke:url(#gaugegrad);stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset 1.3s cubic-bezier(0.16,1,0.3,1);}
+.gauge-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.gauge-center b{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:600;color:var(--gold-2);line-height:1;}
+.gauge-center small{font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-dark-mute);margin-top:3px;}
+.diag-res-label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:10px;}
+.diag-res-headline{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;line-height:1.25;color:#fff;margin-bottom:6px;}
+.diag-res-sub{font-size:0.9rem;color:var(--on-dark-soft);font-weight:300;line-height:1.55;}
+.diag-points{list-style:none;display:flex;flex-direction:column;gap:13px;padding:24px 0;margin-bottom:24px;border-top:1px solid var(--on-dark-line);border-bottom:1px solid var(--on-dark-line);position:relative;z-index:2;}
+.diag-points li{display:flex;align-items:flex-start;gap:13px;font-size:0.92rem;color:rgba(255,255,255,0.86);font-weight:300;line-height:1.5;}
+.diag-points li svg{width:18px;height:18px;color:var(--gold-2);flex-shrink:0;margin-top:1px;}
+.diag-disclaimer{font-size:11.5px;color:var(--on-dark-mute);line-height:1.55;margin-bottom:22px;position:relative;z-index:2;font-weight:300;}
+.diag-cta{display:inline-flex;width:100%;align-items:center;justify-content:center;gap:11px;padding:16px;border-radius:3px;background:var(--gold);color:var(--navy);font-weight:600;font-size:0.98rem;text-decoration:none;transition:all 0.4s;position:relative;z-index:2;}
+.diag-cta:hover{background:var(--gold-2);transform:translateY(-2px);box-shadow:0 16px 36px -16px rgba(200,169,107,0.6);}
+.diag-cta svg{width:18px;height:18px;}
 
-/* SERVIÇOS */
-.servicos{background:var(--creme);}
-.servicos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.servico{background:var(--branco);padding:30px 26px;border-radius:18px;border:1px solid var(--linha);display:flex;align-items:flex-start;gap:16px;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;}
-.servico::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--magenta);transform:scaleY(0);transform-origin:bottom;transition:transform 0.4s;}
-.servico:hover{transform:translateY(-6px);box-shadow:0 26px 52px -18px rgba(27,42,142,0.2);border-color:transparent;}
-.servico:hover::after{transform:scaleY(1);}
-.servico-icon{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--azul),var(--azul-claro));display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.4s;}
-.servico:hover .servico-icon{background:linear-gradient(135deg,var(--magenta),var(--magenta-claro));transform:rotate(-6deg);}
-.servico-icon svg{width:22px;height:22px;color:#fff;}
-.servico h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;color:var(--azul);margin-bottom:6px;}
-.servico p{font-size:13px;color:var(--texto-suave);line-height:1.6;}
+/* ---------- AUTORIDADE ---------- */
+.aut{background:var(--snow);}
+.aut-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:72px;align-items:center;}
+.aut-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+.aut-stat{background:var(--snow);padding:34px 30px;text-align:center;}
+.aut-stat .n{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:600;color:var(--navy);line-height:1;}
+.aut-stat .n span{color:var(--gold-deep);}
+.aut-stat .l{font-size:12px;letter-spacing:0.06em;color:var(--ink-soft);margin-top:10px;font-weight:400;}
+.aut-pillars{display:flex;flex-direction:column;gap:4px;}
+.aut-pillar{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line-soft);}
+.aut-pillar:last-child{border-bottom:none;}
+.aut-pillar-ico{width:46px;height:46px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.5s;}
+.aut-pillar:hover .aut-pillar-ico{background:var(--navy);border-color:var(--navy);}
+.aut-pillar-ico svg{width:21px;height:21px;color:var(--navy);transition:color 0.5s;}
+.aut-pillar:hover .aut-pillar-ico svg{color:var(--gold-2);}
+.aut-pillar h3{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:5px;}
+.aut-pillar p{font-size:0.93rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
 
-/* ESPECIALIDADES */
-.especialidades{background:linear-gradient(135deg,var(--azul) 0%,#0F1442 100%);color:var(--branco);position:relative;overflow:hidden;border:none;outline:none;}
-.especialidades::before{content:'';position:absolute;top:-30%;right:-20%;width:80%;height:160%;background:radial-gradient(circle,rgba(233,30,155,0.15) 0%,transparent 60%);pointer-events:none;}
-.especialidades::after{content:'';position:absolute;bottom:-30%;left:-20%;width:60%;height:120%;background:radial-gradient(circle,rgba(255,61,176,0.08) 0%,transparent 60%);pointer-events:none;}
-.especialidades .section-tag{color:var(--magenta-claro);}
-.especialidades .section-title{color:var(--branco);}
-.especialidades .section-title em{color:var(--magenta-claro);}
-.esp-header{position:relative;z-index:2;margin-bottom:72px;}
-.esp-showcase{display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:2;}
-.esp-bloco{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(20px);border-radius:28px;padding:44px 40px;position:relative;overflow:hidden;transition:all 0.5s cubic-bezier(0.22,1,0.36,1);max-width:100%;}
-.esp-bloco:hover{border-color:rgba(255,61,176,0.4);transform:translateY(-6px);box-shadow:0 30px 70px -20px rgba(233,30,155,0.3);}
-.esp-bloco::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--magenta),var(--magenta-claro));transform:scaleX(0);transform-origin:left;transition:transform 0.6s;}
-.esp-bloco:hover::before{transform:scaleX(1);}
-.esp-bloco-num{position:absolute;top:30px;right:36px;font-family:'Fraunces',serif;font-size:5rem;font-weight:300;font-style:italic;color:rgba(255,255,255,0.05);line-height:1;pointer-events:none;}
-.esp-icon-area{height:160px;display:flex;align-items:center;justify-content:center;margin-bottom:32px;position:relative;}
-.esp-globo{width:140px;height:140px;animation:girar 20s linear infinite;}
-@keyframes girar{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.orbit{stroke-dasharray:8 4;animation:orbitDash 15s linear infinite;}
-@keyframes orbitDash{to{stroke-dashoffset:-100;}}
-.ponto-rota{animation:piscar 2s ease-in-out infinite;}
-.ponto-rota.p1{animation-delay:0s;}.ponto-rota.p2{animation-delay:0.5s;}.ponto-rota.p3{animation-delay:1s;}.ponto-rota.p4{animation-delay:1.5s;}
-@keyframes piscar{0%,100%{opacity:1;}50%{opacity:0.3;}}
-.esp-predio{width:140px;height:140px;}
-.janelas rect{animation:janelaPiscar 4s ease-in-out infinite;}
-.j1,.j3,.j5,.j7,.j9{animation-delay:0s;}.j2,.j4,.j6,.j8{animation-delay:1s;}
-@keyframes janelaPiscar{0%,80%,100%{opacity:0.95;}85%,90%{opacity:0.2;}}
-.estrelas-hotel text{animation:brilhar 2s ease-in-out infinite;}
-.estrelas-hotel text:nth-child(1){animation-delay:0s;}.estrelas-hotel text:nth-child(2){animation-delay:0.2s;}.estrelas-hotel text:nth-child(3){animation-delay:0.4s;}.estrelas-hotel text:nth-child(4){animation-delay:0.6s;}.estrelas-hotel text:nth-child(5){animation-delay:0.8s;}
-@keyframes brilhar{0%,100%{opacity:1}50%{opacity:0.3}}
-.esp-tags-f{position:absolute;inset:0;pointer-events:none;}
-.esp-tag-f{position:absolute;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);padding:7px 14px;border-radius:50px;font-size:12px;font-weight:500;white-space:nowrap;color:var(--branco);animation:flutuar 6s ease-in-out infinite;}
-.esp-tag-f.tf1{top:8%;left:0;animation-delay:0s;}.esp-tag-f.tf2{bottom:10%;right:0;animation-delay:2s;}.esp-tag-f.tf3{top:45%;left:-8%;animation-delay:4s;}
-@keyframes flutuar{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-.esp-bloco h3{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:500;margin-bottom:12px;color:var(--branco);}
-.esp-desc{color:rgba(255,255,255,0.7);font-size:0.97rem;line-height:1.65;margin-bottom:28px;}
-.esp-checks{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;padding:24px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
-.esp-check{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.85);}
-.esp-check svg{width:18px;height:18px;color:var(--magenta-claro);flex-shrink:0;}
-.esp-result{display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(233,30,155,0.1);border-radius:14px;border:1px solid rgba(233,30,155,0.2);}
-.esp-result-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:500;color:var(--magenta-claro);font-style:italic;line-height:1;}
-.esp-result-label{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.4;}
-.esp-result-label strong{color:var(--branco);font-weight:600;}
+/* ---------- CTA FINAL ---------- */
+.cta{
+  background:
+    radial-gradient(900px 500px at 50% -20%, rgba(200,169,107,0.16), transparent 60%),
+    linear-gradient(160deg,#0A1733 0%,#162A5C 130%);
+  color:#fff;text-align:center;position:relative;overflow:hidden;
+}
+.cta::before{content:'';position:absolute;inset:0;opacity:0.4;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(700px 400px at 50% 50%,#000,transparent 75%);mask-image:radial-gradient(700px 400px at 50% 50%,#000,transparent 75%);}
+.cta-inner{max-width:820px;margin:0 auto;position:relative;z-index:2;}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:500;line-height:1.12;color:#fff;margin:24px 0 22px;}
+.cta h2 em{font-style:italic;color:var(--gold-2);}
+.cta p{font-size:1.12rem;color:var(--on-dark-soft);max-width:58ch;margin:0 auto 40px;line-height:1.7;font-weight:300;}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px;}
+.cta-info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--on-dark-line);border:1px solid var(--on-dark-line);border-radius:6px;overflow:hidden;max-width:720px;margin:0 auto;}
+.cta-info-item{background:rgba(10,23,51,0.4);padding:26px 20px;}
+.cta-info-label{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:8px;}
+.cta-info-val{font-size:0.92rem;color:#fff;font-weight:300;}
 
-/* SOBRE */
-.sobre{background:var(--bege);display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;padding:120px 5%;}
-.sobre-foto{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 70px -15px rgba(27,42,142,0.25);}
-.sobre-foto-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--azul) 0%,var(--azul-claro) 50%,var(--magenta) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
-.sobre-foto-placeholder svg{width:80px;height:80px;color:rgba(255,255,255,0.5);}
-.sobre-foto-placeholder span{color:rgba(255,255,255,0.7);font-size:14px;font-weight:500;}
-.sobre-foto img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s;}
-.sobre-foto:hover img{transform:scale(1.03);}
-.sobre-foto::after{content:'';position:absolute;bottom:-20px;right:-20px;width:140px;height:140px;background:var(--magenta);border-radius:24px;z-index:-1;}
-.sobre-foto::before{content:'';position:absolute;top:-15px;left:-15px;width:80px;height:80px;border:2px solid var(--azul);border-radius:16px;z-index:-1;}
-.sobre-bio{font-size:1.05rem;color:var(--texto-suave);line-height:1.8;margin-bottom:20px;}
-.sobre-bio strong{color:var(--azul);font-weight:600;}
-.sobre-creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
-.cred{background:var(--branco);padding:10px 16px;border-radius:50px;font-size:13px;font-weight:500;color:var(--azul);border:1px solid var(--linha);display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;}
-.cred:hover{background:var(--azul);color:var(--branco);border-color:var(--azul);}
-.cred-num{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--magenta);font-style:italic;}
-.cred:hover .cred-num{color:var(--magenta-claro);}
-.assinatura{margin-top:32px;padding-top:28px;border-top:1px solid var(--linha);}
-.assinatura-nome{font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;color:var(--azul);font-weight:500;}
-.assinatura-cargo{font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--texto-suave);margin-top:4px;}
+/* ---------- FAQ ---------- */
+.faq{background:var(--mist);}
+.faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;text-align:left;font-family:'Inter',sans-serif;font-size:1.06rem;font-weight:500;color:var(--navy);transition:color 0.3s;}
+.faq-q:hover{color:var(--gold-deep);}
+.faq-icon{width:30px;height:30px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;transition:all 0.4s;}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--navy);transition:all 0.4s;}
+.faq-icon::before{width:12px;height:1.5px;}
+.faq-icon::after{width:1.5px;height:12px;}
+.faq-item.open .faq-icon{background:var(--navy);border-color:var(--navy);}
+.faq-item.open .faq-icon::before,.faq-item.open .faq-icon::after{background:var(--gold-2);}
+.faq-item.open .faq-icon::after{transform:scaleY(0);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.16,1,0.3,1);}
+.faq-a-inner{padding:0 0 28px;font-size:0.98rem;color:var(--ink-soft);line-height:1.75;font-weight:300;max-width:72ch;}
+.faq-item.open .faq-a{max-height:340px;}
 
-/* PROVA */
-.prova{background:var(--branco);}
-.prova-numeros{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;background:linear-gradient(135deg,var(--azul) 0%,#0F1442 100%);border-radius:28px;padding:48px;margin-bottom:72px;position:relative;overflow:hidden;}
-.prova-numeros::before{content:'';position:absolute;top:-50%;right:-15%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,155,0.18) 0%,transparent 60%);}
-.prova-num{text-align:center;position:relative;z-index:2;}
-.prova-num-val{font-family:'Fraunces',serif;font-size:3rem;font-weight:500;color:var(--branco);font-style:italic;line-height:1;margin-bottom:6px;}
-.prova-num-val span{color:var(--magenta-claro);}
-.prova-num-label{font-size:13px;color:rgba(255,255,255,0.65);font-weight:500;}
-.deps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.dep{background:var(--creme);padding:36px 32px;border-radius:20px;border:1px solid var(--linha);transition:all 0.4s;display:flex;flex-direction:column;}
-.dep:hover{transform:translateY(-8px);box-shadow:0 30px 60px -18px rgba(27,42,142,0.2);background:var(--branco);border-color:transparent;}
-.dep-stars{color:#F59E0B;font-size:16px;letter-spacing:2px;margin-bottom:18px;}
-.dep-resultado{font-family:'Fraunces',serif;font-style:italic;font-size:1.8rem;color:var(--magenta);font-weight:500;line-height:1;margin-bottom:14px;}
-.dep-resultado span{font-size:1rem;color:var(--azul);font-style:normal;}
-.dep-texto{font-size:0.95rem;color:var(--texto-suave);line-height:1.65;margin-bottom:24px;flex-grow:1;}
-.dep-autor{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--linha);}
-.dep-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--magenta));display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1rem;color:#fff;font-weight:500;flex-shrink:0;}
-.dep-nome{font-weight:600;font-size:14px;color:var(--texto);}
-.dep-empresa{font-size:12px;color:var(--texto-suave);}
-
-/* CTA FINAL */
-.cta-final{background:linear-gradient(135deg,var(--magenta) 0%,#B7167E 100%);padding:100px 5%;position:relative;overflow:hidden;}
-.cta-final::before{content:'';position:absolute;top:-50%;left:-15%;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,0.05);}
-.cta-final::after{content:'';position:absolute;bottom:-50%;right:-15%;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.05);}
-.cta-final-content{position:relative;z-index:2;max-width:900px;margin:0 auto;text-align:center;}
-.cta-final h2{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:400;color:#fff;margin-bottom:20px;line-height:1.1;}
-.cta-final h2 em{font-style:italic;}
-.cta-final p{font-size:1.15rem;color:rgba(255,255,255,0.88);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6;}
-.cta-final-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
-.cta-info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:680px;margin:0 auto;padding-top:40px;border-top:1px solid rgba(255,255,255,0.15);}
-.cta-info-item{text-align:center;}
-.cta-info-icon{width:44px;height:44px;background:rgba(255,255,255,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
-.cta-info-icon svg{width:22px;height:22px;color:#fff;}
-.cta-info-label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:4px;}
-.cta-info-val{font-family:'Fraunces',serif;font-size:1rem;color:#fff;font-weight:500;}
-
-/* FAQ */
-.faq{background:var(--creme);}
-.faq-list{max-width:760px;margin:0 auto;}
-.faq-item{border-bottom:1px solid var(--linha);}
-.faq-question{width:100%;background:none;border:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:'Inter Tight',sans-serif;font-size:1.05rem;font-weight:600;color:var(--texto);transition:color 0.3s;}
-.faq-question:hover{color:var(--magenta);}
-.faq-icon{width:32px;height:32px;border-radius:50%;background:var(--branco);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s;font-size:18px;color:var(--azul);border:1px solid var(--linha);}
-.faq-item.open .faq-icon{background:var(--magenta);color:#fff;transform:rotate(45deg);border-color:var(--magenta);}
-.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.22,1,0.36,1);}
-.faq-answer-inner{padding:0 0 24px;font-size:0.97rem;color:var(--texto-suave);line-height:1.75;}
-.faq-item.open .faq-answer{max-height:300px;}
-
-/* FOOTER */
-.footer{background:#0A0E2E;color:var(--branco);padding:60px 5% 30px;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1);}
-.footer-brand{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:600;margin-bottom:14px;letter-spacing:-0.02em;}
-.footer-brand span{color:var(--magenta-claro);}
-.footer-tagline{font-family:'Fraunces',serif;font-style:italic;color:rgba(255,255,255,0.65);line-height:1.6;max-width:380px;margin-bottom:16px;}
-.footer-lgpd{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;}
-.footer-lgpd a{color:rgba(255,255,255,0.55);text-decoration:underline;cursor:pointer;transition:color 0.3s;}
-.footer-lgpd a:hover{color:var(--magenta-claro);}
-.footer-col h4{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--magenta-claro);font-weight:600;margin-bottom:18px;}
+/* ---------- FOOTER ---------- */
+.footer{background:#070F25;color:#fff;padding:72px 6% 34px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:56px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,0.09);}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;letter-spacing:0.14em;margin-bottom:18px;}
+.footer-brand .dot{color:var(--gold);}
+.footer-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--on-dark-soft);line-height:1.5;max-width:38ch;margin-bottom:22px;}
+.footer-region{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-2);font-weight:500;display:flex;align-items:center;gap:9px;}
+.footer-region i{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.footer-col h4{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:20px;}
 .footer-col ul{list-style:none;}
-.footer-col li{margin-bottom:10px;}
-.footer-col a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:14px;transition:color 0.3s;}
-.footer-col a:hover{color:var(--magenta-claro);}
-.footer-bottom{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:rgba(255,255,255,0.45);}
-.footer-bottom a{color:rgba(255,255,255,0.45);text-decoration:none;}
-.footer-bottom a:hover{color:var(--magenta-claro);}
+.footer-col li{margin-bottom:12px;}
+.footer-col a{color:var(--on-dark-soft);text-decoration:none;font-size:14px;font-weight:300;transition:color 0.3s;}
+.footer-col a:hover{color:var(--gold-2);}
+.footer-lgpd{font-size:12px;color:var(--on-dark-mute);line-height:1.7;margin-top:34px;font-weight:300;}
+.footer-lgpd a{color:var(--on-dark-soft);text-decoration:underline;cursor:pointer;transition:color 0.3s;}
+.footer-lgpd a:hover{color:var(--gold-2);}
+.footer-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--on-dark-mute);font-weight:300;}
+.footer-bottom a{color:var(--on-dark-soft);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.18);transition:all 0.3s;}
+.footer-bottom a:hover{color:var(--gold-2);border-color:var(--gold-2);}
 
-/* WA BUTTON */
-.wa-btn{position:fixed;bottom:30px;right:30px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;z-index:99;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,0.45);transition:all 0.3s cubic-bezier(0.22,1,0.36,1);animation:waPulse 3s ease-in-out infinite;}
-@keyframes waPulse{0%,100%{box-shadow:0 8px 28px rgba(37,211,102,0.45);}50%{box-shadow:0 8px 28px rgba(37,211,102,0.45),0 0 0 14px rgba(37,211,102,0.07);}}
-.wa-btn:hover{transform:scale(1.12);box-shadow:0 14px 36px rgba(37,211,102,0.55);}
-.wa-btn svg{width:30px;height:30px;}
+/* ---------- FLOATING CTA ---------- */
+.float-cta{
+  position:fixed;bottom:26px;right:26px;z-index:120;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--navy);color:#fff;text-decoration:none;
+  padding:13px 22px;border-radius:3px;font-size:13.5px;font-weight:500;letter-spacing:0.01em;
+  border:1px solid var(--gold);box-shadow:0 18px 40px -18px rgba(10,23,51,0.6);
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.float-cta:hover{background:var(--navy-2);transform:translateY(-2px);}
+.float-cta svg{width:16px;height:16px;color:var(--gold-2);}
 
-/* COOKIE BANNER */
-.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0A0E2E;color:var(--branco);padding:20px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:3px solid var(--magenta);transform:translateY(100%);transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);}
-.cookie-banner.show{transform:translateY(0);}
-.cookie-text{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;max-width:700px;}
-.cookie-text a{color:var(--magenta-claro);text-decoration:underline;cursor:pointer;}
-.cookie-actions{display:flex;gap:12px;flex-shrink:0;}
-.cookie-btn{padding:10px 24px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all 0.3s;}
-.cookie-btn.aceitar{background:var(--magenta);color:#fff;}
-.cookie-btn.aceitar:hover{background:var(--magenta-claro);}
-.cookie-btn.recusar{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);}
-
-/* MODAL PRIVACIDADE */
-.modal-overlay{position:fixed;inset:0;background:rgba(15,20,66,0.75);backdrop-filter:blur(8px);z-index:300;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+/* ---------- COOKIE / MODAL ---------- */
+.cookie{position:fixed;bottom:0;left:0;right:0;z-index:300;background:#070F25;color:#fff;padding:20px 6%;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:2px solid var(--gold);transform:translateY(100%);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);}
+.cookie.show{transform:none;}
+.cookie-text{font-size:13.5px;color:var(--on-dark-soft);line-height:1.55;max-width:760px;font-weight:300;}
+.cookie-text a{color:var(--gold-2);text-decoration:underline;cursor:pointer;}
+.cookie-actions{display:flex;gap:11px;flex-shrink:0;}
+.cookie-btn{padding:11px 22px;border-radius:2px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:all 0.3s;}
+.cookie-btn.ok{background:var(--gold);color:var(--navy);font-weight:600;}
+.cookie-btn.ok:hover{background:var(--gold-2);}
+.cookie-btn.no{background:transparent;color:var(--on-dark-soft);border-color:rgba(255,255,255,0.2);}
+.cookie-btn.no:hover{border-color:var(--gold);color:var(--gold-2);}
+.modal-overlay{position:fixed;inset:0;background:rgba(7,15,37,0.78);backdrop-filter:blur(8px);z-index:400;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
 .modal-overlay.open{opacity:1;pointer-events:all;}
-.modal-box{background:var(--branco);border-radius:24px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:48px;position:relative;transform:translateY(20px);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);}
-.modal-overlay.open .modal-box{transform:translateY(0);}
-.modal-close{position:absolute;top:20px;right:20px;background:var(--bege);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px;color:var(--texto);display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
-.modal-close:hover{background:var(--magenta);color:#fff;}
-.modal-box h2{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--azul);margin-bottom:8px;}
-.modal-date{font-size:12px;color:var(--texto-suave);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--linha);}
-.modal-box h3{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--azul);margin:24px 0 10px;}
-.modal-box p,.modal-box li{font-size:0.95rem;color:var(--texto-suave);line-height:1.75;margin-bottom:10px;}
+.modal-box{background:#fff;border-radius:8px;max-width:720px;width:100%;max-height:86vh;overflow-y:auto;padding:52px;position:relative;transform:translateY(18px);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);}
+.modal-overlay.open .modal-box{transform:none;}
+.modal-close{position:absolute;top:22px;right:22px;background:var(--mist);border:1px solid var(--line);border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:17px;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
+.modal-close:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.modal-box h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy);margin-bottom:8px;font-weight:600;}
+.modal-date{font-size:12px;color:var(--ink-mute);margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid var(--line);}
+.modal-box h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin:26px 0 10px;font-weight:600;}
+.modal-box p,.modal-box li{font-size:0.94rem;color:var(--ink-soft);line-height:1.75;margin-bottom:9px;font-weight:300;}
 .modal-box ul{padding-left:20px;}
-.modal-box strong{color:var(--texto);}
+.modal-box strong{color:var(--ink);font-weight:600;}
 
-/* RESPONSIVO */
-@media(max-width:1024px){
-  .prova-numeros{grid-template-columns:repeat(2,1fr);padding:36px;}
-  .passos::before{display:none;}
-  .passos{grid-template-columns:1fr;gap:32px;}
-  .passo{padding:0;}
+/* ---------- RESPONSIVO ---------- */
+@media(max-width:1080px){
+  .aut-grid{grid-template-columns:1fr;gap:48px;}
+  .hero{gap:48px;}
 }
-@media(max-width:968px){
-  .hero{grid-template-columns:1fr;gap:60px;padding-top:120px;}
-  .hero-float{display:none;}
-  .ps-grid{grid-template-columns:1fr;gap:40px;}
-  .ps-arrow{transform:rotate(90deg);padding:0;}
-  .esp-showcase{grid-template-columns:1fr;}
-  .esp-bloco{padding:32px 24px;}
-  .especialidades{padding-left:4%;padding-right:4%;}
-  .servicos-grid{grid-template-columns:repeat(2,1fr);}
-  .sobre{grid-template-columns:1fr;gap:50px;}
-  .deps-grid{grid-template-columns:1fr;}
-  .footer-top{grid-template-columns:1fr;gap:32px;}
-  section{padding:80px 5%;}
-  .cookie-banner{flex-direction:column;align-items:flex-start;}
+@media(max-width:960px){
+  .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .nav.mobile-open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:8px 6% 18px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px -28px rgba(10,23,51,0.4);}
+  .nav.mobile-open .nav-links a{color:var(--navy);padding:14px 0;border-bottom:1px solid var(--line-soft);width:100%;}
+  .nav.mobile-open .nav-links a::after{display:none;}
+  .hero{grid-template-columns:1fr;padding-top:130px;}
+  .console{max-width:520px;}
+  .dor-grid{grid-template-columns:1fr;}
+  .dor-origin{grid-template-columns:1fr;gap:22px;padding:34px;}
+  .dor-origin-tag{border-right:none;border-bottom:1px solid var(--on-dark-line);padding-right:0;padding-bottom:18px;}
+  .board-links{display:none;}
+  .board-grid{grid-template-columns:1fr;gap:18px;}
+  .board-core{order:-1;max-width:520px;margin:0 auto 8px;}
+  .board-col.right .pillar-head{flex-direction:row;text-align:left;}
+  .board-col.right .pillar p{text-align:left;}
+  .board-col.left .pillar,.board-col.right .pillar{padding:22px 24px;}
+  .vert-grid{grid-template-columns:1fr;}
+  .metodo-line{grid-template-columns:1fr;gap:8px;}
+  .metodo-line::before{display:none;}
+  .metodo-step{display:grid;grid-template-columns:auto 1fr;gap:20px;text-align:left;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);}
+  .metodo-node{margin:0;}
+  .metodo-step h3{margin-bottom:5px;}
+  .result-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:34px;}
+}
+@media(max-width:620px){
+  section{padding:84px 6%;}
+  .hero h1{font-size:2.5rem;}
+  .hero-actions{flex-direction:column;align-items:stretch;}
+  .btn{justify-content:center;}
+  .hero-pillars{gap:10px 0;}
+  .console-kpis{grid-template-columns:1fr 1fr;}
+  .diag-card{padding:34px 22px;}
+  .diag-fields{grid-template-columns:1fr;}
+  .diag-res-top{grid-template-columns:1fr;justify-items:center;text-align:center;gap:22px;}
+  .result-grid{grid-template-columns:1fr;}
   .cta-info{grid-template-columns:1fr;}
-  .calc-card{padding:36px 28px;}
-  .calc-fields{grid-template-columns:1fr;}
-  .calc-res-top{flex-direction:column;gap:16px;}
+  .footer-top{grid-template-columns:1fr;}
+  .aut-stats{grid-template-columns:1fr 1fr;}
+  .float-cta span{display:none;}
+  .float-cta{padding:14px;border-radius:50%;}
 }
-@media(max-width:640px){
-  .hero h1{font-size:2.4rem;}
-  .hero-actions{flex-direction:column;}
-  .btn{justify-content:center;width:100%;}
-  .hero-proof{flex-direction:column;align-items:flex-start;gap:12px;}
-  .prova-numeros{grid-template-columns:1fr;}
-  .cta-final-actions{flex-direction:column;}
-  .servicos-grid{grid-template-columns:1fr;}
-  .calc-card{padding:28px 20px;}
-  .calc-res-valor{font-size:clamp(1.4rem,8vw,2.4rem);}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition-duration:0.001ms !important;}
+  .reveal{opacity:1;transform:none;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ===================== NAVBAR ===================== -->
 <nav class="nav" id="nav">
-  <a href="#inicio" class="nav-logo">New<span>Enter</span></a>
-  <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20mais%20informações." class="nav-cta" target="_blank">
-    Quero economizar
+  <a href="#topo" class="nav-logo"><b>NEWENTER</b><span class="dot">.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#board">One Business Board</a>
+    <a href="#verticais">Especializações</a>
+    <a href="#metodo">Metodologia</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#autoridade">Autoridade</a>
+  </div>
+  <a href="#contato" class="nav-cta">
+    Diagnóstico Executivo
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- ① HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-blob-1"></div>
-  <div class="hero-blob-2"></div>
-  <div class="hero-content">
-    <div class="hero-tag"><div class="hero-tag-dot"></div>Atendendo São Paulo · CE & Hotelaria</div>
-    <h1>Reduza seus impostos<br>em até <span class="hl">30%</span><br>com quem <em>entende</em><br>do seu setor</h1>
-    <p class="hero-desc">Contabilidade especializada em comércio exterior e hotelaria. Planejamento tributário, compliance e zero dor de cabeça com o fisco.</p>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="hero-content reveal visible">
+    <div class="hero-region"><span class="pin"></span>Brasil &middot; América Latina</div>
+    <h1>Governança, <em>Inteligência</em> e Controle para empresas que crescem com responsabilidade.</h1>
+    <p class="hero-desc">Uma plataforma integrada de gestão empresarial que conecta dados, compliance, controladoria, tributação e estratégia em uma única visão executiva.</p>
     <div class="hero-actions">
-      <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Quero%20uma%20análise%20gratuita." class="btn btn-primary" target="_blank">
-        Quero economizar agora
+      <a href="#contato" class="btn btn-gold">
+        Solicitar Diagnóstico Executivo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+      <a href="#contato" class="btn btn-ghost-light">Agendar Reunião Estratégica</a>
     </div>
-    <div class="hero-proof">
-      <div class="proof-avatars"><span>JC</span><span>MR</span><span>FS</span><span>+</span></div>
-      <div>
-        <div class="proof-stars">★★★★★</div>
-        <div class="proof-text"><strong>+300 empresas</strong> confiam na NewEnter</div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-card">
-      <div class="hero-float f1">
-        <div class="hero-float-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>
-        Zero autuações
-      </div>
-      <div class="hero-float f2">
-        <div class="hero-float-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-        Resposta em 4h
-      </div>
-      <div class="hero-card-label">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        Economia média dos clientes
-      </div>
-      <div class="hero-saving-label">Redução na carga tributária</div>
-      <div class="hero-saving-val"><span class="num">R$ 47.800</span></div>
-      <div class="hero-saving-sub">por ano · empresa do setor de importação</div>
-      <div class="hero-bar">
-        <div class="hero-bar-label"><span>Antes da NewEnter</span><span style="color:var(--vermelho);font-weight:600;">R$ 158k/ano</span></div>
-        <div class="hero-bar-track"><div class="hero-bar-fill b1"></div></div>
-      </div>
-      <div class="hero-bar">
-        <div class="hero-bar-label"><span>Com a NewEnter</span><span style="color:var(--verde);font-weight:600;">R$ 110k/ano</span></div>
-        <div class="hero-bar-track"><div class="hero-bar-fill b2"></div></div>
-      </div>
-      <div class="hero-mini-tags">
-        <span class="hero-mini-tag">✓ Comércio Exterior</span>
-        <span class="hero-mini-tag">✓ Hotelaria</span>
-        <span class="hero-mini-tag">✓ Planejamento</span>
-      </div>
+    <div class="hero-pillars">
+      <span class="hero-pillar">Contabilidade Estratégica</span>
+      <span class="hero-pillar">Controladoria &amp; BI</span>
+      <span class="hero-pillar">Fiscal &amp; Tributário</span>
+      <span class="hero-pillar">Compliance &amp; Governança</span>
     </div>
   </div>
-</section>
 
-<!-- ② PROBLEMA / SOLUÇÃO -->
-<section class="problema-solucao">
-  <div class="text-center reveal">
-    <span class="section-tag">Você reconhece?</span>
-    <h2 class="section-title">Sua contabilidade <em>te dá dor de cabeça?</em></h2>
-    <p class="section-subtitle">A maioria dos empresários sofre com os mesmos problemas. Veja como a NewEnter resolve.</p>
-  </div>
-  <div class="ps-grid">
-    <div class="ps-coluna problema reveal">
-      <h3>O problema</h3>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <div><div class="ps-item-titulo">Contador que demora dias pra responder</div><div class="ps-item-desc">Você manda um e-mail urgente e a resposta vem depois do prazo</div></div>
+  <div class="hero-visual reveal visible d2">
+    <div class="console">
+      <div class="console-top">
+        <div class="console-title"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>One Business Board</div>
+        <div class="console-live"><span class="blip"></span>Tempo real</div>
       </div>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <div><div class="ps-item-titulo">Multas e autuações inesperadas</div><div class="ps-item-desc">Você descobre débito fiscal só quando a Receita já cobrou</div></div>
-      </div>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <div><div class="ps-item-titulo">Paga mais imposto do que deveria</div><div class="ps-item-desc">Contador genérico não conhece os benefícios fiscais do seu setor</div></div>
-      </div>
-    </div>
-    <div class="ps-arrow reveal">→</div>
-    <div class="ps-coluna solucao reveal delay-2">
-      <h3>A solução NewEnter</h3>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>
-        <div><div class="ps-item-titulo">Resposta garantida em até 4 horas</div><div class="ps-item-desc">Suporte direto via WhatsApp com contador dedicado ao seu negócio</div></div>
-      </div>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>
-        <div><div class="ps-item-titulo">Zero autuações em 3 anos</div><div class="ps-item-desc">Compliance rigoroso e monitoramento proativo das obrigações fiscais</div></div>
-      </div>
-      <div class="ps-item">
-        <div class="ps-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>
-        <div><div class="ps-item-titulo">Economia média de 30% em impostos</div><div class="ps-item-desc">Planejamento tributário ativo no regime mais vantajoso para o seu CNAE</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALCULADORA -->
-<section class="calculadora" id="calculadora">
-  <div class="calc-card reveal">
-    <div class="calc-header">
-      <div class="calc-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        Simulador gratuito
-      </div>
-      <h2>Quanto sua empresa pode <em>economizar</em> por ano?</h2>
-      <p>Insira o faturamento e o setor da sua empresa. Calculamos uma estimativa real da economia com a NewEnter.</p>
-    </div>
-
-    <div class="calc-fields">
-      <div class="calc-field">
-        <label>Faturamento mensal</label>
-        <div class="calc-input-wrap">
-          <span class="calc-prefix">R$</span>
-          <input type="text" class="calc-input" id="calcFaturamento" placeholder="0,00" inputmode="numeric" oninput="mascaraReais(this)"/>
+      <div class="console-kpis">
+        <div class="kpi">
+          <div class="kpi-label">Eficiência Tributária</div>
+          <div class="kpi-val" data-count="92">0<span>/100</span></div>
+          <div class="kpi-bar"><i data-fill="92%"></i></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Compliance</div>
+          <div class="kpi-val" data-count="100">0<span>%</span></div>
+          <div class="kpi-bar"><i data-fill="100%"></i></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Previsibilidade</div>
+          <div class="kpi-val" data-count="87">0<span>%</span></div>
+          <div class="kpi-bar"><i data-fill="87%"></i></div>
         </div>
       </div>
-      <div class="calc-field">
-        <label>Setor da empresa</label>
-        <div class="calc-select-wrap">
-          <select class="calc-select" id="calcSetor">
+      <div class="console-chart">
+        <div class="console-chart-head"><span class="t">Performance consolidada</span><span class="v serif">+ Estável</span></div>
+        <svg viewBox="0 0 320 64" preserveAspectRatio="none" fill="none">
+          <defs>
+            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(200,169,107,0.30)"/>
+              <stop offset="100%" stop-color="rgba(200,169,107,0)"/>
+            </linearGradient>
+          </defs>
+          <line x1="0" y1="16" x2="320" y2="16" stroke="rgba(255,255,255,0.06)"/>
+          <line x1="0" y1="32" x2="320" y2="32" stroke="rgba(255,255,255,0.06)"/>
+          <line x1="0" y1="48" x2="320" y2="48" stroke="rgba(255,255,255,0.06)"/>
+          <path d="M0,52 L40,46 L80,49 L120,38 L160,40 L200,28 L240,30 L280,18 L320,12 L320,64 L0,64 Z" fill="url(#area)"/>
+          <path id="chartLine" d="M0,52 L40,46 L80,49 L120,38 L160,40 L200,28 L240,30 L280,18 L320,12" stroke="#DABE89" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="320" cy="12" r="3.5" fill="#DABE89"/>
+        </svg>
+      </div>
+      <div class="console-foot">
+        <span class="console-chip"><i></i>Governança</span>
+        <span class="console-chip"><i></i>Controladoria</span>
+        <span class="console-chip"><i></i>Jurídico Preventivo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOR DO C-LEVEL ===================== -->
+<section class="dor" id="dor">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">O custo da ausência de visão</span>
+      <h2 class="section-title">O crescimento sem controle <em>custa caro.</em></h2>
+      <p class="section-lead">Empresas em expansão acumulam complexidade mais rápido do que estrutura. Quando a informação está dispersa, o risco deixa de ser visível — e a decisão deixa de ser segura.</p>
+    </div>
+
+    <div class="dor-grid reveal">
+      <div class="dor-item">
+        <div class="dor-num">01</div>
+        <h3>Passivos tributários ocultos</h3>
+        <p>Contingências que se acumulam silenciosamente e só aparecem em fiscalizações, due diligences ou operações societárias.</p>
+      </div>
+      <div class="dor-item">
+        <div class="dor-num">02</div>
+        <h3>Falta de previsibilidade financeira</h3>
+        <p>Decisões de investimento e expansão tomadas sem um horizonte confiável de caixa, margem e resultado.</p>
+      </div>
+      <div class="dor-item">
+        <div class="dor-num">03</div>
+        <h3>Informações descentralizadas</h3>
+        <p>Dados fragmentados entre áreas, sistemas e fornecedores, sem uma leitura única e consolidada do negócio.</p>
+      </div>
+      <div class="dor-item">
+        <div class="dor-num">04</div>
+        <h3>Exposição trabalhista</h3>
+        <p>Estruturas de pessoal e encargos que geram riscos relevantes quando não há governança e controle ativos.</p>
+      </div>
+      <div class="dor-item">
+        <div class="dor-num">05</div>
+        <h3>Falhas de compliance</h3>
+        <p>Obrigações acessórias e regulatórias tratadas de forma reativa, ampliando a exposição institucional da empresa.</p>
+      </div>
+      <div class="dor-item">
+        <div class="dor-num">06</div>
+        <h3>Decisões sem dados confiáveis</h3>
+        <p>A gestão avança no instinto porque os números não chegam a tempo, ou não chegam com a precisão necessária.</p>
+      </div>
+    </div>
+
+    <div class="dor-origin reveal">
+      <div class="dor-origin-tag">Origem comum</div>
+      <p>Esses riscos não são problemas isolados. Eles compartilham uma única raiz: <em>a ausência de visão integrada.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ONE BUSINESS BOARD ===================== -->
+<section class="board" id="board">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">One Business Board</span>
+      <h2 class="section-title">Uma única visão para <em>decisões mais seguras.</em></h2>
+      <p class="section-lead">Seis frentes que normalmente operam isoladas, integradas em uma só leitura executiva do negócio. A informação deixa de ser obrigação e passa a ser inteligência para decidir.</p>
+    </div>
+
+    <div class="board-stage reveal">
+      <svg class="board-links" id="boardLinks" aria-hidden="true">
+        <defs>
+          <linearGradient id="linkgrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="rgba(200,169,107,0.15)"/>
+            <stop offset="50%" stop-color="rgba(200,169,107,0.7)"/>
+            <stop offset="100%" stop-color="rgba(200,169,107,0.15)"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="board-grid">
+        <div class="board-col left">
+          <div class="pillar" data-port="left">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+              <h3>Contabilidade Estratégica</h3>
+            </div>
+            <p>Demonstrações que orientam a gestão, não apenas cumprem prazos.</p>
+          </div>
+          <div class="pillar" data-port="left">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></span>
+              <h3>Controladoria &amp; BI</h3>
+            </div>
+            <p>Indicadores, orçamentos e cenários para antecipar resultados.</p>
+          </div>
+          <div class="pillar" data-port="left">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg></span>
+              <h3>Fiscal &amp; Tributário</h3>
+            </div>
+            <p>Enquadramento eficiente e segurança em cada obrigação.</p>
+          </div>
+        </div>
+
+        <div class="board-core">
+          <div class="board-core-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <div class="board-core-label">Visão Executiva Única</div>
+          <h3>One Business Board</h3>
+          <p>Tudo o que a sua empresa precisa monitorar, conectado em um único painel de decisão.</p>
+          <div class="board-core-stat">
+            <div><div class="n">6</div><div class="l">Frentes</div></div>
+            <div><div class="n">1</div><div class="l">Leitura</div></div>
+            <div><div class="n">∞</div><div class="l">Decisões</div></div>
+          </div>
+        </div>
+
+        <div class="board-col right">
+          <div class="pillar" data-port="right">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg></span>
+              <h3>Departamento Pessoal</h3>
+            </div>
+            <p>Folha, encargos e eSocial com controle e segurança jurídica.</p>
+          </div>
+          <div class="pillar" data-port="right">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h3>Compliance &amp; Governança</h3>
+            </div>
+            <p>Conformidade contínua e estrutura de controles institucionais.</p>
+          </div>
+          <div class="pillar" data-port="right">
+            <div class="pillar-head">
+              <span class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"/><path d="M5 7l-3 6h6z"/><path d="M19 7l-3 6h6z"/><path d="M5 7h14"/></svg></span>
+              <h3>Jurídico Preventivo</h3>
+            </div>
+            <p>Mitigação de riscos antes que se tornem passivos relevantes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESPECIALIZAÇÕES ===================== -->
+<section class="verticais" id="verticais">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Verticais estratégicas</span>
+      <h2 class="section-title">Especialização que <em>antecipa o setor.</em></h2>
+      <p class="section-lead">Não tratamos todos os negócios da mesma forma. Operamos com profundidade em segmentos que exigem domínio técnico, regulatório e operacional específico.</p>
+    </div>
+
+    <div class="vert-grid">
+      <div class="vert reveal">
+        <span class="vert-index">Vertical 01</span>
+        <div class="vert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <h3>Comércio Exterior</h3>
+        <p class="vert-desc">Estruturação fiscal, aduaneira e de compliance para importadores, exportadores, agentes de carga e operações internacionais de alta complexidade.</p>
+        <ul class="vert-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Importação</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Exportação</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Regimes Aduaneiros</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Benefícios Fiscais</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Compliance Internacional</li>
+        </ul>
+      </div>
+
+      <div class="vert reveal d2">
+        <span class="vert-index">Vertical 02</span>
+        <div class="vert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><rect x="9" y="12" width="2.5" height="2.5"/><rect x="13.5" y="12" width="2.5" height="2.5"/><rect x="9" y="16" width="2.5" height="2.5"/><rect x="13.5" y="16" width="2.5" height="2.5"/></svg></div>
+        <h3>Hotelaria</h3>
+        <p class="vert-desc">Controladoria e governança para empreendimentos hoteleiros, pool de locação e condomínios, com leitura gerencial específica do setor.</p>
+        <ul class="vert-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Pool Hoteleiro</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Condomínios</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Alimentos &amp; Bebidas (A&amp;B)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Lucro Real</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Controladoria Hoteleira</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== METODOLOGIA ===================== -->
+<section class="metodo" id="metodo">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Metodologia proprietária</span>
+      <h2 class="section-title">Um método que reduz ruído e <em>amplia previsibilidade.</em></h2>
+      <p class="section-lead">Cada etapa existe para transformar complexidade em clareza. Estrutura antes de execução; execução antes de evolução.</p>
+    </div>
+
+    <div class="metodo-line reveal">
+      <div class="metodo-step">
+        <div class="metodo-node">I</div>
+        <div>
+          <h3>Diagnóstico</h3>
+          <p>Mapeamento da operação, riscos e oportunidades de eficiência.</p>
+        </div>
+      </div>
+      <div class="metodo-step">
+        <div class="metodo-node">II</div>
+        <div>
+          <h3>Planejamento</h3>
+          <p>Desenho da estrutura tributária, contábil e de governança.</p>
+        </div>
+      </div>
+      <div class="metodo-step">
+        <div class="metodo-node">III</div>
+        <div>
+          <h3>Implantação</h3>
+          <p>Integração de processos, controles e fluxos de informação.</p>
+        </div>
+      </div>
+      <div class="metodo-step">
+        <div class="metodo-node">IV</div>
+        <div>
+          <h3>Execução</h3>
+          <p>Operação consistente com monitoramento e reporte executivo.</p>
+        </div>
+      </div>
+      <div class="metodo-step">
+        <div class="metodo-node">V</div>
+        <div>
+          <h3>Evolução Contínua</h3>
+          <p>Refinamento permanente diante de cenário e regulação.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="metodo-foot reveal">O método reduz o ruído operacional e converte cada ciclo em <em>maior previsibilidade de gestão.</em></p>
+  </div>
+</section>
+
+<!-- ===================== RESULTADOS ===================== -->
+<section class="result" id="resultados">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resultados para a gestão</span>
+      <h2 class="section-title">Não entregamos promessas. <em>Entregamos impacto.</em></h2>
+      <p class="section-lead">O que a direção percebe quando a operação passa a ser conduzida com inteligência integrada.</p>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-card reveal">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Clareza gerencial</h3>
+        <p>Informação consolidada e tempestiva para sustentar cada decisão.</p>
+      </div>
+      <div class="result-card reveal d1">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Segurança tributária</h3>
+        <p>Enquadramento eficiente com conformidade e mitigação de contingências.</p>
+      </div>
+      <div class="result-card reveal d2">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V10M19 21V10M9 21V14M15 21V14"/><path d="M3 10l9-6 9 6"/></svg></div>
+        <h3>Governança corporativa</h3>
+        <p>Estrutura de controles que sustenta crescimento e profissionalização.</p>
+      </div>
+      <div class="result-card reveal">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Eficiência operacional</h3>
+        <p>Processos integrados que reduzem retrabalho e custo de gestão.</p>
+      </div>
+      <div class="result-card reveal d1">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <h3>Redução de exposição</h3>
+        <p>Riscos trabalhistas, fiscais e regulatórios identificados e tratados.</p>
+      </div>
+      <div class="result-card reveal d2">
+        <div class="result-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 17l6-6 4 4 7-8"/><path d="M21 7v6h-6"/></svg></div>
+        <h3>Crescimento sustentável</h3>
+        <p>Expansão apoiada em previsibilidade, e não em improviso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIAGNÓSTICO TRIBUTÁRIO ===================== -->
+<section class="diag" id="diagnostico">
+  <div class="wrap">
+    <div class="diag-card reveal">
+      <div class="diag-head">
+        <span class="eyebrow center">Diagnóstico de eficiência tributária</span>
+        <h2>Existe eficiência tributária <em>não capturada</em> na sua operação?</h2>
+        <p>Nossa análise preliminar identifica potenciais oportunidades de otimização fiscal, inconsistências de enquadramento e riscos que podem comprometer a performance financeira da empresa.</p>
+      </div>
+
+      <div class="diag-fields">
+        <div class="field">
+          <label>Faturamento mensal estimado</label>
+          <div class="field-wrap">
+            <span class="field-prefix">R$</span>
+            <input type="text" class="diag-input has-prefix" id="diagFat" placeholder="0,00" inputmode="numeric" oninput="mascaraReais(this)">
+          </div>
+        </div>
+        <div class="field">
+          <label>Regime tributário atual</label>
+          <select class="diag-select" id="diagRegime">
+            <option value="">Selecione o regime</option>
+            <option value="simples">Simples Nacional</option>
+            <option value="presumido">Lucro Presumido</option>
+            <option value="real">Lucro Real</option>
+            <option value="naosei">Não tenho certeza</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Setor de atuação</label>
+          <select class="diag-select" id="diagSetor">
             <option value="">Selecione o setor</option>
-            <option value="exterior">Comercio Exterior</option>
-            <option value="hotelaria">Hotelaria & Turismo</option>
-            <option value="outros">Outros setores</option>
+            <option value="exterior">Comércio Exterior</option>
+            <option value="hotelaria">Hotelaria</option>
+            <option value="holding">Holding / Family Office</option>
+            <option value="grupo">Grupo Empresarial</option>
+            <option value="outros">Outro setor</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Estágio da empresa</label>
+          <select class="diag-select" id="diagEstagio">
+            <option value="">Selecione o estágio</option>
+            <option value="estrut">Em estruturação</option>
+            <option value="expansao">Em expansão</option>
+            <option value="consolidada">Consolidada</option>
+            <option value="grupo">Múltiplas empresas / grupo</option>
           </select>
         </div>
       </div>
-    </div>
 
-    <button class="calc-btn" onclick="calcularEconomia()">
-      Ver minha economia estimada
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
+      <button class="diag-btn" onclick="gerarDiagnostico()">
+        Gerar análise preliminar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
 
-    <div class="calc-resultado" id="calcResultado">
-      <div class="calc-res-top">
-        <div>
-          <div class="calc-res-label">Economia estimada com a NewEnter</div>
-          <div class="calc-res-valor" id="calcValorAnual">R$ 0</div>
-          <div class="calc-res-periodo">por ano &middot; <span id="calcValorMensal"></span> por mes</div>
+      <div class="diag-result" id="diagResult">
+        <div class="diag-res-top">
+          <div class="gauge">
+            <svg width="128" height="128" viewBox="0 0 128 128">
+              <defs>
+                <linearGradient id="gaugegrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#A98A4F"/>
+                  <stop offset="100%" stop-color="#DABE89"/>
+                </linearGradient>
+              </defs>
+              <circle class="gauge-track" cx="64" cy="64" r="54"/>
+              <circle class="gauge-fill" id="gaugeFill" cx="64" cy="64" r="54" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+            </svg>
+            <div class="gauge-center"><b id="gaugeNum">0</b><small>Índice</small></div>
+          </div>
+          <div>
+            <div class="diag-res-label">Índice de eficiência estimado</div>
+            <div class="diag-res-headline" id="diagHeadline">Análise preliminar concluída</div>
+            <div class="diag-res-sub" id="diagSub">Identificamos margem relevante para estruturação fiscal e de governança.</div>
+          </div>
         </div>
-        <div class="calc-res-breakdown">
-          <div class="calc-res-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-            <span id="calcDescSetor"></span>
-          </div>
-          <div class="calc-res-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-            Planejamento tributario ativo
-          </div>
-          <div class="calc-res-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-            Sem risco de autuacoes
-          </div>
+        <ul class="diag-points" id="diagPoints"></ul>
+        <p class="diag-disclaimer">Esta é uma estimativa indicativa, construída a partir de parâmetros gerais de mercado. Não substitui um diagnóstico técnico. Um Diagnóstico Executivo completo considera regime, CNAE, estrutura societária, operações e contingências específicas da sua empresa.</p>
+        <a class="diag-cta" id="diagCta" href="#contato">
+          Receber Diagnóstico Executivo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUTORIDADE ===================== -->
+<section class="aut" id="autoridade">
+  <div class="wrap">
+    <div class="aut-grid">
+      <div class="reveal-left reveal">
+        <span class="eyebrow">Autoridade institucional</span>
+        <h2 class="section-title">Estrutura, método e <em>presença regional.</em></h2>
+        <p class="section-lead" style="margin-bottom:32px;">A NEWENTER opera como um ecossistema integrado de inteligência empresarial, com atuação no Brasil e na América Latina.</p>
+        <div class="aut-stats">
+          <div class="aut-stat"><div class="n" data-count="1">0</div><div class="l">Visão executiva única<br>(One Business Board)</div></div>
+          <div class="aut-stat"><div class="n" data-count="6">0</div><div class="l">Frentes integradas<br>no One Business Board</div></div>
+          <div class="aut-stat"><div class="n" data-count="2">0</div><div class="l">Verticais<br>especializadas</div></div>
+          <div class="aut-stat"><div class="n" data-count="5">0</div><div class="l">Etapas na<br>metodologia proprietária</div></div>
         </div>
       </div>
-      <div class="calc-res-divider"></div>
-      <div class="calc-res-disclaimer">* Estimativa baseada na reducao media sobre a carga tributaria dos nossos clientes (CE: ~25% dos impostos / Hotelaria: ~20% / Outros: ~15%). O valor real varia conforme regime tributario atual, CNAE e complexidade das operacoes. Agende uma analise gratuita para um numero preciso.</div>
-      <a class="calc-wa-btn" id="calcWaBtn" href="#" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quero conversar sobre essa economia
+
+      <div class="aut-pillars reveal-right reveal">
+        <div class="aut-pillar">
+          <span class="aut-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>
+          <div><h3>Atuação Brasil e América Latina</h3><p>Cobertura regional para grupos e operações que cruzam fronteiras e jurisdições.</p></div>
+        </div>
+        <div class="aut-pillar">
+          <span class="aut-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.4 5 5.6.6-4 4 1.1 5.6L12 19.8 6.9 22l1.1-5.6-4-4 5.6-.6z"/></svg></span>
+          <div><h3>Especialização setorial</h3><p>Domínio profundo de comércio exterior e hotelaria, com leitura técnica específica de cada vertical.</p></div>
+        </div>
+        <div class="aut-pillar">
+          <span class="aut-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <div><h3>Metodologia proprietária</h3><p>Um processo estruturado em cinco etapas que reduz ruído e amplia previsibilidade de gestão.</p></div>
+        </div>
+        <div class="aut-pillar">
+          <span class="aut-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2L19 19M19 5l-2.8 2.8M7.8 16.2L5 19"/></svg></span>
+          <div><h3>Ecossistema integrado</h3><p>Contábil, fiscal, controladoria, compliance, pessoal e jurídico operando como uma única plataforma.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta" id="contato">
+  <div class="cta-inner reveal">
+    <span class="eyebrow center">Próximo passo</span>
+    <h2>As decisões mais importantes da sua empresa merecem <em>informações mais confiáveis.</em></h2>
+    <p>Converse com nossos especialistas e descubra como estruturar uma operação mais segura, previsível e preparada para crescer.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1.%20Gostaria%20de%20solicitar%20um%20Diagn%C3%B3stico%20Executivo%20para%20a%20minha%20empresa." class="btn btn-gold" target="_blank" rel="noopener">
+        Solicitar Diagnóstico Executivo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="como-funciona" id="como-funciona">
-  <div class="text-center reveal">
-    <span class="section-tag">Sem complicação</span>
-    <h2 class="section-title">Trocar de contador é <em>mais simples</em><br>do que você imagina</h2>
-    <p class="section-subtitle">Cuidamos de toda a burocracia. Você só precisa dizer sim.</p>
-  </div>
-
-  <div class="passos">
-    <div class="passo reveal">
-      <div class="passo-num-wrap">
-        <div class="passo-num">1</div>
-      </div>
-      <div class="passo-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      </div>
-      <div class="passo-titulo">Diagnóstico gratuito</div>
-      <p class="passo-desc">Entendemos sua operação, seu setor e sua situação fiscal atual. Em 30 minutos identificamos oportunidades de economia que seu contador atual pode estar perdendo.</p>
-      <div class="passo-detalhe">
-        <strong>O que acontece:</strong> Reunião no WhatsApp ou videochamada. Você explica seu negócio, a gente apresenta o potencial de economia. Sem compromisso.
-      </div>
-    </div>
-
-    <div class="passo reveal delay-2">
-      <div class="passo-num-wrap">
-        <div class="passo-num">2</div>
-      </div>
-      <div class="passo-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-      </div>
-      <div class="passo-titulo">A gente cuida da transição</div>
-      <p class="passo-desc">Fazemos o distrato com o contador anterior, transferimos toda a escrituração histórica e garantimos zero interrupção nas obrigações fiscais. Você não precisa fazer nada.</p>
-      <div class="passo-detalhe">
-        <strong>Prazo médio:</strong> 15 dias úteis. Nenhuma multa, nenhum prazo perdido. A troca é completamente silenciosa para o fisco.
-      </div>
-    </div>
-
-    <div class="passo reveal delay-3">
-      <div class="passo-num-wrap">
-        <div class="passo-num">3</div>
-      </div>
-      <div class="passo-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-      </div>
-      <div class="passo-titulo">Economia na ponta do dedo</div>
-      <p class="passo-desc">A partir daí você recebe relatórios gerenciais mensais, suporte via WhatsApp em até 4h e planejamento tributário ativo — tudo para que sua empresa pague menos e cresça mais.</p>
-      <div class="passo-detalhe">
-        <strong>Resultado médio:</strong> Clientes economizam R$ 30k–80k por ano só com otimização do regime tributário.
-      </div>
-    </div>
-  </div>
-
-  <div class="passos-cta reveal">
-    <p>Pronto para dar o primeiro passo? É grátis e sem compromisso.</p>
-    <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Quero%20fazer%20o%20diagnóstico%20gratuito." class="btn btn-primary" target="_blank">
-      Agendar diagnóstico gratuito
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- ④ ESPECIALIDADES -->
-<section class="especialidades" id="especialidades">
-  <div class="esp-header reveal text-center">
-    <span class="section-tag">Especialistas no seu setor</span>
-    <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Dois setores. <em>Total domínio.</em></h2>
-    <p class="section-subtitle" style="color:rgba(255,255,255,0.7);margin-left:auto;margin-right:auto;">Não somos contabilidade genérica. Vivemos o dia a dia de comércio exterior e hotelaria há mais de 10 anos.</p>
-  </div>
-  <div class="esp-showcase">
-    <div class="esp-bloco reveal">
-      <div class="esp-bloco-num">01</div>
-      <div class="esp-icon-area">
-        <svg class="esp-globo" viewBox="0 0 160 160" fill="none">
-          <circle cx="80" cy="80" r="70" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
-          <ellipse cx="80" cy="80" rx="30" ry="70" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="orbit"/>
-          <ellipse cx="80" cy="80" rx="70" ry="25" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="orbit"/>
-          <circle cx="80" cy="10" r="5" fill="#FF3DB0" class="ponto-rota p1"/>
-          <circle cx="150" cy="80" r="4" fill="#FF3DB0" class="ponto-rota p2"/>
-          <circle cx="20" cy="60" r="3" fill="#fff" class="ponto-rota p3"/>
-          <circle cx="110" cy="140" r="4" fill="#FF3DB0" class="ponto-rota p4"/>
-          <line x1="20" y1="60" x2="80" y2="10" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-          <line x1="80" y1="10" x2="150" y2="80" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-          <line x1="150" y1="80" x2="110" y2="140" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-        </svg>
-        <div class="esp-tags-f">
-          <div class="esp-tag-f tf1">🌎 Importação</div>
-          <div class="esp-tag-f tf2">📦 Drawback</div>
-          <div class="esp-tag-f tf3">🚢 Exportação</div>
-        </div>
-      </div>
-      <h3>Comércio Exterior</h3>
-      <p class="esp-desc">Importação, exportação e regimes aduaneiros especiais. Reduzimos seus custos de operação internacional com compliance total.</p>
-      <div class="esp-checks">
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Classificação fiscal NCM</div>
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Drawback, Recof e regimes especiais</div>
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>SISCOMEX e documentação completa</div>
-      </div>
-      <div class="esp-result">
-        <div class="esp-result-num">30%</div>
-        <div class="esp-result-label"><strong>de redução média</strong><br>nos custos de importação dos nossos clientes</div>
-      </div>
-    </div>
-    <div class="esp-bloco reveal delay-2">
-      <div class="esp-bloco-num">02</div>
-      <div class="esp-icon-area">
-        <svg class="esp-predio" viewBox="0 0 160 160" fill="none">
-          <rect x="30" y="40" width="100" height="110" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-          <g class="janelas">
-            <rect class="j1" x="42" y="55" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j2" x="62" y="55" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j3" x="82" y="55" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j4" x="102" y="55" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j5" x="42" y="73" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j6" x="62" y="73" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j7" x="82" y="73" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j8" x="102" y="73" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-            <rect class="j9" x="42" y="91" width="14" height="10" rx="2" fill="#FF3DB0" opacity="0.9"/>
-          </g>
-          <rect x="60" y="120" width="40" height="30" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-          <g class="estrelas-hotel" style="font-size:14px">
-            <text x="47" y="30" fill="#FFD700">★</text><text x="60" y="30" fill="#FFD700">★</text>
-            <text x="73" y="30" fill="#FFD700">★</text><text x="86" y="30" fill="#FFD700">★</text>
-            <text x="99" y="30" fill="#FFD700">★</text>
-          </g>
-        </svg>
-        <div class="esp-tags-f">
-          <div class="esp-tag-f tf1">🏨 RevPAR</div>
-          <div class="esp-tag-f tf2">📊 F&B</div>
-          <div class="esp-tag-f tf3">🛎️ Ocupação</div>
-        </div>
-      </div>
-      <h3>Hotelaria & Turismo</h3>
-      <p class="esp-desc">Contabilidade gerencial para hotéis, pousadas e operadoras. Dashboards com os indicadores do setor que realmente importam.</p>
-      <div class="esp-checks">
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Centro de custo por UH</div>
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Indicadores RevPAR, ADR e GoProfit</div>
-        <div class="esp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Controle detalhado de F&B</div>
-      </div>
-      <div class="esp-result">
-        <div class="esp-result-num">+50</div>
-        <div class="esp-result-label"><strong>hotéis e pousadas</strong><br>já confiam nos nossos relatórios gerenciais</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ⑤ SERVIÇOS -->
-<section class="servicos" id="servicos">
-  <div class="reveal">
-    <span class="section-tag">O que oferecemos</span>
-    <h2 class="section-title">Tudo que sua empresa <em>precisa</em></h2>
-    <p class="section-subtitle">Serviços completos para manter sua empresa em dia com o fisco e crescendo com segurança.</p>
-  </div>
-  <div class="servicos-grid">
-    <div class="servico reveal delay-1">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l6-6m-6 0h6v6M3 17V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-      <div><h3>Contabilidade Geral</h3><p>Escrituração contábil, balancetes, DRE e balanço patrimonial com relatórios mensais em linguagem clara.</p></div>
-    </div>
-    <div class="servico reveal delay-2">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20"/></svg></div>
-      <div><h3>Comércio Exterior</h3><p>Classificação NCM, SISCOMEX, drawback e regimes aduaneiros especiais para reduzir custos de importação.</p></div>
-    </div>
-    <div class="servico reveal delay-3">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-      <div><h3>Hotelaria & Turismo</h3><p>Contabilidade especializada para hotéis com centro de custo por UH e indicadores RevPAR, ADR e GoProfit.</p></div>
-    </div>
-    <div class="servico reveal delay-1">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-      <div><h3>Planejamento Tributário</h3><p>Análise do regime mais vantajoso e estruturação fiscal para reduzir legalmente a carga de impostos.</p></div>
-    </div>
-    <div class="servico reveal delay-2">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-      <div><h3>Departamento Pessoal</h3><p>Folha de pagamento, eSocial, admissões e demissões com segurança jurídica total.</p></div>
-    </div>
-    <div class="servico reveal delay-3">
-      <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <div><h3>Consultoria Financeira</h3><p>Diagnóstico financeiro, fluxo de caixa e indicadores para tomada de decisão estratégica no negócio.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ⑥ SOBRE -->
-<section class="sobre" id="sobre">
-  <div class="sobre-foto reveal-left">
-    <div class="sobre-foto-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      <span>Foto da Janaína</span>
-    </div>
-  </div>
-  <div class="reveal-right">
-    <span class="section-tag">Quem cuida do seu negócio</span>
-    <h2 class="section-title">Uma contadora que <em>virou especialista</em> por necessidade</h2>
-    <p class="sobre-bio">Quando comecei a atender empresas de comércio exterior e hotelaria, percebi que <strong>a contabilidade genérica não servia</strong>. Cada setor tem suas peculiaridades, benefícios fiscais e indicadores próprios — e ignorar isso significa deixar dinheiro na mesa.</p>
-    <p class="sobre-bio">Há mais de 10 anos construí a <strong>NewEnter</strong> para ser diferente: uma assessoria que mergulha no seu setor, fala a sua língua e trabalha ativamente para que você pague menos e cresça mais.</p>
-    <div class="sobre-creds">
-      <div class="cred"><span class="cred-num">10+</span> Anos de mercado</div>
-      <div class="cred"><span class="cred-num">300+</span> Empresas</div>
-      <div class="cred">✓ CRC-SP ativo</div>
-      <div class="cred">✓ SINCOSP</div>
-    </div>
-    <div class="assinatura">
-      <div class="assinatura-nome">Janaína Carmo</div>
-      <div class="assinatura-cargo">Sócia-Fundadora · Contadora CRC SP</div>
-    </div>
-  </div>
-</section>
-
-<!-- ⑦ PROVA -->
-<section class="prova">
-  <div class="text-center reveal">
-    <span class="section-tag">Resultados reais</span>
-    <h2 class="section-title">Quem já <em>economizou</em> com a gente</h2>
-  </div>
-  <div class="prova-numeros reveal">
-    <div class="prova-num"><div class="prova-num-val">10<span>+</span></div><div class="prova-num-label">Anos de mercado</div></div>
-    <div class="prova-num"><div class="prova-num-val">300<span>+</span></div><div class="prova-num-label">Empresas atendidas</div></div>
-    <div class="prova-num"><div class="prova-num-val">0</div><div class="prova-num-label">Autuações em 3 anos</div></div>
-    <div class="prova-num"><div class="prova-num-val">98<span>%</span></div><div class="prova-num-label">Satisfação</div></div>
-  </div>
-  <div class="deps-grid">
-    <div class="dep reveal">
-      <div class="dep-stars">★★★★★</div>
-      <div class="dep-resultado">R$ 47k <span>economia/ano</span></div>
-      <div class="dep-texto">"Mudei pra NewEnter e em 6 meses já tinha pago todo o investimento só com a economia de impostos. Atendimento ágil e sem enrolação."</div>
-      <div class="dep-autor"><div class="dep-avatar">MR</div><div><div class="dep-nome">Marcos Rodrigues</div><div class="dep-empresa">MR Importações</div></div></div>
-    </div>
-    <div class="dep reveal delay-2">
-      <div class="dep-stars">★★★★★</div>
-      <div class="dep-resultado">+30% <span>no GoProfit</span></div>
-      <div class="dep-texto">"Finalmente uma contadora que entende de hotel. Os relatórios mensais mudaram minha forma de gerenciar. Recomendo de olhos fechados."</div>
-      <div class="dep-autor"><div class="dep-avatar">FS</div><div><div class="dep-nome">Fernanda Souza</div><div class="dep-empresa">Pousada Vista Verde</div></div></div>
-    </div>
-    <div class="dep reveal delay-3">
-      <div class="dep-stars">★★★★★</div>
-      <div class="dep-resultado">Zero <span>multas em 2 anos</span></div>
-      <div class="dep-texto">"Saí de um contador que me dava dor de cabeça toda semana. Hoje tenho tranquilidade total com o fisco. Vale cada centavo."</div>
-      <div class="dep-autor"><div class="dep-avatar">JC</div><div><div class="dep-nome">Jorge Campos</div><div class="dep-empresa">JC Comércio Exterior</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ⑧ CTA FINAL -->
-<section class="cta-final" id="contato">
-  <div class="cta-final-content">
-    <h2>Pronto pra parar de pagar<br><em>imposto a mais?</em></h2>
-    <p>Análise gratuita sem compromisso. Em 30 minutos a gente identifica o quanto você pode economizar com a NewEnter.</p>
-    <div class="cta-final-actions">
-      <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Quero%20agendar%20minha%20análise%20gratuita." class="btn" style="background:#fff;color:var(--magenta);box-shadow:0 6px 24px rgba(0,0,0,0.15);" target="_blank">
-        Falar no WhatsApp agora
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      </a>
-      <a href="mailto:SEUEMAIL@newenter.com.br" class="btn btn-outline-white">Mandar e-mail</a>
+      <a href="mailto:contato@newenter.com.br?subject=Reuni%C3%A3o%20Estrat%C3%A9gica%20NEWENTER" class="btn btn-ghost-light">Agendar Reunião Estratégica</a>
     </div>
     <div class="cta-info">
       <div class="cta-info-item">
-        <div class="cta-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div class="cta-info-label">Atendimento</div>
-        <div class="cta-info-val">Seg–Sex 8h às 18h</div>
+        <div class="cta-info-label">Atuação</div>
+        <div class="cta-info-val">Brasil &amp; América Latina</div>
       </div>
       <div class="cta-info-item">
-        <div class="cta-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <div class="cta-info-label">Telefone</div>
-        <div class="cta-info-val">(11) X XXXX-XXXX</div>
+        <div class="cta-info-label">Relacionamento</div>
+        <div class="cta-info-val">contato@newenter.com.br</div>
       </div>
       <div class="cta-info-item">
-        <div class="cta-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="cta-info-label">Localização</div>
-        <div class="cta-info-val">São Paulo, SP</div>
+        <div class="cta-info-label">Atendimento executivo</div>
+        <div class="cta-info-val">Seg–Sex · 9h às 18h</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ⑨ FAQ -->
+<!-- ===================== FAQ ===================== -->
 <section class="faq" id="faq">
-  <div class="text-center reveal">
-    <span class="section-tag">Dúvidas frequentes</span>
-    <h2 class="section-title">Antes de fechar, <em>algumas respostas</em></h2>
-  </div>
-  <div class="faq-list reveal">
-    <div class="faq-item">
-      <button class="faq-question">Já tenho contador. Vale a pena trocar?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Sim — especialmente se você opera em comércio exterior ou hotelaria. A maioria dos contadores genéricos não conhece os benefícios fiscais específicos desses setores e você paga mais imposto do que deveria. Fazemos uma análise gratuita para mostrar exatamente quanto você está perdendo hoje.</div></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Esclarecimentos</span>
+      <h2 class="section-title">Perguntas de quem <em>decide.</em></h2>
     </div>
-    <div class="faq-item">
-      <button class="faq-question">Como funciona a troca? É trabalhoso?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Não — nós cuidamos de tudo. Fazemos o distrato com o contador anterior, transferimos toda a escrituração histórica e garantimos zero interrupção nas obrigações fiscais. O processo leva em média 15 dias e você não precisa fazer nada além de dizer sim.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Quanto custa?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">O valor depende do porte da sua empresa e da complexidade das operações. Em geral, a economia tributária que conseguimos para o cliente paga a mensalidade várias vezes. Fale com a gente para uma proposta personalizada e gratuita — sem compromisso.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Qual o prazo de resposta para minhas dúvidas?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Até 4 horas úteis via WhatsApp para questões do dia a dia. Para demandas complexas, comunicamos o prazo no primeiro retorno. Nunca deixamos você sem resposta — esse é nosso compromisso.</div></div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">A NEWENTER substitui a minha estrutura contábil atual?<span class="faq-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">A NEWENTER atua como plataforma integrada de inteligência empresarial. Em muitos casos consolidamos contabilidade, fiscal, pessoal, controladoria, compliance e jurídico preventivo em uma única governança. O escopo é definido no Diagnóstico Executivo, a partir do momento e da estrutura de cada empresa.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O que é o One Business Board?<span class="faq-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">É o conceito central da NEWENTER: uma única visão executiva que conecta as seis frentes críticas do negócio. Em vez de informações dispersas entre áreas e fornecedores, a direção passa a ler a empresa de forma consolidada, com maior segurança para decidir.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como funciona o Diagnóstico Executivo?<span class="faq-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">É uma análise estruturada da sua operação — enquadramento tributário, exposição a riscos, governança e oportunidades de eficiência. O resultado é uma leitura objetiva da situação atual e das prioridades de estruturação, conduzida por especialistas seniores.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">A atuação é apenas no Brasil?<span class="faq-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. Atuamos no Brasil e na América Latina, com atenção especial a operações de comércio exterior e a grupos empresariais com presença em múltiplas jurisdições.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Para que perfil de empresa a NEWENTER é indicada?<span class="faq-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Para empresas em expansão e grupos que exigem previsibilidade, controle e governança — incluindo importadores, exportadores, agentes de carga, holdings, family offices e empreendimentos de hotelaria. O ponto comum é a necessidade de decidir com base em informação confiável.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="footer-top">
     <div>
-      <div class="footer-brand">New<span>Enter</span></div>
-      <p class="footer-tagline">Contabilidade especializada em comércio exterior e hotelaria. Transformando números em soluções estratégicas.</p>
-      <div class="footer-lgpd">
-        © 2025 NewEnter Assessoria Contábil · CNPJ XX.XXX.XXX/0001-XX<br>
-        <a onclick="abrirPrivacidade()">Política de Privacidade</a> · <a onclick="abrirPrivacidade()">Uso de Cookies</a>
-      </div>
+      <div class="footer-brand">NEWENTER<span class="dot">.</span></div>
+      <p class="footer-tag">Transformamos obrigações em inteligência para decisões empresariais.</p>
+      <div class="footer-region"><i></i>Brasil &middot; América Latina</div>
     </div>
     <div class="footer-col">
-      <h4>Navegação</h4>
+      <h4>Plataforma</h4>
       <ul>
-        <li><a href="#calculadora">Simulador de economia</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#especialidades">Especialidades</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#board">One Business Board</a></li>
+        <li><a href="#metodo">Metodologia</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#autoridade">Autoridade</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contato</h4>
+      <h4>Verticais</h4>
       <ul>
-        <li><a href="https://wa.me/55XXXXXXXXXXX" target="_blank">WhatsApp</a></li>
-        <li><a href="mailto:SEUEMAIL@newenter.com.br">E-mail</a></li>
-        <li><a onclick="abrirPrivacidade()" style="cursor:pointer">Privacidade & LGPD</a></li>
+        <li><a href="#verticais">Comércio Exterior</a></li>
+        <li><a href="#verticais">Hotelaria</a></li>
+        <li><a href="#diagnostico">Diagnóstico Tributário</a></li>
+        <li><a href="#faq">Esclarecimentos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Relacionamento</h4>
+      <ul>
+        <li><a href="#contato">Diagnóstico Executivo</a></li>
+        <li><a href="#contato">Reunião Estratégica</a></li>
+        <li><a href="mailto:contato@newenter.com.br">contato@newenter.com.br</a></li>
+        <li><a onclick="abrirPrivacidade()" style="cursor:pointer">Privacidade &amp; LGPD</a></li>
       </ul>
     </div>
   </div>
+  <div class="footer-lgpd">
+    © 2026 NEWENTER · Inteligência Empresarial · CNPJ XX.XXX.XXX/0001-XX<br>
+    <a onclick="abrirPrivacidade()">Política de Privacidade</a> · <a onclick="abrirPrivacidade()">Uso de Cookies</a> · Em conformidade com a LGPD (Lei nº 13.709/2018)
+  </div>
   <div class="footer-bottom">
-    <span>Desenvolvido por <a href="https://www.linkedin.com/in/vinnicius-s-nogueira" target="_blank" style="color:rgba(255,255,255,0.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.2);transition:all 0.3s;" onmouseover="this.style.color='#FF3DB0';this.style.borderBottomColor='#FF3DB0'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='rgba(255,255,255,0.2)'">Vinnicius Soares</a></span>
-    <a href="#inicio">Voltar ao topo ↑</a>
+    <span>Desenvolvido por <a href="https://www.linkedin.com/in/vinnicius-s-nogueira" target="_blank" rel="noopener">Vinnicius Soares</a></span>
+    <a href="#topo">Voltar ao topo ↑</a>
   </div>
 </footer>
 
-<!-- WA Button -->
-<a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="wa-btn" target="_blank" title="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- FLOATING CTA -->
+<a href="#contato" class="float-cta">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-6 0v4M5 9h14l1 12H4z"/></svg>
+  <span>Diagnóstico Executivo</span>
 </a>
 
 <!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
+<div class="cookie" id="cookie">
   <div class="cookie-text">
-    🍪 Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa
-    <a onclick="abrirPrivacidade()">Política de Privacidade</a> conforme a <strong>LGPD (Lei 13.709/2018)</strong>.
+    Utilizamos cookies para aprimorar sua experiência e analisar o desempenho institucional do site. Ao continuar, você concorda com nossa
+    <a onclick="abrirPrivacidade()">Política de Privacidade</a>, em conformidade com a <strong>LGPD (Lei nº 13.709/2018)</strong>.
   </div>
   <div class="cookie-actions">
-    <button class="cookie-btn recusar" onclick="recusarCookies()">Apenas essenciais</button>
-    <button class="cookie-btn aceitar" onclick="aceitarCookies()">Aceitar todos</button>
+    <button class="cookie-btn no" onclick="recusarCookies()">Apenas essenciais</button>
+    <button class="cookie-btn ok" onclick="aceitarCookies()">Aceitar todos</button>
   </div>
 </div>
 
 <!-- MODAL PRIVACIDADE -->
-<div class="modal-overlay" id="modalPrivacidade">
+<div class="modal-overlay" id="modalPriv">
   <div class="modal-box">
     <button class="modal-close" onclick="fecharPrivacidade()">✕</button>
     <h2>Política de Privacidade</h2>
-    <div class="modal-date">Última atualização: Janeiro de 2025 · NewEnter Assessoria Contábil · CNPJ XX.XXX.XXX/0001-XX</div>
-    <h3>1. Quem somos</h3>
-    <p>A <strong>NewEnter Assessoria Contábil</strong>, CNPJ XX.XXX.XXX/0001-XX, São Paulo/SP, é responsável pelo tratamento dos dados coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
-    <h3>2. Dados coletados</h3>
+    <div class="modal-date">Última atualização: Junho de 2026 · NEWENTER · CNPJ XX.XXX.XXX/0001-XX</div>
+    <h3>1. Controlador dos dados</h3>
+    <p>A <strong>NEWENTER</strong>, CNPJ XX.XXX.XXX/0001-XX, é responsável pelo tratamento dos dados coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+    <h3>2. Dados tratados</h3>
     <ul>
-      <li><strong>Dados de contato:</strong> nome, e-mail e telefone fornecidos via WhatsApp ou formulário.</li>
-      <li><strong>Dados de navegação:</strong> IP, tipo de navegador e páginas visitadas (via cookies).</li>
+      <li><strong>Dados de contato corporativo:</strong> nome, empresa, e-mail e telefone informados em solicitações.</li>
+      <li><strong>Dados de navegação:</strong> endereço IP, navegador e páginas acessadas, via cookies.</li>
     </ul>
     <h3>3. Finalidade</h3>
     <ul>
-      <li>Responder solicitações de contato e orçamentos</li>
-      <li>Melhorar a experiência de navegação</li>
-      <li>Enviar informações sobre serviços (somente com consentimento)</li>
+      <li>Responder solicitações de diagnóstico e reuniões estratégicas;</li>
+      <li>Conduzir o relacionamento institucional e contratual;</li>
+      <li>Aprimorar a experiência e a segurança da navegação.</li>
     </ul>
     <h3>4. Cookies</h3>
-    <p>Usamos cookies essenciais para o funcionamento do site e analíticos para entender o comportamento dos visitantes. Você pode recusar os não essenciais pelo banner.</p>
+    <p>Empregamos cookies essenciais ao funcionamento do site e cookies analíticos para compreender o desempenho institucional. Os não essenciais podem ser recusados no banner.</p>
     <h3>5. Compartilhamento</h3>
-    <p>Seus dados <strong>não são vendidos ou compartilhados</strong> com terceiros para fins comerciais.</p>
-    <h3>6. Seus direitos (LGPD)</h3>
-    <p>Você pode: acessar, corrigir, excluir seus dados, revogar consentimento e solicitar portabilidade. Contato: <strong>SEUEMAIL@newenter.com.br</strong></p>
-    <h3>7. Contato</h3>
-    <p><strong>E-mail:</strong> SEUEMAIL@newenter.com.br<br><strong>WhatsApp:</strong> (11) X XXXX-XXXX<br><strong>Endereço:</strong> São Paulo, SP</p>
+    <p>Os dados <strong>não são comercializados</strong>. Eventual compartilhamento ocorre apenas com operadores estritamente necessários à prestação do serviço, sob obrigação de confidencialidade.</p>
+    <h3>6. Direitos do titular (LGPD)</h3>
+    <p>Você pode acessar, corrigir, eliminar e portar seus dados, bem como revogar consentimento. Solicitações: <strong>contato@newenter.com.br</strong>.</p>
+    <h3>7. Contato do encarregado</h3>
+    <p><strong>E-mail:</strong> contato@newenter.com.br<br><strong>Atuação:</strong> Brasil e América Latina</p>
   </div>
 </div>
 
 <script>
-// Navbar
+// ---------- NAVBAR ----------
 const nav = document.getElementById('nav');
-window.addEventListener('scroll',()=>{ nav.classList.toggle('scrolled',window.scrollY>50); });
+window.addEventListener('scroll',()=>{ nav.classList.toggle('scrolled', window.scrollY>40); }, {passive:true});
+const navToggle = document.getElementById('navToggle');
+navToggle.addEventListener('click',()=> nav.classList.toggle('mobile-open'));
+document.querySelectorAll('#navLinks a').forEach(a=> a.addEventListener('click',()=> nav.classList.remove('mobile-open')));
 
-// Reveal
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      obs.unobserve(e.target);
-    }
-  });
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+// ---------- REVEAL ----------
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+},{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
-// Stagger automatico em grids
-document.querySelectorAll('.servicos-grid,.deps-grid,.diferenciais-grid').forEach(grid=>{
-  [...grid.children].forEach((child,i)=>{
-    if(!child.classList.contains('reveal')) child.classList.add('reveal');
-    child.style.transitionDelay = (i*0.08)+'s';
-    obs.observe(child);
-  });
+// stagger automático em grids
+document.querySelectorAll('.dor-grid,.result-grid').forEach(grid=>{
+  [...grid.children].forEach((c,i)=>{ if(!c.classList.contains('reveal')){ c.classList.add('reveal'); } c.style.transitionDelay=(i*0.06)+'s'; io.observe(c); });
 });
 
-// FAQ
-document.querySelectorAll('.faq-question').forEach(btn=>{
+// ---------- KPI bars + count-up (console) ----------
+const consoleObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    e.target.querySelectorAll('.kpi-bar i').forEach(bar=>{ bar.style.width = bar.dataset.fill; });
+    e.target.querySelectorAll('.kpi-val[data-count]').forEach(el=> countUp(el, parseInt(el.dataset.count)));
+    consoleObs.unobserve(e.target);
+  });
+},{threshold:0.4});
+document.querySelectorAll('.console').forEach(c=> consoleObs.observe(c));
+
+// ---------- count-up genérico ----------
+function countUp(el, target, suffix){
+  const span = el.querySelector('span');
+  const dur = 1300, t0 = performance.now();
+  function tick(now){
+    const p = Math.min((now-t0)/dur, 1);
+    const val = Math.round((1-Math.pow(1-p,3)) * target);
+    el.childNodes[0].nodeValue = val;
+    if(p<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// autoridade stats count-up
+const statObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    e.target.querySelectorAll('.n[data-count]').forEach(el=>{
+      const target = parseInt(el.dataset.count), dur=1200, t0=performance.now();
+      function tick(now){ const p=Math.min((now-t0)/dur,1); el.textContent = Math.round((1-Math.pow(1-p,3))*target); if(p<1) requestAnimationFrame(tick); }
+      requestAnimationFrame(tick);
+    });
+    statObs.unobserve(e.target);
+  });
+},{threshold:0.5});
+document.querySelectorAll('.aut-stats').forEach(s=> statObs.observe(s));
+
+// ---------- ONE BUSINESS BOARD connectors ----------
+function drawBoardLines(){
+  const svg = document.getElementById('boardLinks');
+  const stage = document.querySelector('.board-stage');
+  const core = document.querySelector('.board-core');
+  if(!svg || !stage || !core) return;
+  if(window.innerWidth <= 960){ return; }
+  const sb = stage.getBoundingClientRect();
+  const cb = core.getBoundingClientRect();
+  svg.setAttribute('viewBox', `0 0 ${sb.width} ${sb.height}`);
+  // limpa linhas antigas (mantém defs)
+  [...svg.querySelectorAll('line,circle')].forEach(n=> n.remove());
+  const coreLeftX = cb.left - sb.left;
+  const coreRightX = cb.right - sb.left;
+  const ns='http://www.w3.org/2000/svg';
+  document.querySelectorAll('.pillar').forEach(p=>{
+    const pb = p.getBoundingClientRect();
+    const side = p.dataset.port;
+    const py = pb.top - sb.top + pb.height/2;
+    const px = side==='left' ? (pb.right - sb.left) : (pb.left - sb.left);
+    const cx = side==='left' ? coreLeftX : coreRightX;
+    const cy = Math.max(cb.top - sb.top + 24, Math.min(py, cb.bottom - sb.top - 24));
+    const line = document.createElementNS(ns,'line');
+    line.setAttribute('x1', px); line.setAttribute('y1', py);
+    line.setAttribute('x2', cx); line.setAttribute('y2', cy);
+    svg.appendChild(line);
+    const dot = document.createElementNS(ns,'circle');
+    dot.setAttribute('cx', px); dot.setAttribute('cy', py); dot.setAttribute('r', 3);
+    svg.appendChild(dot);
+    requestAnimationFrame(()=> line.classList.add('on'));
+  });
+}
+const boardObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ drawBoardLines(); } });
+},{threshold:0.3});
+const boardStage = document.querySelector('.board-stage');
+if(boardStage) boardObs.observe(boardStage);
+let rt; window.addEventListener('resize',()=>{ clearTimeout(rt); rt=setTimeout(drawBoardLines,160); });
+window.addEventListener('load', drawBoardLines);
+
+// ---------- FAQ ----------
+document.querySelectorAll('.faq-q').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    const item=btn.parentElement;
-    const open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    const item = btn.parentElement;
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=> i.classList.remove('open'));
     if(!open) item.classList.add('open');
   });
 });
 
-// Calculadora
+// ---------- DIAGNÓSTICO TRIBUTÁRIO (vende inteligência, não economia) ----------
 function mascaraReais(el){
   let v = el.value.replace(/\D/g,'');
   if(!v){ el.value=''; return; }
-  v = (parseInt(v)/100).toFixed(2);
-  v = v.replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  v = (parseInt(v)/100).toFixed(2).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.');
   el.value = v;
 }
 
-function formatarReais(num){
-  return num.toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:0});
+function gerarDiagnostico(){
+  const fatStr = document.getElementById('diagFat').value;
+  const regime = document.getElementById('diagRegime').value;
+  const setor  = document.getElementById('diagSetor').value;
+  const estagio= document.getElementById('diagEstagio').value;
+
+  const faltando = [];
+  if(!fatStr) faltando.push('faturamento');
+  if(!regime) faltando.push('regime tributário');
+  if(!setor) faltando.push('setor');
+  if(!estagio) faltando.push('estágio');
+  if(faltando.length){ alert('Para gerar a análise, informe: ' + faltando.join(', ') + '.'); return; }
+
+  // Índice de eficiência: parte de uma base e penaliza fatores de risco/oportunidade.
+  let indice = 78;
+  const pontos = [];
+
+  if(regime==='real'){ indice += 4; }
+  else if(regime==='presumido'){ indice -= 8; pontos.push('Lucro Presumido frequentemente deixa créditos e enquadramentos não aproveitados — há margem para revisão.'); }
+  else if(regime==='simples'){ indice -= 6; pontos.push('Empresas em crescimento no Simples Nacional costumam atingir o limite de eficiência do regime — convém reavaliar o enquadramento.'); }
+  else { indice -= 14; pontos.push('A indefinição sobre o regime atual é, por si só, um indicador de baixa governança tributária.'); }
+
+  if(setor==='exterior'){ indice -= 9; pontos.push('Operações de comércio exterior concentram oportunidades em regimes aduaneiros e benefícios fiscais raramente capturados na totalidade.'); }
+  else if(setor==='hotelaria'){ indice -= 7; pontos.push('Empreendimentos hoteleiros exigem controladoria setorial específica (pool, A&B, Lucro Real) para revelar a eficiência real.'); }
+  else if(setor==='holding'){ indice -= 8; pontos.push('Holdings e family offices demandam estruturação societária e sucessória para proteger patrimônio e eficiência fiscal.'); }
+  else if(setor==='grupo'){ indice -= 10; pontos.push('Grupos empresariais tendem a acumular ineficiências entre as empresas por falta de visão consolidada.'); }
+
+  if(estagio==='expansao'){ indice -= 6; pontos.push('Em fase de expansão, a estrutura tributária e de governança raramente acompanha o ritmo do crescimento.'); }
+  else if(estagio==='grupo'){ indice -= 8; pontos.push('Múltiplas empresas sem leitura única ampliam o risco de exposição e de decisões descoordenadas.'); }
+  else if(estagio==='estrut'){ indice -= 4; pontos.push('A estruturação inicial é o momento de maior retorno para desenhar a base tributária e de compliance corretamente.'); }
+
+  // pontos institucionais fixos
+  pontos.push('Recomenda-se revisão de exposição trabalhista e de obrigações acessórias para reduzir contingências.');
+
+  indice = Math.max(46, Math.min(94, indice));
+
+  // headline conforme faixa
+  let headline, sub;
+  if(indice >= 82){ headline = 'Operação com boa base — refinamento de governança recomendado'; sub = 'A estrutura é sólida, mas há espaço para elevar previsibilidade e blindar a exposição.'; }
+  else if(indice >= 68){ headline = 'Eficiência parcial — oportunidades relevantes não capturadas'; sub = 'Identificamos margem consistente de otimização fiscal e de controle.'; }
+  else { headline = 'Indicadores de exposição — estruturação prioritária'; sub = 'O cenário sugere risco e ineficiência que merecem diagnóstico aprofundado com urgência.'; }
+
+  document.getElementById('diagHeadline').textContent = headline;
+  document.getElementById('diagSub').textContent = sub;
+
+  // render pontos (máx 4)
+  const ul = document.getElementById('diagPoints');
+  ul.innerHTML = '';
+  pontos.slice(0,4).forEach(p=>{
+    const li = document.createElement('li');
+    li.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/></svg>' + p;
+    ul.appendChild(li);
+  });
+
+  // CTA whatsapp executivo
+  const msg = encodeURIComponent('Olá. Realizei a análise preliminar de eficiência tributária no site (índice estimado: '+indice+'/100) e gostaria de solicitar um Diagnóstico Executivo completo.');
+  document.getElementById('diagCta').href = 'https://wa.me/55XXXXXXXXXXX?text=' + msg;
+
+  // mostra + anima gauge e número
+  const result = document.getElementById('diagResult');
+  result.classList.add('show');
+  const circ = 2 * Math.PI * 54; // 339.292
+  const fill = document.getElementById('gaugeFill');
+  fill.setAttribute('stroke-dasharray', circ.toFixed(3));
+  requestAnimationFrame(()=>{ fill.setAttribute('stroke-dashoffset', (circ*(1 - indice/100)).toFixed(3)); });
+  // número
+  const numEl = document.getElementById('gaugeNum');
+  const dur=1200, t0=performance.now();
+  (function tick(now){ const p=Math.min((now-t0)/dur,1); numEl.textContent = Math.round((1-Math.pow(1-p,3))*indice); if(p<1) requestAnimationFrame(tick); })(performance.now());
+
+  setTimeout(()=> result.scrollIntoView({behavior:'smooth', block:'center'}), 120);
 }
 
-function calcularEconomia(){
-  const faturamentoStr = document.getElementById('calcFaturamento').value;
-  const setor = document.getElementById('calcSetor').value;
-
-  if(!faturamentoStr || !setor){
-    const campos = [];
-    if(!faturamentoStr) campos.push('faturamento mensal');
-    if(!setor) campos.push('setor da empresa');
-    alert('Por favor, preencha: ' + campos.join(' e ') + '.');
-    return;
-  }
-
-  const faturamentoMensal = parseFloat(faturamentoStr.replace(/\./g,'').replace(',','.'));
-  const faturamentoAnual = faturamentoMensal * 12;
-
-  const taxas = { exterior: 0.03, hotelaria: 0.02, outros: 0.0135 };
-  const descricoes = {
-    exterior: 'Especialista em Comercio Exterior',
-    hotelaria: 'Especialista em Hotelaria',
-    outros: 'Contabilidade estrategica'
-  };
-
-  const taxa = taxas[setor];
-  const economiaAnual = faturamentoAnual * taxa;
-  const economiaMensal = economiaAnual / 12;
-
-  document.getElementById('calcValorAnual').textContent = 'R$ ' + formatarReais(economiaAnual);
-  document.getElementById('calcValorMensal').textContent = 'R$ ' + formatarReais(economiaMensal);
-  document.getElementById('calcDescSetor').textContent = descricoes[setor];
-
-  const valorFormatado = 'R$ ' + formatarReais(economiaAnual);
-  const msg = encodeURIComponent('Ola! Fiz uma simulacao no site e vi que minha empresa pode economizar ' + valorFormatado + ' por ano. Quero entender como funciona.');
-  document.getElementById('calcWaBtn').href = 'https://wa.me/55XXXXXXXXXXX?text=' + msg;
-
-  const resultado = document.getElementById('calcResultado');
-  resultado.classList.add('show');
-  setTimeout(()=>resultado.scrollIntoView({behavior:'smooth',block:'center'}), 100);
-}
-
-// Cookies
-function aceitarCookies(){ localStorage.setItem('ne_cookies','aceito'); document.getElementById('cookieBanner').classList.remove('show'); }
-function recusarCookies(){ localStorage.setItem('ne_cookies','essencial'); document.getElementById('cookieBanner').classList.remove('show'); }
-function abrirPrivacidade(){ document.getElementById('modalPrivacidade').classList.add('open'); document.body.style.overflow='hidden'; }
-function fecharPrivacidade(){ document.getElementById('modalPrivacidade').classList.remove('open'); document.body.style.overflow=''; }
-document.getElementById('modalPrivacidade').addEventListener('click',function(e){ if(e.target===this) fecharPrivacidade(); });
-window.addEventListener('load',()=>{ if(!localStorage.getItem('ne_cookies')){ setTimeout(()=>document.getElementById('cookieBanner').classList.add('show'),1500); } });
+// ---------- COOKIES / MODAL ----------
+function aceitarCookies(){ localStorage.setItem('ne_cookies','all'); document.getElementById('cookie').classList.remove('show'); }
+function recusarCookies(){ localStorage.setItem('ne_cookies','essential'); document.getElementById('cookie').classList.remove('show'); }
+function abrirPrivacidade(){ document.getElementById('modalPriv').classList.add('open'); document.body.style.overflow='hidden'; }
+function fecharPrivacidade(){ document.getElementById('modalPriv').classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('modalPriv').addEventListener('click',function(e){ if(e.target===this) fecharPrivacidade(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharPrivacidade(); });
+window.addEventListener('load',()=>{ if(!localStorage.getItem('ne_cookies')){ setTimeout(()=> document.getElementById('cookie').classList.add('show'), 1400); } });
 </script>
 </body>
 </html>
