@@ -451,6 +451,27 @@ section{padding:118px 6%;position:relative;}
 .aut-pillar h3{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:5px;}
 .aut-pillar p{font-size:0.93rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
 
+/* ---------- LIDERANÇA / JANAÍNA ---------- */
+.lider{background:var(--mist);}
+.lider-grid{display:grid;grid-template-columns:0.82fr 1.18fr;gap:64px;align-items:center;}
+.lider-foto{position:relative;}
+.lider-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;display:block;border:1px solid var(--line);}
+.lider-foto-ph{aspect-ratio:4/5;border:1px solid var(--line);border-radius:6px;background:linear-gradient(160deg,#fff,var(--cloud));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;overflow:hidden;}
+.lider-foto-ph::before{content:'';position:absolute;top:14px;left:14px;width:16px;height:16px;border-top:1px solid var(--gold);border-left:1px solid var(--gold);}
+.lider-foto-ph::after{content:'';position:absolute;bottom:14px;right:14px;width:16px;height:16px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold);}
+.lider-foto-ph svg{width:62px;height:62px;color:var(--ink-mute);}
+.lider-foto-ph span{font-size:14px;font-weight:600;color:var(--ink-soft);}
+.lider-foto-ph small{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);}
+.lider-bio{font-size:1.02rem;color:var(--ink-soft);line-height:1.8;margin-bottom:16px;font-weight:300;}
+.lider-bio strong{color:var(--navy);font-weight:600;}
+.lider-creds{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 4px;}
+.lider-cred{font-size:12.5px;color:var(--navy);border:1px solid var(--line);background:#fff;padding:9px 15px;border-radius:2px;display:inline-flex;align-items:center;gap:8px;font-weight:500;transition:all 0.35s;}
+.lider-cred:hover{border-color:var(--gold);}
+.lider-cred b{font-family:'IBM Plex Mono',monospace;color:var(--gold-deep);font-weight:600;}
+.lider-assinatura{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);}
+.lider-nome{font-size:1.3rem;font-weight:600;color:var(--navy);letter-spacing:-0.01em;}
+.lider-cargo{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
+
 /* ---------- CTA FINAL ---------- */
 .cta{
   background:
@@ -544,7 +565,7 @@ section{padding:118px 6%;position:relative;}
 
 /* ---------- RESPONSIVO ---------- */
 @media(max-width:1080px){
-  .aut-grid{grid-template-columns:1fr;gap:48px;}
+  .aut-grid{grid-template-columns:1fr;gap:48px;}.lider-grid{grid-template-columns:1fr;gap:44px;}.lider-foto{max-width:400px;margin:0 auto;width:100%;}
   .hero{gap:48px;}
 }
 @media(max-width:960px){
@@ -607,6 +628,7 @@ section{padding:118px 6%;position:relative;}
     <a href="#metodo">Metodologia</a>
     <a href="#diagnostico">Diagnóstico</a>
     <a href="#autoridade">Autoridade</a>
+    <a href="#lideranca">Liderança</a>
   </div>
   <a href="#contato" class="nav-cta">
     Diagnóstico Executivo
@@ -1081,6 +1103,38 @@ section{padding:118px 6%;position:relative;}
   </div>
 </section>
 
+<!-- ===================== LIDERANÇA / JANAÍNA ===================== -->
+<section class="lider" id="lideranca">
+  <div class="wrap lider-grid">
+    <div class="lider-foto reveal">
+      <!-- FOTO: para inserir, substitua TODO o bloco .lider-foto-ph abaixo por:
+           <img src="janaina.jpg" alt="Janaína Carmo — Sócia-Fundadora da NEWENTER"> -->
+      <div class="lider-foto-ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Foto da Janaína</span>
+        <small>Espaço reservado · envie sua foto</small>
+      </div>
+    </div>
+    <div class="lider-conteudo reveal">
+      <span class="eyebrow">Liderança</span>
+      <!-- Ajuste nome, cargo e credenciais conforme necessário -->
+      <h2 class="section-title">À frente da NEWENTER, <em>uma visão de dono.</em></h2>
+      <p class="lider-bio">À frente da NEWENTER, <strong>Janaína Carmo</strong> conduz uma estrutura que trata a informação contábil como inteligência de gestão — e não como obrigação. Sua atuação une rigor técnico, visão de negócio e governança para empresas que crescem e precisam decidir com segurança.</p>
+      <p class="lider-bio">Com especialização em comércio exterior e hotelaria, lidera a integração das seis frentes do <strong>One Business Board</strong>, traduzindo dados em decisões para CEOs, CFOs, conselhos e family offices no Brasil e na América Latina.</p>
+      <div class="lider-creds">
+        <span class="lider-cred"><b>·</b> Contadora CRC-SP</span>
+        <span class="lider-cred"><b>·</b> Comércio Exterior</span>
+        <span class="lider-cred"><b>·</b> Hotelaria</span>
+        <span class="lider-cred"><b>·</b> Governança &amp; Controladoria</span>
+      </div>
+      <div class="lider-assinatura">
+        <div class="lider-nome">Janaína Carmo</div>
+        <div class="lider-cargo">Sócia-Fundadora · Contadora (CRC-SP)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CTA FINAL ===================== -->
 <section class="cta" id="contato">
   <div class="cta-inner reveal on-dark">
@@ -1383,24 +1437,46 @@ function gerarDiagnostico(){
   else if(estagio==='grupo'){ indice -= 8; pontos.push('Múltiplas empresas sem leitura única ampliam o risco de exposição e de decisões descoordenadas.'); }
   else if(estagio==='estrut'){ indice -= 4; pontos.push('A estruturação inicial é o momento de maior retorno para desenhar a base tributária e de compliance corretamente.'); }
 
-  // pontos institucionais fixos
-  pontos.push('Recomenda-se revisão de exposição trabalhista e de obrigações acessórias para reduzir contingências.');
-
   indice = Math.max(46, Math.min(94, indice));
 
-  // headline conforme faixa
-  let headline, sub;
-  if(indice >= 82){ headline = 'Operação com boa base — refinamento de governança recomendado'; sub = 'A estrutura é sólida, mas há espaço para elevar previsibilidade e blindar a exposição.'; }
-  else if(indice >= 68){ headline = 'Eficiência parcial — oportunidades relevantes não capturadas'; sub = 'Identificamos margem consistente de otimização fiscal e de controle.'; }
-  else { headline = 'Indicadores de exposição — estruturação prioritária'; sub = 'O cenário sugere risco e ineficiência que merecem diagnóstico aprofundado com urgência.'; }
+  // headline + sub + reforço por faixa (todas conduzem ao Diagnóstico Executivo)
+  let headline, sub, reforco;
+  if(indice >= 82){
+    headline = 'Operação madura — pronta para governança de alto nível';
+    sub = 'Estruturas sólidas são as que mais ganham com uma leitura independente: validação de riscos, blindagem patrimonial e preparação para crescimento, captação ou sucessão.';
+    reforco = [
+      'Eficiência aparente não elimina contingências ocultas — uma validação independente confirma onde há exposição.',
+      'Operações consolidadas devem revisar a estrutura societária com foco em sucessão, M&A ou captação.',
+      'Empresas lucrativas e bem estruturadas são alvo prioritário de fiscalização — a blindagem preventiva é estratégica.'
+    ];
+  } else if(indice >= 68){
+    headline = 'Eficiência parcial — oportunidades relevantes não capturadas';
+    sub = 'Há margem consistente de otimização fiscal e de controle a ser destravada com estrutura e governança.';
+    reforco = [
+      'Existe otimização fiscal ainda não capturada na estrutura atual.',
+      'A integração de controladoria e compliance reduz exposição e amplia a previsibilidade.',
+      'Recomenda-se revisão de exposição trabalhista e de obrigações acessórias.'
+    ];
+  } else {
+    headline = 'Indicadores de exposição — estruturação prioritária';
+    sub = 'O cenário sugere risco e ineficiência que merecem um diagnóstico aprofundado com prioridade.';
+    reforco = [
+      'O enquadramento atual tende a gerar custo tributário e risco acima do necessário.',
+      'A ausência de visão integrada amplia a exposição a passivos fiscais e trabalhistas.',
+      'A prioridade é estruturar base tributária, controles e governança antes de crescer.'
+    ];
+  }
 
   document.getElementById('diagHeadline').textContent = headline;
   document.getElementById('diagSub').textContent = sub;
 
-  // render pontos (máx 4)
+  // pontos: contexto específico + reforço da faixa (sempre 3–4, nunca vazio)
+  let listaPontos = (indice >= 82) ? reforco : pontos.concat(reforco);
+  listaPontos = [...new Set(listaPontos)].slice(0, 4);
+
   const ul = document.getElementById('diagPoints');
   ul.innerHTML = '';
-  pontos.slice(0,4).forEach(p=>{
+  listaPontos.forEach(p=>{
     const li = document.createElement('li');
     li.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/></svg>' + p;
     ul.appendChild(li);
