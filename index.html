@@ -580,6 +580,46 @@
         <div class="cta-info-val">Seg–Sex · 9h às 18h</div>
       </div>
     </div>
+
+    <!--
+      FORMULÁRIO DE CONTATO — envio por e-mail via Formspree (contato@newenter.com.br).
+      Para ativar: crie uma conta gratuita em https://formspree.io usando o e-mail
+      contato@newenter.com.br, crie um novo formulário e troque SEU_FORM_ID abaixo
+      pelo ID fornecido (formato: https://formspree.io/f/xxxxxxxx).
+    -->
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/SEU_FORM_ID" method="POST" novalidate>
+      <div class="contact-form-fields">
+        <div class="cf-field">
+          <label for="cfNome">Nome</label>
+          <input class="cf-input" type="text" id="cfNome" name="nome" placeholder="Seu nome completo" autocomplete="name" maxlength="80" required aria-required="true">
+        </div>
+        <div class="cf-field">
+          <label for="cfEmpresa">Empresa</label>
+          <input class="cf-input" type="text" id="cfEmpresa" name="empresa" placeholder="Nome da empresa" autocomplete="organization" maxlength="80" required aria-required="true">
+        </div>
+        <div class="cf-field">
+          <label for="cfEmail">E-mail</label>
+          <input class="cf-input" type="email" id="cfEmail" name="email" placeholder="voce@empresa.com.br" autocomplete="email" maxlength="120" required aria-required="true">
+        </div>
+        <div class="cf-field">
+          <label for="cfTelefone">Telefone</label>
+          <input class="cf-input" type="tel" id="cfTelefone" name="telefone" placeholder="(11) 90000-0000" autocomplete="tel" inputmode="tel" pattern="[0-9()\-\s+]{8,20}" maxlength="20" required aria-required="true">
+        </div>
+        <div class="cf-field full">
+          <label for="cfMensagem">Mensagem</label>
+          <textarea class="cf-textarea" id="cfMensagem" name="mensagem" placeholder="Conte brevemente sobre sua empresa e o que gostaria de resolver." maxlength="600" rows="4"></textarea>
+        </div>
+      </div>
+      <!-- honeypot anti-spam: campo invisível para humanos, preenchido só por bots -->
+      <input class="cf-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Novo contato — site NEWENTER">
+      <button type="submit" class="cf-submit">
+        Enviar mensagem
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="cf-note">Seus dados são usados apenas para retorno da NEWENTER, conforme a LGPD.</p>
+      <div class="cf-status" id="cfStatus" role="status" aria-live="polite"></div>
+    </form>
   </div>
 </section>
 
@@ -654,7 +694,7 @@
     </div>
   </div>
   <div class="footer-lgpd">
-    © 2026 NEWENTER · Inteligência Empresarial · CNPJ XX.XXX.XXX/0001-XX<br>
+    © 2026 NEWENTER · Inteligência Empresarial · CNPJ 60.450.561/0001-14<br>
     <a data-action="open-privacy" tabindex="0" role="button">Política de Privacidade</a> · <a data-action="open-privacy" tabindex="0" role="button">Uso de Cookies</a> · Em conformidade com a LGPD (Lei nº 13.709/2018)
   </div>
   <div class="footer-bottom">
@@ -686,9 +726,9 @@
   <div class="modal-box">
     <button class="modal-close" data-action="close-privacy" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <h2 id="modalPrivTitle">Política de Privacidade</h2>
-    <div class="modal-date">Última atualização: Junho de 2026 · NEWENTER · CNPJ XX.XXX.XXX/0001-XX</div>
+    <div class="modal-date">Última atualização: Junho de 2026 · NEWENTER · CNPJ 60.450.561/0001-14</div>
     <h3>1. Controlador dos dados</h3>
-    <p>A <strong>NEWENTER</strong>, CNPJ XX.XXX.XXX/0001-XX, é responsável pelo tratamento dos dados coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+    <p>A <strong>NEWENTER</strong>, CNPJ 60.450.561/0001-14, é responsável pelo tratamento dos dados coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
     <h3>2. Dados tratados</h3>
     <ul>
       <li><strong>Dados de contato corporativo:</strong> nome, empresa, e-mail e telefone informados em solicitações.</li>

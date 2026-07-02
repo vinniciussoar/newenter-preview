@@ -245,3 +245,50 @@ document.addEventListener('keydown', e=>{
 document.getElementById('modalPriv').addEventListener('click',function(e){ if(e.target===this) fecharPrivacidade(); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharPrivacidade(); });
 window.addEventListener('load',()=>{ if(!localStorage.getItem('ne_cookies')){ setTimeout(()=> document.getElementById('cookie').classList.add('show'), 1400); } });
+
+// ---------- FORMULÁRIO DE CONTATO (Formspree) ----------
+const contactForm = document.getElementById('contactForm');
+if(contactForm){
+  const cfStatus = document.getElementById('cfStatus');
+  const cfBtn = contactForm.querySelector('.cf-submit');
+
+  function cfShowStatus(kind, msg){
+    cfStatus.textContent = msg;
+    cfStatus.className = 'cf-status show ' + kind;
+  }
+
+  contactForm.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if(!contactForm.checkValidity()){ contactForm.reportValidity(); return; }
+
+    const endpoint = contactForm.getAttribute('action');
+    if(!endpoint || endpoint.includes('SEU_FORM_ID')){
+      cfShowStatus('err', 'Formulário ainda não configurado. Fale conosco pelo WhatsApp acima.');
+      return;
+    }
+
+    cfBtn.disabled = true;
+    const textoOriginal = cfBtn.innerHTML;
+    cfBtn.innerHTML = 'Enviando…';
+
+    try{
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        cfShowStatus('ok', 'Mensagem enviada. Em breve entraremos em contato.');
+        contactForm.reset();
+      } else {
+        cfShowStatus('err', 'Não foi possível enviar agora. Tente novamente ou use o WhatsApp acima.');
+      }
+    } catch(err){
+      cfShowStatus('err', 'Falha de conexão. Tente novamente ou use o WhatsApp acima.');
+    } finally {
+      cfBtn.disabled = false;
+      cfBtn.innerHTML = textoOriginal;
+    }
+  });
+}
+
