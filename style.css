@@ -411,9 +411,9 @@ section{padding:118px 6%;position:relative;}
 .aut-pillar:hover .aut-pillar-ico svg{color:var(--gold-2);}
 .aut-pillar h3{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:5px;}
 .aut-pillar p{font-size:0.93rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
-.aut-photo{margin-top:60px;border-radius:8px;overflow:hidden;box-shadow:0 34px 70px -38px rgba(27,42,142,0.35);border:1px solid var(--line);position:relative;}
+.aut-photo{margin-top:60px;border-radius:8px;overflow:hidden;box-shadow:0 34px 70px -38px rgba(27,42,142,0.35);border:1px solid var(--line);background:var(--snow);}
 .aut-photo img{width:100%;height:auto;display:block;}
-.aut-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 24px;background:linear-gradient(0deg,rgba(15,20,66,0.72),transparent);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;}
+.aut-photo figcaption{padding:14px 24px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;color:var(--ink-soft);background:var(--mist);border-top:1px solid var(--line);}
 
 /* ---------- LIDERANÇA / JANAÍNA ---------- */
 .lider{background:var(--mist);}
@@ -426,6 +426,9 @@ section{padding:118px 6%;position:relative;}
 .lider-assinatura{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);}
 .lider-nome{font-size:1.3rem;font-weight:600;color:var(--navy);letter-spacing:-0.01em;}
 .lider-cargo{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
+.lider-linkedin{margin-top:20px;display:inline-flex;align-items:center;gap:9px;background:#0A66C2;color:#fff;font-family:'IBM Plex Sans',sans-serif;font-size:13.5px;font-weight:600;padding:11px 20px;border-radius:3px;text-decoration:none;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);}
+.lider-linkedin svg{width:17px;height:17px;flex-shrink:0;}
+.lider-linkedin:hover{background:#004182;transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(10,102,194,0.5);}
 
 /* ---------- CTA FINAL ---------- */
 .cta{
