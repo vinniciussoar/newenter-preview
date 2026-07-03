@@ -411,6 +411,9 @@ section{padding:118px 6%;position:relative;}
 .aut-pillar:hover .aut-pillar-ico svg{color:var(--gold-2);}
 .aut-pillar h3{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:5px;}
 .aut-pillar p{font-size:0.93rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
+.aut-photo{margin-top:60px;border-radius:8px;overflow:hidden;box-shadow:0 34px 70px -38px rgba(27,42,142,0.35);border:1px solid var(--line);position:relative;}
+.aut-photo img{width:100%;height:auto;display:block;}
+.aut-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 24px;background:linear-gradient(0deg,rgba(15,20,66,0.72),transparent);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;}
 
 /* ---------- LIDERANÇA / JANAÍNA ---------- */
 .lider{background:var(--mist);}
