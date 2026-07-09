@@ -252,6 +252,12 @@ if(contactForm){
   const cfStatus = document.getElementById('cfStatus');
   const cfBtn = contactForm.querySelector('.cf-submit');
 
+  // Telefone: filtra letras/símbolos em tempo real (só dígitos, espaço, parênteses, + e -)
+  const cfTelefone = document.getElementById('cfTelefone');
+  if(cfTelefone) cfTelefone.addEventListener('input', e=>{
+    e.target.value = e.target.value.replace(/[^0-9()+\-\s]/g, '');
+  });
+
   function cfShowStatus(kind, msg){
     cfStatus.textContent = msg;
     cfStatus.className = 'cf-status show ' + kind;
