@@ -157,12 +157,13 @@ function gerarDiagnostico(){
   else if(regime==='simples'){ indice -= 6; pontos.push('Empresas em crescimento no Simples Nacional costumam atingir o limite de eficiência do regime — convém reavaliar o enquadramento.'); }
   else { indice -= 14; pontos.push('A indefinição sobre o regime atual é, por si só, um indicador de baixa governança tributária.'); }
 
-  if(setor==='contabil'){ indice -= 6; pontos.push('Contabilidade que apenas cumpre prazos, sem leitura gerencial, esconde ineficiências que só uma contabilidade estratégica revela.'); }
-  else if(setor==='fiscal'){ indice -= 9; pontos.push('A apuração e o enquadramento fiscal concentram a maior parte da eficiência tributária não capturada — é onde costuma haver mais margem de revisão.'); }
+  if(setor==='comercio'){ indice -= 6; pontos.push('Comércio e varejo concentram oportunidades em crédito de ICMS, substituição tributária e enquadramento de mix de produtos raramente revisados.'); }
+  else if(setor==='industria'){ indice -= 8; pontos.push('Operações industriais acumulam créditos de insumos, IPI e regimes especiais que muitas vezes não são aproveitados na totalidade.'); }
+  else if(setor==='servicos'){ indice -= 6; pontos.push('Empresas de serviços frequentemente têm margem em ISS, retenções e enquadramento de atividade que passam despercebidas.'); }
+  else if(setor==='exterior'){ indice -= 9; pontos.push('Operações de comércio exterior concentram oportunidades em regimes aduaneiros e benefícios fiscais raramente capturados na totalidade.'); }
   else if(setor==='hotelaria'){ indice -= 7; pontos.push('Empreendimentos hoteleiros exigem controladoria setorial específica (pool, A&B, Lucro Real) para revelar a eficiência real.'); }
-  else if(setor==='comex'){ indice -= 9; pontos.push('Operações de comércio exterior concentram oportunidades em regimes aduaneiros e benefícios fiscais raramente capturados na totalidade.'); }
-  else if(setor==='adm'){ indice -= 6; pontos.push('Folha, encargos e eSocial mal estruturados acumulam passivos trabalhistas e deixam oportunidades em encargos sobre a mesa.'); }
-  else if(setor==='juridico'){ indice -= 8; pontos.push('Contingências e passivos tratados de forma reativa corroem a eficiência antes de virarem processo — a atuação preventiva antecipa o risco.'); }
+  else if(setor==='holding'){ indice -= 8; pontos.push('Holdings e family offices demandam estruturação societária e sucessória para proteger patrimônio e eficiência fiscal.'); }
+  else if(setor==='grupo'){ indice -= 10; pontos.push('Grupos empresariais tendem a acumular ineficiências entre as empresas por falta de visão consolidada.'); }
 
   if(estagio==='expansao'){ indice -= 6; pontos.push('Em fase de expansão, a estrutura tributária e de governança raramente acompanha o ritmo do crescimento.'); }
   else if(estagio==='grupo'){ indice -= 8; pontos.push('Múltiplas empresas sem leitura única ampliam o risco de exposição e de decisões descoordenadas.'); }
