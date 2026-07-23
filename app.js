@@ -203,7 +203,7 @@ function gerarDiagnostico(){
 
   // CTA whatsapp executivo
   const msg = encodeURIComponent('Olá. Realizei a análise preliminar de eficiência tributária no site (índice estimado: '+indice+'/100) e gostaria de solicitar um Diagnóstico Executivo completo.');
-  document.getElementById('diagCta').href = 'https://wa.me/55XXXXXXXXXXX?text=' + msg;
+  document.getElementById('diagCta').href = 'https://wa.me/5511996001232?text=' + msg;
 
   // mostra + anima gauge e número
   const result = document.getElementById('diagResult');
