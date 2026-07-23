@@ -1,11 +1,11 @@
-// ---------- TELA DE CARREGAMENTO ----------
+// ---------- ANIMAÇÃO DE ENTRADA ----------
 window.addEventListener('load', ()=>{
   const pre = document.getElementById('preloader');
   if(!pre) return;
   setTimeout(()=>{
     pre.classList.add('hide');
     pre.addEventListener('transitionend', ()=> pre.remove(), {once:true});
-  }, 300);
+  }, 1050);
 });
 
 // ---------- NAVBAR ----------
