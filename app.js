@@ -1,3 +1,13 @@
+// ---------- TELA DE CARREGAMENTO ----------
+window.addEventListener('load', ()=>{
+  const pre = document.getElementById('preloader');
+  if(!pre) return;
+  setTimeout(()=>{
+    pre.classList.add('hide');
+    pre.addEventListener('transitionend', ()=> pre.remove(), {once:true});
+  }, 300);
+});
+
 // ---------- NAVBAR ----------
 const nav = document.getElementById('nav');
 window.addEventListener('scroll',()=>{ nav.classList.toggle('scrolled', window.scrollY>40); }, {passive:true});
