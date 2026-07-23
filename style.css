@@ -608,14 +608,36 @@ section{padding:118px 6%;position:relative;}
 }
 .preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
 .preloader-inner{display:flex;flex-direction:column;align-items:center;gap:18px;}
-.preloader-logo{height:50px;width:auto;opacity:0;transform:scale(0.94);animation:preloaderLogo 0.9s cubic-bezier(0.16,1,0.3,1) forwards;}
-.preloader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));animation:preloaderLine 0.7s cubic-bezier(0.16,1,0.3,1) 0.35s forwards;}
+.preloader-logo-wrap{position:relative;display:inline-block;line-height:0;}
+/* halo pulsante atrás da logo */
+.preloader-logo-wrap::before{
+  content:'';position:absolute;left:50%;top:50%;width:210%;height:340%;transform:translate(-50%,-50%);
+  background:radial-gradient(ellipse at center,rgba(255,255,255,0.18),rgba(46,64,199,0.12) 40%,transparent 70%);
+  opacity:0;pointer-events:none;animation:preloaderGlow 1.7s ease-in-out 0.3s forwards;
+}
+.preloader-logo{height:50px;width:auto;display:block;opacity:0;transform:scale(0.92);animation:preloaderLogo 0.9s cubic-bezier(0.16,1,0.3,1) forwards;}
+/* brilho que varre a logo (confinado à silhueta pela máscara) */
+.preloader-shine{
+  position:absolute;inset:0;pointer-events:none;
+  -webkit-mask-image:url(./logo-branco.png);mask-image:url(./logo-branco.png);
+  -webkit-mask-size:contain;mask-size:contain;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,0.95) 50%,transparent 62%);
+  background-repeat:no-repeat;background-size:250% 100%;background-position:130% 0;
+  opacity:0;animation:preloaderShine 0.9s cubic-bezier(0.22,1,0.36,1) 0.55s forwards;
+}
+.preloader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));box-shadow:0 0 10px rgba(233,30,155,0.5);animation:preloaderLine 0.7s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;}
 @keyframes preloaderLogo{to{opacity:1;transform:scale(1);}}
+@keyframes preloaderGlow{0%{opacity:0;}45%{opacity:1;}100%{opacity:0.55;}}
+@keyframes preloaderShine{0%{background-position:130% 0;opacity:0;}20%{opacity:1;}80%{opacity:1;}100%{background-position:-50% 0;opacity:0;}}
 @keyframes preloaderLine{to{width:110px;}}
 
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition-duration:0.001ms !important;}
   .reveal{opacity:1;transform:none;}
   .preloader-logo{opacity:1;transform:none;}
+  .preloader-shine{display:none;}
+  .preloader-logo-wrap::before{opacity:0.55;}
   .preloader-line{width:110px;}
 }
