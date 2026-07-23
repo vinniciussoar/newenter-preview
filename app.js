@@ -5,7 +5,7 @@ window.addEventListener('load', ()=>{
   setTimeout(()=>{
     pre.classList.add('hide');
     pre.addEventListener('transitionend', ()=> pre.remove(), {once:true});
-  }, 1500);
+  }, 1900);
 });
 
 // ---------- NAVBAR ----------

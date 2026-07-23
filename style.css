@@ -599,45 +599,77 @@ section{padding:118px 6%;position:relative;}
   .float-cta span{display:none;}
   .float-cta{padding:14px;border-radius:50%;}
 }
-/* ---------- ANIMAÇÃO DE ENTRADA ---------- */
-.preloader{
+/* ==========================================================
+   SPLASH / TELA DE ABERTURA — premium (Stripe/Linear-like)
+   Anima só transform + opacity (GPU). Removida via JS no load.
+   ========================================================== */
+.splash{
   position:fixed;inset:0;z-index:9999;
   display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(160deg,#1B2A8E 0%,#131F6B 52%,#0F1442 100%);
-  transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),visibility 0.6s;
+  overflow:hidden;isolation:isolate;
+  /* azul institucional com profundidade (glow radial + gradiente) */
+  background:
+    radial-gradient(115% 85% at 50% 40%, #26399F 0%, #182A6E 44%, #0E1642 100%);
+  transition:opacity 0.4s ease, visibility 0.4s ease;
+  will-change:opacity;
 }
-.preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
-.preloader-inner{display:flex;flex-direction:column;align-items:center;gap:18px;}
-.preloader-logo-wrap{position:relative;display:inline-block;line-height:0;}
-/* halo pulsante atrás da logo */
-.preloader-logo-wrap::before{
-  content:'';position:absolute;left:50%;top:50%;width:210%;height:340%;transform:translate(-50%,-50%);
-  background:radial-gradient(ellipse at center,rgba(255,255,255,0.18),rgba(46,64,199,0.12) 40%,transparent 70%);
-  opacity:0;pointer-events:none;animation:preloaderGlow 1.7s ease-in-out 0.3s forwards;
+.splash.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.splash.hide .splash__content{transform:scale(1.04);}
+
+/* grid tecnológico discreto, esmaecendo nas bordas */
+.splash__grid{
+  position:absolute;inset:0;pointer-events:none;opacity:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.045) 1px,transparent 1px);
+  background-size:clamp(38px,5vw,52px) clamp(38px,5vw,52px);
+  -webkit-mask-image:radial-gradient(62% 58% at 50% 44%,#000 0%,transparent 80%);
+          mask-image:radial-gradient(62% 58% at 50% 44%,#000 0%,transparent 80%);
+  animation:splashFade 1s ease-out 0.1s forwards;
 }
-.preloader-logo{height:50px;width:auto;display:block;opacity:0;transform:scale(0.92);animation:preloaderLogo 0.9s cubic-bezier(0.16,1,0.3,1) forwards;}
-/* brilho que varre a logo (confinado à silhueta pela máscara) */
-.preloader-shine{
-  position:absolute;inset:0;pointer-events:none;
-  -webkit-mask-image:url(./logo-branco.png);mask-image:url(./logo-branco.png);
-  -webkit-mask-size:contain;mask-size:contain;
-  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-  -webkit-mask-position:center;mask-position:center;
-  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,0.95) 50%,transparent 62%);
-  background-repeat:no-repeat;background-size:250% 100%;background-position:130% 0;
-  opacity:0;animation:preloaderShine 0.9s cubic-bezier(0.22,1,0.36,1) 0.55s forwards;
+/* halo luminoso em blur atrás da logo */
+.splash__glow{
+  position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);
+  width:min(640px,86vw);height:min(640px,86vw);
+  background:radial-gradient(circle,rgba(130,158,255,0.30),rgba(74,104,224,0.12) 40%,transparent 68%);
+  filter:blur(30px);pointer-events:none;opacity:0;
+  animation:splashGlow 1.3s ease-out 0.1s forwards;
 }
-.preloader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));box-shadow:0 0 10px rgba(233,30,155,0.5);animation:preloaderLine 0.7s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;}
-@keyframes preloaderLogo{to{opacity:1;transform:scale(1);}}
-@keyframes preloaderGlow{0%{opacity:0;}45%{opacity:1;}100%{opacity:0.55;}}
-@keyframes preloaderShine{0%{background-position:130% 0;opacity:0;}20%{opacity:1;}80%{opacity:1;}100%{background-position:-50% 0;opacity:0;}}
-@keyframes preloaderLine{to{width:110px;}}
+.splash__content{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vh,40px);
+  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  will-change:transform;
+}
+/* logo ~2x maior, entrada fade + escala 95%→100% */
+.splash__logo{
+  height:clamp(80px,15vw,120px);width:auto;display:block;
+  filter:drop-shadow(0 10px 34px rgba(0,0,0,0.35));
+  opacity:0;transform:scale(0.95);
+  animation:splashLogo 0.8s cubic-bezier(0.16,1,0.3,1) 0.12s forwards;
+}
+/* indicador de carregamento: barra fina com preenchimento luminoso */
+.splash__bar{
+  position:relative;width:clamp(150px,40vw,210px);height:3px;border-radius:99px;
+  background:rgba(255,255,255,0.10);overflow:hidden;
+  opacity:0;animation:splashFade 0.5s ease-out 0.4s forwards;
+}
+.splash__bar-fill{
+  position:absolute;inset:0;border-radius:99px;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,#8FA6FF 55%,#FFFFFF 100%);
+  box-shadow:0 0 14px rgba(150,175,255,0.85);
+  transform:scaleX(0);transform-origin:left center;
+  animation:splashFill 1.35s cubic-bezier(0.62,0,0.30,1) 0.5s forwards;
+}
+@keyframes splashLogo{to{opacity:1;transform:scale(1);}}
+@keyframes splashGlow{to{opacity:1;}}
+@keyframes splashFade{to{opacity:1;}}
+@keyframes splashFill{to{transform:scaleX(1);}}
 
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition-duration:0.001ms !important;}
   .reveal{opacity:1;transform:none;}
-  .preloader-logo{opacity:1;transform:none;}
-  .preloader-shine{display:none;}
-  .preloader-logo-wrap::before{opacity:0.55;}
-  .preloader-line{width:110px;}
+  .splash__logo,.splash__glow,.splash__grid,.splash__bar{opacity:1;transform:none;}
+  .splash__logo{transform:scale(1);}
+  .splash__bar-fill{transform:scaleX(1);}
 }
